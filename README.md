@@ -18,6 +18,16 @@ Mega Man / Rockman X4의 플레이어 스프라이트, 일러스트, UI와 대�
 
 PS1은 동일한 미국판 원본에서 두 모드를 각각 별도 BIN/CUE로 만듭니다. `ver_buki_riko`의 Buki는 이전 별칭이며, 현재 표기는 **텐코 시부키**입니다.
 
+## 영상
+
+| 영상 | 길이 | 링크 |
+|---|---|---|
+| 나나 / 린 모드 소개 | 약 7분 | <https://youtu.be/1Vg-rLeGvLc> |
+| 하나코 나나 전체 플레이 | 약 1시간 26분 | <https://youtu.be/YyDA0AfchPU> |
+| 아오쿠모 린 전체 플레이 | 약 1시간 17분 | <https://youtu.be/cAJYBgYdII0> |
+
+처음 보신다면 소개 영상부터 보시면 됩니다. 시부키 / 리코 모드 영상은 준비되는 대로 추가합니다.
+
 ## 다운로드와 설치
 
 **[Releases](https://github.com/MelissaJSM/ClicheX4/releases/latest)**에서 플랫폼에 맞는 ZIP을 받으세요. 사용 방법도 릴리스 설명에 적어 두었습니다. GitHub의 **Code → Download ZIP은 소스 자료**이며 설치용 패치가 아닙니다.
