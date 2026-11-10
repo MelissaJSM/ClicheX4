@@ -1,0 +1,21 @@
+{
+  "transparent_index": 0,
+  "status": "user_accepted_idle_palette",
+  "colors": [
+    {"role":"outline","rgb":[20,24,49]},
+    {"role":"navy_dark","rgb":[29,39,83]},
+    {"role":"navy_mid","rgb":[51,66,114]},
+    {"role":"blue_shadow","rgb":[12,37,145]},
+    {"role":"royal_blue","rgb":[14,67,227]},
+    {"role":"blue_light","rgb":[78,135,255]},
+    {"role":"silver_shadow","rgb":[90,100,136]},
+    {"role":"silver_mid","rgb":[133,145,170]},
+    {"role":"silver_light","rgb":[187,199,218]},
+    {"role":"white_shadow","rgb":[224,235,247]},
+    {"role":"white","rgb":[255,255,255]},
+    {"role":"skin_shadow","rgb":[211,151,124]},
+    {"role":"skin","rgb":[255,205,158]},
+    {"role":"skin_light","rgb":[255,230,195]},
+    {"role":"eye_cyan","rgb":[25,200,239]}
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "files": 105,
+  "preserved_nonaudio_entries": 289,
+  "resolved_wave_references": 494,
+  "native_intro_cases": 9984,
+  "patch_address": "0x987ec9",
+  "before": "725e",
+  "after": "9090",
+  "playing_completion_function_preserved": true,
+  "actual_game_audio_heard": false
+}

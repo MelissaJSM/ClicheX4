@@ -1,0 +1,30 @@
+"""실제 재추출150/155의 원표 순서 검토. 에뮬레이터나 물리 엔진은 실행하지 않는다."""
+from pathlib import Path
+import sys,json,base64,io
+import numpy as np
+from PIL import Image,ImageDraw
+from scipy.ndimage import label,binary_dilation
+H=Path(__file__).resolve().parent;ROOT=H.parents[2];sys.path.insert(0,str(ROOT))
+from native_pose_pack import need,sha,write
+from scripts.export_x_consistency import Archive,page
+FINAL='03a675626035b93ad2e2feef8dd643365ed8a3e1a61a1eb02a476063e2c55e8a'
+def main():
+    o=H/'ultimate_ladder_shot_sequence01';need(not o.exists(),'Fresh review');o.mkdir();p=H/'ultimate_ladder_pack01/PL02_U.ARC';need(sha(p.read_bytes())==FINAL,'Candidate changed');a=Archive(p.read_bytes());rp=ROOT/'work/sprite_style_unification_20261107/zero_audit/ultimate_ladder_shots01/report.json';source=json.loads(rp.read_text('utf8'));seqs=[s for s in source['sequences']if s['id']in(92,93)];data={'sequences':seqs,'images':{}};rows=[];pics=[]
+    union=np.zeros((384,384),bool)
+    for n in(150,155):
+        union|=np.array(Image.open(H/f'ultimate_ladder_shots_registered01/{n:03}_edit_mask.png'))>0
+        union|=np.array(Image.open(H/f'ultimate_ladder_shot_inputs01/{n:03}_barrel_mask.png'))>0
+    for form,mask in [('before',15),('after',0)]:
+        frames={n:a.composite(n,mask)[0]for n in(150,155)};x=np.array(frames[150]);y=np.array(frames[155]);need(np.array_equal(x[~union],y[~union]),'Recoil changed head/body outside arm')
+        for n,im in frames.items():
+            opaque=np.array(im)[:,:,3]>0;need(label(opaque,np.ones((3,3)))[1]==1,'Detached gun/body');gm=np.array(Image.open(H/f'ultimate_ladder_shot_inputs01/{n:03}_barrel_mask.png'))>0;gun=np.array(Image.open(H/f'ultimate_ladder_shot_inputs01/{n:03}_barrel_indices.png'))>0;touch=binary_dilation(gun,np.array([[0,1,0],[1,1,1],[0,1,0]]))&opaque&~gm;need(touch.any(),'No wrist contact')
+            cut=im.crop((128,128,192,192));buf=io.BytesIO();cut.save(buf,format='PNG');data['images'][f'{form}_{n}']='data:image/png;base64,'+base64.b64encode(buf.getvalue()).decode();cut.save(o/f'{form}_{n}_native.png');rows.append({'form':form,'ref':n,'body_connected_8way':True,'gun_wrist_4way_contacts':int(touch.sum()),'non_arm_body_between_shots_exact':True,'native_crop_sha256':sha((o/f'{form}_{n}_native.png').read_bytes())})
+        for s in seqs:
+            for step in s['steps']:
+                duration='external timer-8'if s['id']==93 and step['position']==0 else('terminal hold'if step['relative_step']==0 else str(step['calls'])+' calls')
+                pics.append((f'{form} ID{s["id"]} p{step["position"]}: {step["frame"]} / {duration}',frames[step['frame']]))
+        page(pics[-7:],a.composite(0,mask)[0],o/f'{form}_ordered_contacts.png',cols=4,scale=5)
+    html='''<!doctype html><meta charset="utf-8"><title>사다리 사격 원순서 검토</title><style>body{background:#1d222c;color:#eee;font:16px sans-serif}canvas{image-rendering:pixelated;width:640px;height:320px}button,select,input{font:inherit}p{max-width:850px}</style><h1>사다리 사격 재추출 순서</h1><p>게임 실기 아님. 원 애니메이션 함수 호출을 60회/초로 가정한 표시 검토입니다. 왼쪽 재킷/오른쪽 획득 후. 155는 수용 기본형과 같은 공통 몸체+팔 반동이며 원US 전신 반동 복원이 아닙니다.</p><select id="anim"><option value="92">92: 5→3→6 호출→유지</option><option value="93">93: 외부 타이머→4 호출→유지</option></select><label>93 첫 유지(검토 가정값) <input id="initial" type="number" value="8" min="1" max="255"></label><button id="restart">처음</button><button id="play">재생/정지</button><button id="tick">1호출</button><p id="label"></p><canvas id="c" width="128" height="64"></canvas><p>원 배우 이동/사다리 발판/입력/이벤트·발사체는 재현하지 않습니다. 말단은 유지하며 자동 반복하지 않습니다. 새 총열은 150→155에서 x+3,y−4 이동하고 몸체는 그대로입니다.</p><script>const DATA=__DATA__;const ctx=c.getContext('2d');ctx.imageSmoothingEnabled=false;const images={};let ready=false,state={id:92,pos:0,elapsed:0,playing:false,total:0,holding:false};function steps(){return DATA.sequences.find(s=>s.id===state.id).steps}function duration(){return state.id===93&&state.pos===0?Math.max(1,Math.min(255,+initial.value||8)):steps()[state.pos].calls}function draw(){if(!ready)return;const ref=steps()[state.pos].frame;ctx.clearRect(0,0,128,64);ctx.drawImage(images['before_'+ref],0,0);ctx.drawImage(images['after_'+ref],64,0);label.textContent=`ID${state.id} position${state.pos} ref${ref} call${state.elapsed}/${duration()} total${state.total} ${state.holding?'HOLD':''}`;}function reset(id=+anim.value){state={id,pos:0,elapsed:0,playing:false,total:0,holding:false};draw()}function step(){if(state.holding)return;state.total++;state.elapsed++;if(state.elapsed>=duration()){const s=steps()[state.pos];if(s.relative_step===0){state.holding=true;state.playing=false}else{state.pos+=s.relative_step;state.elapsed=0;if(steps()[state.pos].relative_step===0){state.holding=true;state.playing=false}}}draw()}anim.onchange=()=>reset();restart.onclick=()=>reset();play.onclick=()=>{state.playing=!state.playing};tick.onclick=()=>step();window.review={reset,step,state:()=>({...state,ref:steps()[state.pos].frame}),ready:()=>ready};Promise.all(Object.entries(DATA.images).map(([k,v])=>new Promise(resolve=>{let im=new Image();im.onload=()=>{images[k]=im;resolve()};im.src=v}))).then(()=>{ready=true;reset()});let prior=0,acc=0;function loop(t){if(state.playing){acc+=Math.min(100,t-prior);while(acc>=1000/60&&state.playing){step();acc-=1000/60}}else acc=0;prior=t;requestAnimationFrame(loop)}requestAnimationFrame(loop);</script>'''.replace('__DATA__',json.dumps(data,ensure_ascii=False));(o/'REVIEW.html').write_text(html,'utf8')
+    write(o/'report.json',{'candidate_sha256':FINAL,'source_report':{'path':rp.relative_to(ROOT).as_posix(),'sha256':sha(rp.read_bytes())},'actual_tables':seqs,'contact_checks':rows,'gun_recoil_delta':[3,-4],'no_extra_between_frame_art':True,'static_review_pending':True,'browser_pending':True,'continuous_video_actually_watched':False,'runtime_verified':False,'limits':['93 첫96은 caller의 attack_pose_timer-8로 바뀌므로 UI의8은 검토 가정값이다.','실제 배우의 높이/사다리 이동/발판/입력 및 효과는 재현하지 않는다.','손-총의 연결과 팔 영역 밖 머리/몸/다리 불변만 정적으로 확인했다.']})
+    print(o.relative_to(ROOT).as_posix())
+if __name__=='__main__':main()

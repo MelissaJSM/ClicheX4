@@ -1,0 +1,85 @@
+{
+  "reference": "character/ver_buki_riko/riko(zero)_mark.webp",
+  "reference_sha256": "032349b68f2847d7133ae43dd3211ef01bc22a04a81320e96b2454e99f5f0a9e",
+  "tiles": [
+    76,
+    77,
+    78,
+    145
+  ],
+  "source_tiles_sha256": "e6983e260246c7a17ad5e0bf22bd2596f5488b630445c7187e8b490c34ccaf79",
+  "frames": {
+    "69": "ea8181e40ab105c21809476f9709491d4d5c90deb30afa53215837ec9a61936e",
+    "70": "ecb0e3f36f92286e80402d48bc87fad2e4ab423ca35843c3c61003dba46578a5",
+    "71": "1ef4afdfe8c04ed3716836bf8a22afd0f67acee61ba10be058db162458ba68b6",
+    "72": "f47dbcc40e175d762cb30e530d22bf41cdeb15a5833f516f4d648c731bb61e37",
+    "73": "0ab330d893973ed5feeafdfee581b90c01455a92fe838588d58e2d87d84c066b",
+    "74": "40984c799d3eff99752c1ada58daef485185415667be93f8c570b09b8ddcf84d",
+    "75": "6f9e2a77276031f7ff4d02434c1460fe2fc694d018c0805d446d2b40c14942fb",
+    "76": "dee6daa60c8bd3c26198371431cea70cc3ede358dc8f00e9e96dff92448a0f2c",
+    "77": "e530272e5001e27153b9d87582aa04e1237286df6ef070ce11cdbf42f8ad6819"
+  },
+  "background_rows": [
+    [
+      43,
+      8,
+      22
+    ],
+    [
+      44,
+      7,
+      22
+    ],
+    [
+      45,
+      7,
+      23
+    ],
+    [
+      46,
+      6,
+      23
+    ],
+    [
+      47,
+      6,
+      24
+    ],
+    [
+      48,
+      6,
+      24
+    ],
+    [
+      49,
+      6,
+      24
+    ],
+    [
+      50,
+      6,
+      27
+    ],
+    [
+      51,
+      7,
+      26
+    ],
+    [
+      52,
+      8,
+      25
+    ],
+    [
+      53,
+      9,
+      24
+    ],
+    [
+      54,
+      8,
+      21
+    ]
+  ],
+  "target_frame_sha256": "ffdc5e4226ce260acb00bf20ae5220d2f9e77d5c5f149ba3079db5dfa34f7979"
+}

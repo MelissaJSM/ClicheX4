@@ -1,0 +1,422 @@
+[
+  {
+    "relative_path": "nativeDX10/X4/romPC/load.arc",
+    "output_sha256": "f50a1dc55eb075f77710902a9e0e7a496ad8481f166cdd0ce6d38950926e6bfd"
+  },
+  {
+    "relative_path": "nativeDX10/X4/romPC/pl00.arc",
+    "output_sha256": "785a58e04472747530d1a6d7a5a2edcf812caf6267c8cc6766c5b6453cc76bd0"
+  },
+  {
+    "relative_path": "nativeDX10/X4/romPC/pl01.arc",
+    "output_sha256": "1601c1beeb1d7258f8b3c57362f00d02b1b36b758f4f4b51672db0d0bbae4e08"
+  },
+  {
+    "relative_path": "nativeDX10/X4/romPC/pl02.arc",
+    "output_sha256": "8d85e192cf5d42c4a26dfbf7fa04af3e15baa8e1a2eb3c0f41c9cdb086a0d709"
+  },
+  {
+    "relative_path": "nativeDX10/X4/romPC/load_eng.arc",
+    "output_sha256": "b2de3157f461a31ab30e6bf9dda1990a585ae4446812ac62487bb33d2aa0f57e"
+  },
+  {
+    "relative_path": "nativeDX10/X4/romPC/pl00_eng.arc",
+    "output_sha256": "e2a62b7d31e7045ff6ff8ebc329c8c712ec02b6e5657c95aeeef4dbb7f9ece6c"
+  },
+  {
+    "relative_path": "nativeDX10/X4/romPC/pl01_eng.arc",
+    "output_sha256": "431d5bca47ca5b4534fdb30f55d7cc282e1db90dde803d4b60b03a333cccc972"
+  },
+  {
+    "relative_path": "nativeDX10/X4/romPC/pl02_eng.arc",
+    "output_sha256": "538cfffe050f37b4d56a5c6ece6ff4d9ba148f5b52a10905dca763e942475800"
+  },
+  {
+    "relative_path": "nativeDX10/X4/romPC/st1_1_1_eng.arc",
+    "output_sha256": "53d762f3b699f161122599da2d5f2f5f5edc248439ba43d33415c161d5585962"
+  },
+  {
+    "relative_path": "nativeDX10/X4/romPC/onpare_1_eng.arc",
+    "output_sha256": "99b12ad082b19e2ee5d17efbfc97587af9366f184855b19b0776ed8c71dae4a3"
+  },
+  {
+    "relative_path": "nativeDX10/X4/romPC/st2_1_1_eng.arc",
+    "output_sha256": "62bdda4e8a8295fc3d348f27483a1105d588f91a0647047687614371927bad3a"
+  },
+  {
+    "relative_path": "nativeDX10/X4/romPC/onpare_2_eng.arc",
+    "output_sha256": "b9a6c7962711c5f5b97545c983b17ff812292bfa178b5e7c79a648a90ab306c7"
+  },
+  {
+    "relative_path": "nativeDX10/X4/romPC/st3_1_1_eng.arc",
+    "output_sha256": "3eaff602c74d3c966ce32e05a42732389625c553dc73df4610051eb047bf5815"
+  },
+  {
+    "relative_path": "nativeDX10/X4/romPC/onpare_3_eng.arc",
+    "output_sha256": "d8e89e83c98cc340f91c08bf7fbfcb26b9a3d9fa0a70f0e1829e4d4befe1889a"
+  },
+  {
+    "relative_path": "nativeDX10/X4/romPC/st5_1_1_eng.arc",
+    "output_sha256": "25e03ae54332110ef9c55b32f9be1f3bc471749bcb4031c65973800c6c787017"
+  },
+  {
+    "relative_path": "nativeDX10/X4/romPC/onpare_5_eng.arc",
+    "output_sha256": "20c70ded2e7748f23ff6877718992702fb3737e3fb30ad7f9345877f5c1c3df6"
+  },
+  {
+    "relative_path": "nativeDX10/X4/romPC/st6_1_1_eng.arc",
+    "output_sha256": "3af592e6d4851a4f988e1aba00f37c7881c4f0f8a904f21d40f893ad44488cd3"
+  },
+  {
+    "relative_path": "nativeDX10/X4/romPC/onpare_6_eng.arc",
+    "output_sha256": "b6b0881698a70769a4312d17e4f9a9fe2c19d35481c2dce1e4390d0c08593afe"
+  },
+  {
+    "relative_path": "nativeDX10/X4/romPC/st7_1_1_eng.arc",
+    "output_sha256": "58eaea77e2dca9e581b9b1a765cfbf6e113ad63c4df2adec2f590bd7a311efca"
+  },
+  {
+    "relative_path": "nativeDX10/X4/romPC/onpare_7_eng.arc",
+    "output_sha256": "0b2eef3459b7fe8466525b016d7d8f4c2af1e7c906ec94415406ecb92103f62f"
+  },
+  {
+    "relative_path": "nativeDX10/X4/romPC/st8_1_1_eng.arc",
+    "output_sha256": "5d24067a854d7f457e6deee2429934c3ff7cfadd73ede4f034c1f0c526228e81"
+  },
+  {
+    "relative_path": "nativeDX10/X4/romPC/onpare_8_eng.arc",
+    "output_sha256": "f75bbe5e3d10d5091bcbcd50bd30d13c5cf7da9848d94a19e41af00338297786"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl00/wav/VO_PL00_PG00_ID00.xsew",
+    "output_sha256": "1d4081e5480e6b3f696ecea18ca5c3c6378b4d8c0ea3e06c4e562a550576c694"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl00/wav/VO_PL00_PG00_ID01.xsew",
+    "output_sha256": "1d4081e5480e6b3f696ecea18ca5c3c6378b4d8c0ea3e06c4e562a550576c694"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl00/wav/VO_PL00_PG00_ID02.xsew",
+    "output_sha256": "7fa644a55d2486a7cba64c526571066a23a4a5a8c14092952d8b6aaa651057b5"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl00/wav/VO_PL00_PG00_ID03.xsew",
+    "output_sha256": "968a7a4acd475fcfe876f7105dddbb9e027251870699cbed166065c992527640"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl00/wav/VO_PL00_PG00_ID04.xsew",
+    "output_sha256": "4745cebd5dd5ebbaeffd29bdf21e55f15d56608e880a5013ac250c3521d37c93"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl00/wav/VO_PL00_PG00_ID05.xsew",
+    "output_sha256": "79b3eecaebbc648b711f0b3f027c81930f6eed6e8b4ad05c69ceae37dd808d9e"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl00/wav/VO_PL00_PG00_ID06.xsew",
+    "output_sha256": "c5e9e04d1f4fdd8bf13bec999784800d389fe0ca1f8bc072dde6e3db7e2247de"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl00/wav/VO_PL00_PG00_ID07.xsew",
+    "output_sha256": "20130273d3e6836cd9ef0a6a840ed4c1bd35750b07619e462feda5aee88d216c"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl00/wav/VO_PL00_PG00_ID08.xsew",
+    "output_sha256": "eab63bd67ae0a63de775ac1909ccc9cc560744604bf19b9b35d27c266775c15e"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl00/wav/VO_PL00_PG00_ID09.xsew",
+    "output_sha256": "b41dddce9fed59e2f01f1c8c340b5b448bd1822794009f0ca015bb77b6fc0521"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl00/wav/VO_PL00_PG00_ID10.xsew",
+    "output_sha256": "a13708e0be0568a43c35eb9df1312fefb7e8b567fb427f43370d1691696dd552"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl00/wav/VO_PL00_PG00_ID11.xsew",
+    "output_sha256": "0a6b35754593a477d5a328f95d4734829b08f1a4c30a73e26028252978fa67e4"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl00/vo_pl00.sbkr",
+    "output_sha256": "355e3a3d6b8034b13fe00989fe5b0bc09038d0f9cd1eab4205e116b6205843a7"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl00/wav/VO_PL00_PG00_ID00_ENG.xsew",
+    "output_sha256": "1d4081e5480e6b3f696ecea18ca5c3c6378b4d8c0ea3e06c4e562a550576c694"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl00/wav/VO_PL00_PG00_ID01_ENG.xsew",
+    "output_sha256": "1d4081e5480e6b3f696ecea18ca5c3c6378b4d8c0ea3e06c4e562a550576c694"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl00/wav/VO_PL00_PG00_ID02_ENG.xsew",
+    "output_sha256": "4dec1f349476058699db7db72d7df68e8f4e8303547bc56791639cb4821109d1"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl00/wav/VO_PL00_PG00_ID03_ENG.xsew",
+    "output_sha256": "c288ca9b0888473ea79871bfecc52f75085fd5d7441ef55820cb55ef0c92fa4e"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl00/wav/VO_PL00_PG00_ID04_ENG.xsew",
+    "output_sha256": "98e63f3cb7b4881d915c76e2b3b0ecd0a1f14464bf46b8f913614af25494f3c7"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl00/wav/VO_PL00_PG00_ID05_ENG.xsew",
+    "output_sha256": "c1a7ade167da5fa91395d52e65b5e4ac3ec9cf57173022671f658c94880b8ed4"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl00/wav/VO_PL00_PG00_ID06_ENG.xsew",
+    "output_sha256": "552b6ec33e3a9bbe2064bcaba79a609eff17b3e0ed662d00093700278e262d4e"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl00/wav/VO_PL00_PG00_ID07_ENG.xsew",
+    "output_sha256": "a496ef1dc415bf08f84b68febcbdeb45fdaf0827679045e46c8ce1614afb16b1"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl00/wav/VO_PL00_PG00_ID08_ENG.xsew",
+    "output_sha256": "d1bdd575d6afde4201ccd1f59772763b16a54245dbbac14cb82a434c23efb31c"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl00/wav/VO_PL00_PG00_ID09_ENG.xsew",
+    "output_sha256": "eded718c056e1795fb7f5d94035f7bd31dcdbf353fdacdbd88b0e88bb28a3fb9"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl00/wav/VO_PL00_PG00_ID10_ENG.xsew",
+    "output_sha256": "5612e949178325b166d0495c9f5f96ad0e1f4a0c6ba9835747183c47476679dc"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl00/wav/VO_PL00_PG00_ID11_ENG.xsew",
+    "output_sha256": "0a6b35754593a477d5a328f95d4734829b08f1a4c30a73e26028252978fa67e4"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl00/vo_pl00_eng.sbkr",
+    "output_sha256": "4f61c12e40dd778fc5d1154dd3b82070793e746930fac699949891a5ba3692ff"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl01/wav/VO_PL01_PG00_ID00.xsew",
+    "output_sha256": "1d4081e5480e6b3f696ecea18ca5c3c6378b4d8c0ea3e06c4e562a550576c694"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl01/wav/VO_PL01_PG00_ID01.xsew",
+    "output_sha256": "1d4081e5480e6b3f696ecea18ca5c3c6378b4d8c0ea3e06c4e562a550576c694"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl01/wav/VO_PL01_PG00_ID02.xsew",
+    "output_sha256": "7fcbb24e3fc30b3a432bfb24e2ab80c1a7514e6b9189a6978a4634dcc395ee51"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl01/wav/VO_PL01_PG00_ID03.xsew",
+    "output_sha256": "dbbaf0fa4e46b9646cdbe31890f5472ded57ab1d9d564e916e5b2e65850e5f8c"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl01/wav/VO_PL01_PG00_ID04.xsew",
+    "output_sha256": "c8c640d5ff1b954d8ccfd736c644be9222f50c733f39ba152711b0c82725beb4"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl01/wav/VO_PL01_PG00_ID05.xsew",
+    "output_sha256": "d1e87e487fd5eeb888b1f516776e81146146afeb730005919cf7de5c5cbfee79"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl01/wav/VO_PL01_PG00_ID06.xsew",
+    "output_sha256": "96c3b3738f3f7f236b6be00c66f3864fdc487b186fbb1c523ff466e430cce820"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl01/wav/VO_PL01_PG00_ID07.xsew",
+    "output_sha256": "a625091e707b81f35f5373b32652f9757b9e36b196305f1c75e220c5938ad638"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl01/wav/VO_PL01_PG00_ID08.xsew",
+    "output_sha256": "2bf59ccdeddba7c7ab8f2825d508af258f0b7e6f9a966ffdfc9eeb283276d962"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl01/wav/VO_PL01_PG00_ID09.xsew",
+    "output_sha256": "0847d1bf2fcc88075710f4148dd7fdb53ad7bbb53a99f9e847ae9abba2c10eec"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl01/wav/VO_PL01_PG00_ID10.xsew",
+    "output_sha256": "7cac5aa6df91876120bafe39b21433d4b369c246eedaf59a62d275bf945519ec"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl01/wav/VO_PL01_PG00_ID11.xsew",
+    "output_sha256": "aae5bbc76150241ff5aa32013b93c1654bffc10bd6d7d3c5e0a08c5d894fcee3"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl01/wav/VO_PL01_PG00_ID12.xsew",
+    "output_sha256": "0a6b35754593a477d5a328f95d4734829b08f1a4c30a73e26028252978fa67e4"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl01/vo_pl01.sbkr",
+    "output_sha256": "ab9584de2babb679703c79e2e5ce9c19ced823e5d2f691f000a8bab5c5ab3b8f"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl01/wav/VO_PL01_PG00_ID00_ENG.xsew",
+    "output_sha256": "1d4081e5480e6b3f696ecea18ca5c3c6378b4d8c0ea3e06c4e562a550576c694"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl01/wav/VO_PL01_PG00_ID01_ENG.xsew",
+    "output_sha256": "1d4081e5480e6b3f696ecea18ca5c3c6378b4d8c0ea3e06c4e562a550576c694"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl01/wav/VO_PL01_PG00_ID02_ENG.xsew",
+    "output_sha256": "3d46791ff7b1583cfd8379b1c111a7f1df4fcb22135b2d74ea990a0d2da6d87b"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl01/wav/VO_PL01_PG00_ID03_ENG.xsew",
+    "output_sha256": "02260e193b239e7f2794e20f0106f34716dbda7066274717cb5d7ff9438f73e7"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl01/wav/VO_PL01_PG00_ID04_ENG.xsew",
+    "output_sha256": "1f97d51e6e0479f95ec98e4072a9bac010981226a72085a87b7d6fab12391b5e"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl01/wav/VO_PL01_PG00_ID05_ENG.xsew",
+    "output_sha256": "890bcc7ff0e95644659c0742111e7dba353a3852cea4ae62ed428127b9b2e62c"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl01/wav/VO_PL01_PG00_ID06_ENG.xsew",
+    "output_sha256": "3a2092dc3c8b768588c583e751f979e42584b8c035f348b9ae6f8b89ef3fb699"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl01/wav/VO_PL01_PG00_ID07_ENG.xsew",
+    "output_sha256": "d055c75f0cf34e1face620ffdb49c9233fa2cd7966100e64d067b618412b2fa7"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl01/wav/VO_PL01_PG00_ID08_ENG.xsew",
+    "output_sha256": "8d7d9a57316a7f710748d5a10e6f1225793d0c3b6300591f3d07efc3c38ceb67"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl01/wav/VO_PL01_PG00_ID09_ENG.xsew",
+    "output_sha256": "1d9073725e102ed91d35b16f7d2f4e590ad175b86e2a24fc120204c969b0d339"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl01/wav/VO_PL01_PG00_ID10_ENG.xsew",
+    "output_sha256": "7cac5aa6df91876120bafe39b21433d4b369c246eedaf59a62d275bf945519ec"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl01/wav/VO_PL01_PG00_ID11_ENG.xsew",
+    "output_sha256": "518f6b1a60ba841efde84ae6118c1304087fdfc4a5a67dd924a014acd39878ac"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl01/wav/VO_PL01_PG00_ID12_ENG.xsew",
+    "output_sha256": "0a6b35754593a477d5a328f95d4734829b08f1a4c30a73e26028252978fa67e4"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/vo_pl01/vo_pl01_eng.sbkr",
+    "output_sha256": "96c56c016b9bd4881a566ce5a53b5242f63d8562f0a32ad9307e00b37a219564"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/se/se_pl01/se_pl01.sbkr",
+    "output_sha256": "c3a2264eefa247ed5bb7fb3eb63784097edfc25b3b93af8d992976021f8c03a3"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/voice/wav/VOICE1/eng/VOICE1_0002_eng.sngw",
+    "output_sha256": "921986b1752bf1b57653005630b153ebd6e82c4beb22d1ac2d487f700e5e1791"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/voice/wav/VOICE1/eng/VOICE1_0003_eng.sngw",
+    "output_sha256": "b1bf10a4bd8b580e31182d5f71a4ac21c1ced015a8c5d1ef7390fd407a07afec"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/voice/wav/VOICE1/eng/VOICE1_0004_eng.sngw",
+    "output_sha256": "13e9c5f87255885896f4ca57dac5f180863630b97489ae0de658941c24095c0f"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/voice/wav/VOICE1/eng/VOICE1_0006_eng.sngw",
+    "output_sha256": "b8a5a68e7ff2b688ab824293c3ed0b2324015ba85febce90fee4ee079c2f4de9"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/voice/wav/VOICE2/eng/VOICE2_0001_eng.sngw",
+    "output_sha256": "fbbe4bf0e9f552889c6a6440d8f96d7711f634eb39a44533fa30d863d69345fe"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/voice/wav/VOICE2/eng/VOICE2_0004_eng.sngw",
+    "output_sha256": "ddaa41f913c938575e9b6e3e6d875f4d6b91cf08c3342e888437c4c56ec92f49"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/voice/wav/VOICE2/eng/VOICE2_0005_eng.sngw",
+    "output_sha256": "735034a1da6573b513fb587a6bd24b564267ab576ffe235a9ff6d2dfa777fdcf"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/voice/wav/VOICE2/eng/VOICE2_0006_eng.sngw",
+    "output_sha256": "ec0eb95c7bfc816851d0f566705b0585a49098fd2f5faf582414eb0674b5b90e"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/voice/wav/VOICE2/eng/VOICE2_0007_eng.sngw",
+    "output_sha256": "d2bc2aec4559daf6cfb558ada35a9f760d52fc60aaf70b35ad332bbe4b682f3b"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/voice/wav/VOICE2/eng/VOICE2_0008_eng.sngw",
+    "output_sha256": "2163012ee03283c15f323f1d914f0725ae68c55e24aad5c090c8472d1b84c199"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/voice/wav/VOICE3/eng/VOICE3_0001_eng.sngw",
+    "output_sha256": "d4789dc306f9f07a24626dbb30f77c88456b5b135d093a221d97f9d0559a13a3"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/voice/wav/VOICE3/eng/VOICE3_0002_eng.sngw",
+    "output_sha256": "954981c6eb52fe8a4d7a7013d8bde21101c0a17720969ecfa08555e6393b0b3b"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/voice/wav/VOICE3/eng/VOICE3_0003_eng.sngw",
+    "output_sha256": "0da6bb376afdd9c91531408144c01f7fe0ac0900f62b16472d29ed86c3a01a1f"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/voice/wav/VOICE3/eng/VOICE3_0005_eng.sngw",
+    "output_sha256": "2039fd02a541765425e0c20bcc4f9be1d785605340ce9ddededdb36ffcb2f95a"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/voice/wav/VOICE3/eng/VOICE3_0006_eng.sngw",
+    "output_sha256": "e933542630a927d5b002cf470c75da9a17fecc60922af67cac97781adb3b207a"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/voice/wav/VOICE3/eng/VOICE3_0008_eng.sngw",
+    "output_sha256": "236007da4bb53404dde3983cef98370ec5fcb22b92fc69816bc1801af8fd2584"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/voice/wav/VOICE4/eng/VOICE4_0002_eng.sngw",
+    "output_sha256": "04e5fcc50014ddb1ebdf53fa983ca10709fb98b4e20a3c6fe42221602b6cd96e"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/voice/wav/VOICE4/eng/VOICE4_0005_eng.sngw",
+    "output_sha256": "a278c48f9474afe91734884d169c92ce196a5c1a511a185d654fd38bb7d251ec"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/voice/wav/VOICE4/eng/VOICE4_0006_eng.sngw",
+    "output_sha256": "fd92a603587d4da051bcfbd88d2fe08dd595c69665fbf8d0c5652fc8d4a155db"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/voice/wav/VOICE4/eng/VOICE4_0007_eng.sngw",
+    "output_sha256": "d4d1a98e5780e2ddde64fe4e9b52a8b535f09d33ef5404896d610d50ecf4e8e9"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/voice/wav/VOICE5/eng/VOICE5_0004_eng.sngw",
+    "output_sha256": "2a03fb0b617dcb1e7dbe7bf89991b33634ba0c2bcb3651f47c40dea2442d3838"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/voice/wav/VOICE5/eng/VOICE5_0007_eng.sngw",
+    "output_sha256": "85c81dc900f9b9b349193793502c127aeeaf719d5257e483e588539d921715d4"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/voice/wav/VOICE5/eng/VOICE5_0008_eng.sngw",
+    "output_sha256": "78a1b3f36f1f6513a81ce1c5fd03bb8ae5040d7d6cf5e503d7903f9b89c25c6e"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/voice/x4_voice01_eng.stqr",
+    "output_sha256": "303671b9e9eb86438a9cc3ace6befa72a03f8c0be2bc9aa9e93a480a00100f8c"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/voice/x4_voice02_eng.stqr",
+    "output_sha256": "419c9fe54680d473e4cbc42bd7af12cd7f11303b6957af2a876455a770bf6971"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/voice/x4_voice03_eng.stqr",
+    "output_sha256": "b8509ce513a24217bab074a63e1f2c91eea0e6ea6fa835798347cfbc974d20a1"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/voice/x4_voice04_eng.stqr",
+    "output_sha256": "e65e711ffa102df4e8ce1b599a2aee066e0476124ae2eabe4065fdd363445aba"
+  },
+  {
+    "relative_path": "nativeDX10/X4/sound/voice/x4_voice05_eng.stqr",
+    "output_sha256": "bc5d3a1093c73a5ae1350108004360954b37f8f8e799796e33e9d64972f6877f"
+  }
+]

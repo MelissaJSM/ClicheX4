@@ -1,0 +1,164 @@
+{
+  "source_sha256": "3ceab06ac99add4035f912188bcbf5b16c02056f46a33d38ff0c8dbce6cb613b",
+  "stage_archives": [
+    {
+      "path": "/ARC/COL00_0Z.ARC;1",
+      "lba": 35,
+      "size": 6144,
+      "sha256": "0ed4e64d48527078bbb20aabde652a285956230b664c05b570513c2e7aab64a1"
+    },
+    {
+      "path": "/ARC/COL00_1Z.ARC;1",
+      "lba": 41,
+      "size": 6144,
+      "sha256": "f4ce2b63fe7c0490788cfd52d2e1a319711112c9a7ba4ab08f3750e85ec36e92"
+    },
+    {
+      "path": "/ARC/COL01_0Z.ARC;1",
+      "lba": 47,
+      "size": 6144,
+      "sha256": "f8333a71ff76877f0f0a80d91259a485c72dde209ce267eb619efdb18a227563"
+    },
+    {
+      "path": "/ARC/COL01_1Z.ARC;1",
+      "lba": 53,
+      "size": 6144,
+      "sha256": "1af9d8d134724eb335f90215af54a7cfa8e7ed6d227b7645913b16382ff866d8"
+    },
+    {
+      "path": "/ARC/COL02_0Z.ARC;1",
+      "lba": 59,
+      "size": 6144,
+      "sha256": "47ab331715fe038e52e06daeeaaf1e1acab2dfb3730c8965784a364e59f37c48"
+    },
+    {
+      "path": "/ARC/COL02_1Z.ARC;1",
+      "lba": 65,
+      "size": 6144,
+      "sha256": "dd82d23f16ab5d0c393f9bf31dce2fae6fe4bfcf7af807b97a42acc86e9a85ad"
+    },
+    {
+      "path": "/ARC/COL03_0Z.ARC;1",
+      "lba": 71,
+      "size": 6144,
+      "sha256": "3e825a70446a79e3e86c2407877fd84cad9215352b343386c8fcb9451a9156ef"
+    },
+    {
+      "path": "/ARC/COL03_1Z.ARC;1",
+      "lba": 77,
+      "size": 6144,
+      "sha256": "0aa701fa98b067900f41ea7742ce0da8fe3203d37dea0d409a3fdac0e6590967"
+    },
+    {
+      "path": "/ARC/COL04_0Z.ARC;1",
+      "lba": 83,
+      "size": 6144,
+      "sha256": "4e3dc8efea84360c736eba42d3ad3d3478e78fea4dc87f119e00a515951c4c0b"
+    },
+    {
+      "path": "/ARC/COL04_1Z.ARC;1",
+      "lba": 89,
+      "size": 6144,
+      "sha256": "c1d80a116568dbbbc98637a6d13d47d1170afcbd58062ff1d5ea245e8e1d62d3"
+    },
+    {
+      "path": "/ARC/COL05_0Z.ARC;1",
+      "lba": 95,
+      "size": 6144,
+      "sha256": "e3101e59dadd49b94c12186da1c7024a410abb88605a9950ace1038e70f29e72"
+    },
+    {
+      "path": "/ARC/COL05_1Z.ARC;1",
+      "lba": 101,
+      "size": 6144,
+      "sha256": "f4312402610e256b4a43089b57fe1d2f19ce162544a41613605c73e02be1b2df"
+    },
+    {
+      "path": "/ARC/COL06_0Z.ARC;1",
+      "lba": 107,
+      "size": 6144,
+      "sha256": "f47fcd209a198f261e04a014fdab6c4c6521991df94403a43ea230fe0192cb5b"
+    },
+    {
+      "path": "/ARC/COL06_1Z.ARC;1",
+      "lba": 113,
+      "size": 6144,
+      "sha256": "4aff15b8738517d403e1675e6bed74a04c2c6fcc7c99b4849da7d9bb84dd7574"
+    },
+    {
+      "path": "/ARC/COL07_0Z.ARC;1",
+      "lba": 119,
+      "size": 6144,
+      "sha256": "2e5674a762aa52e8a9bd5f021c37d17a92eb5f881d6f36ee142e336aa3206546"
+    },
+    {
+      "path": "/ARC/COL07_1Z.ARC;1",
+      "lba": 125,
+      "size": 6144,
+      "sha256": "7dd95925079aeed41109c1a5cfb626b3774238ecb4092cba713ae242eed35ab6"
+    },
+    {
+      "path": "/ARC/COL08_0Z.ARC;1",
+      "lba": 131,
+      "size": 6144,
+      "sha256": "a1de860015605923e7266f908a48b3bb3b2bbf9a87d6b0e3fdb0b7e4e47789db"
+    },
+    {
+      "path": "/ARC/COL08_1Z.ARC;1",
+      "lba": 137,
+      "size": 6144,
+      "sha256": "bfc39d724a36f110d7bd7b34bdb29dd0be983dd39e0e7547691bbc2540dd09db"
+    },
+    {
+      "path": "/ARC/COL09_0Z.ARC;1",
+      "lba": 143,
+      "size": 6144,
+      "sha256": "568ab963c79365cec512ed6654ba8539717c404da1374d89a2b50becd214a692"
+    },
+    {
+      "path": "/ARC/COL0A_0Z.ARC;1",
+      "lba": 149,
+      "size": 6144,
+      "sha256": "d35c1014e8a4fde577774e885e32d5aa4a582cb50f98d5a8cbf41470554eb80a"
+    },
+    {
+      "path": "/ARC/COL0B_0Z.ARC;1",
+      "lba": 155,
+      "size": 6144,
+      "sha256": "d88ea4b3fc65ce2d1f10505c481e15cd049bcf730f2364ba66ddf0e342fcaef9"
+    },
+    {
+      "path": "/ARC/COL0B_1Z.ARC;1",
+      "lba": 161,
+      "size": 6144,
+      "sha256": "c58ec0b66b3909b298801dac3e5eeb7e5cb133b24852afc164eb998942365c19"
+    },
+    {
+      "path": "/ARC/COL0C_0Z.ARC;1",
+      "lba": 167,
+      "size": 6144,
+      "sha256": "b2c25a88aa246151e3f8a0d05283db42e1e5bdfa47d67f07d7ec5f304cabf852"
+    },
+    {
+      "path": "/ARC/COL0C_1Z.ARC;1",
+      "lba": 173,
+      "size": 6144,
+      "sha256": "213213cf916e7bfe4a51811fc5979bb7cbd4971e783840e479bedbd98cf47953"
+    }
+  ],
+  "excluded_different_usage": [
+    {
+      "path": "/ARC/COL0D_0Z.ARC;1",
+      "lba": 179,
+      "size": 6144,
+      "sha256": "958a2831b8c51b517586a6dee701158c18b523c0bb3063aefc0bdaed0626d5fb"
+    }
+  ],
+  "afterimage_palette_offset": 2464,
+  "afterimage_cluts": [
+    13,
+    14,
+    15
+  ],
+  "evidence": "US original baseline state CLUT 0x780D/0x780E/0x780F and player_common.c player_afterimage_cluts; source payloads exactly match observed VRAM"
+}

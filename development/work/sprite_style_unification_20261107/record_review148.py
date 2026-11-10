@@ -1,0 +1,5 @@
+from pathlib import Path
+import json,hashlib
+W=Path(__file__).resolve().parent;ROOT=W.parents[1];D=W/'nana_audit/ultimate_remaining_classification01';out=W/'root_review_checkpoint148.json';assert not out.exists()
+def rec(p):return {'path':p.relative_to(ROOT).as_posix(),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()}
+out.write_text(json.dumps({'checkpoint':148,'scope':'나나 Ultimate140 및208..212 효과성 참조의 보존 분류','actually_viewed_files':[dict(rec(D/f'comparison_{i}.png'),actually_viewed=True)for i in(1,2,3)],'evidence':[rec(D/'report.json'),rec(D/'conclusions_v2.json')],'observations':['140은 현재 대기 외곽을 따른 흰 실루엣과 기존 전기46픽셀이다. 공유 효과로 유지한다.','208/209는 의상별 대기 알파와 일치하는 단색 변환,210은 귀환 중 폭이 줄어드는 실루엣이므로 인물 디테일 누락으로 세지 않는다.','211/212는 수직 빛줄기와 끝부분 조각으로, 새 인물 원화 제작 대상에서 제외하고 기존 색/위치를 보존한다.'],'limits':['이6개를 새원화 제작완료 수치에 추가하지 않는다.','원표 바이트 조사와 정적이미지 검토이며 모든 실제 호출조건·시간팔레트·전환 실기 검증은 아니다.','140은 기존 공유 실루엣 정책으로 획득 전 의상의5px 차이를 따로 신설하지 않는다.'],'game_assets_modified':False,'whole_project_complete':False},ensure_ascii=False,indent=2)+'\n','utf8');print(hashlib.sha256(out.read_bytes()).hexdigest())

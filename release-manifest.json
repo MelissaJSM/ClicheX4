@@ -1,0 +1,19 @@
+{
+  "snapshot": "2026-11-10",
+  "ps1_original_sha256": "3ceab06ac99add4035f912188bcbf5b16c02056f46a33d38ff0c8dbce6cb613b",
+  "ps1": {
+    "ver_buki_riko": {
+      "sha256": "5bd81ec1cc7cff4b79a828e7931f14f1c7d5ac01a122da81b170751c960b5db7",
+      "size": 592217136,
+      "filename": "shibuki_riko.bin"
+    },
+    "ver_rin_nana": {
+      "sha256": "03bb660be698dd7dd1b1b3fbf6612bcd1ed111cff47b5eda7c186ded3f343f3a",
+      "size": 592217136,
+      "filename": "rin_nana.bin"
+    }
+  },
+  "steam_version": "1.0.3",
+  "steam_build": 21253628,
+  "steam_exe_sha256": "8c549623ce4f010ee0b3c23b17fe1ea52d3bc2acfcac9be9b0ecf374cfaa6949"
+}

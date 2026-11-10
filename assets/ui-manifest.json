@@ -1,0 +1,2765 @@
+{
+  "sources": {
+    "ver_buki_riko": {
+      "sha256": "5bd81ec1cc7cff4b79a828e7931f14f1c7d5ac01a122da81b170751c960b5db7",
+      "size": 592217136,
+      "filename": "shibuki_riko.bin"
+    },
+    "ver_rin_nana": {
+      "sha256": "03bb660be698dd7dd1b1b3fbf6612bcd1ed111cff47b5eda7c186ded3f343f3a",
+      "size": 592217136,
+      "filename": "rin_nana.bin"
+    }
+  },
+  "images": [
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/hud/069.png",
+      "sha256": "2bc0092f101a09fa5bde586fddfd1022f086e072a0138ccb53aebf3bbbd8d49b",
+      "bank": 1,
+      "ref": 69,
+      "bounds": [
+        -24,
+        -17,
+        24,
+        47
+      ],
+      "note": "Modified HUD with original meter geometry; CAPCOM rights also apply."
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/hud/070.png",
+      "sha256": "b8db22728d10bd803ea6e4d454ec746e6e170e60b1b2330131bba42087fcab0d",
+      "bank": 1,
+      "ref": 70,
+      "bounds": [
+        -24,
+        -19,
+        24,
+        47
+      ],
+      "note": "Modified HUD with original meter geometry; CAPCOM rights also apply."
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/hud/071.png",
+      "sha256": "7727e99f6a46baf47edad4932dc9258bd1bd104a46b4cdc90b33fe40c594c035",
+      "bank": 1,
+      "ref": 71,
+      "bounds": [
+        -24,
+        -21,
+        24,
+        47
+      ],
+      "note": "Modified HUD with original meter geometry; CAPCOM rights also apply."
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/hud/072.png",
+      "sha256": "39ab6cf27ad00e8b58dc9e634f00eff99be07cf9f2fc2d4bc7fd8c8c3115a4c4",
+      "bank": 1,
+      "ref": 72,
+      "bounds": [
+        -24,
+        -23,
+        24,
+        47
+      ],
+      "note": "Modified HUD with original meter geometry; CAPCOM rights also apply."
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/hud/073.png",
+      "sha256": "0b063f587b8139f2596ce31df4de527bf0c96c591ff242336d7abd1520ac2440",
+      "bank": 1,
+      "ref": 73,
+      "bounds": [
+        -24,
+        -25,
+        24,
+        47
+      ],
+      "note": "Modified HUD with original meter geometry; CAPCOM rights also apply."
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/hud/074.png",
+      "sha256": "fecc2a8a15e4b1d964961a13d4a30110d4bf0aaa85dada1c2492787d946f45be",
+      "bank": 1,
+      "ref": 74,
+      "bounds": [
+        -24,
+        -27,
+        24,
+        47
+      ],
+      "note": "Modified HUD with original meter geometry; CAPCOM rights also apply."
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/hud/075.png",
+      "sha256": "6c1691d88d70d5478360a576a37675fd71fab6cb7cef2c249658de966a6e8125",
+      "bank": 1,
+      "ref": 75,
+      "bounds": [
+        -24,
+        -29,
+        24,
+        47
+      ],
+      "note": "Modified HUD with original meter geometry; CAPCOM rights also apply."
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/hud/076.png",
+      "sha256": "110f4219fda859461c35ae2eb77de3564c7ed1e4fbf114f4b07a05f71c900e65",
+      "bank": 1,
+      "ref": 76,
+      "bounds": [
+        -24,
+        -31,
+        24,
+        47
+      ],
+      "note": "Modified HUD with original meter geometry; CAPCOM rights also apply."
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/hud/077.png",
+      "sha256": "c2d1ae25171135f0959e910e694c55ebc0a80ff3cbea3e297a4b64e553cc95df",
+      "bank": 1,
+      "ref": 77,
+      "bounds": [
+        -24,
+        -33,
+        24,
+        47
+      ],
+      "note": "Modified HUD with original meter geometry; CAPCOM rights also apply."
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/hud/069.png",
+      "sha256": "aa95bf6e65e31f90046704964c7884fb732b3c4fc8f57f616012f723a5534043",
+      "bank": 1,
+      "ref": 69,
+      "bounds": [
+        -24,
+        -17,
+        24,
+        47
+      ],
+      "note": "Modified HUD with original meter geometry; CAPCOM rights also apply."
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/hud/070.png",
+      "sha256": "d16b3f48881d61f547871cd6303b8487e24fe5159c29be57af373cf3ad66ca37",
+      "bank": 1,
+      "ref": 70,
+      "bounds": [
+        -24,
+        -19,
+        24,
+        47
+      ],
+      "note": "Modified HUD with original meter geometry; CAPCOM rights also apply."
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/hud/071.png",
+      "sha256": "31bf475868a24425c915d3fafa44ce6824d391a80338f04d8a4a9a7975d47328",
+      "bank": 1,
+      "ref": 71,
+      "bounds": [
+        -24,
+        -21,
+        24,
+        47
+      ],
+      "note": "Modified HUD with original meter geometry; CAPCOM rights also apply."
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/hud/072.png",
+      "sha256": "844756485550386bf072998db9aea13bb65e07a2fc321663426d4c9f3a045b81",
+      "bank": 1,
+      "ref": 72,
+      "bounds": [
+        -24,
+        -23,
+        24,
+        47
+      ],
+      "note": "Modified HUD with original meter geometry; CAPCOM rights also apply."
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/hud/073.png",
+      "sha256": "a1762a847e0e67552616687cea6ce7bbb8a89af8ecb731332ff8d2a47c283020",
+      "bank": 1,
+      "ref": 73,
+      "bounds": [
+        -24,
+        -25,
+        24,
+        47
+      ],
+      "note": "Modified HUD with original meter geometry; CAPCOM rights also apply."
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/hud/074.png",
+      "sha256": "41439187a06a9fbb5c72121113cfe6ac9f81fc7006a6cb2a324556981293f60b",
+      "bank": 1,
+      "ref": 74,
+      "bounds": [
+        -24,
+        -27,
+        24,
+        47
+      ],
+      "note": "Modified HUD with original meter geometry; CAPCOM rights also apply."
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/hud/075.png",
+      "sha256": "3b376de7bcea248ac645a1075e048ccd43d38d11a2fecc729f81ddc8c22451b5",
+      "bank": 1,
+      "ref": 75,
+      "bounds": [
+        -24,
+        -29,
+        24,
+        47
+      ],
+      "note": "Modified HUD with original meter geometry; CAPCOM rights also apply."
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/hud/076.png",
+      "sha256": "f6fcdccf1650bfbdff4460f2a91d40980590b1ef16d87530551751fdbb95841c",
+      "bank": 1,
+      "ref": 76,
+      "bounds": [
+        -24,
+        -31,
+        24,
+        47
+      ],
+      "note": "Modified HUD with original meter geometry; CAPCOM rights also apply."
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/hud/077.png",
+      "sha256": "e74aabfdcce03eda9719ddde385ba75d95c2be48aadb168654e5fbeba3b8cb9b",
+      "bank": 1,
+      "ref": 77,
+      "bounds": [
+        -24,
+        -33,
+        24,
+        47
+      ],
+      "note": "Modified HUD with original meter geometry; CAPCOM rights also apply."
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/selection_sprite/000.png",
+      "sha256": "c71ec28972aaf8891537c23f16eee3ed39e18bc4d3e975e5f63a2f1607c507b9",
+      "bank": 0,
+      "ref": 0,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/selection_sprite/001.png",
+      "sha256": "b7800ec47e73a8456c9562ac7dc20ca317c851925e0fd026dcf3ec539515f3a8",
+      "bank": 0,
+      "ref": 1,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/selection_sprite/002.png",
+      "sha256": "9b5938be6a1b09bc4e97f583162ce34f4dabd525bb3c3532f128f9a5dc1176e1",
+      "bank": 0,
+      "ref": 2,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/selection_sprite/003.png",
+      "sha256": "d3496b040750efd8a74a9dfc936583cab85ec7f5f6ed20ec9ed7f05b5f7b1af5",
+      "bank": 0,
+      "ref": 3,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/selection_sprite/004.png",
+      "sha256": "5430ed4ebe2cdada29c44e3c4e084170f61f982171e5a580fb5420b17829bdb7",
+      "bank": 0,
+      "ref": 4,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/selection_sprite/005.png",
+      "sha256": "c5403349a757e7bbdd880aaef0ebe371933dc505addccfe02522e89f4c5b8e08",
+      "bank": 0,
+      "ref": 5,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/selection_sprite/006.png",
+      "sha256": "1b8fac0387da437a0cb247729d6a63a75608e845ffd5939b279f04f913298bd5",
+      "bank": 0,
+      "ref": 6,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/selection_sprite/007.png",
+      "sha256": "2029db1143a0171a581b27362bb2a6105e99dc1bacc0a9d5782578663f4d1341",
+      "bank": 0,
+      "ref": 7,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/selection_sprite/008.png",
+      "sha256": "60fea1f79ddb78c6a6dd29912f7789245ca13d7d6e331305d93ce0778f8fd993",
+      "bank": 0,
+      "ref": 8,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/selection_sprite/009.png",
+      "sha256": "d15989d11fe117c0bd319febd7c100716acc78632476e1b030dd4a40043209f6",
+      "bank": 0,
+      "ref": 9,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/selection_sprite/010.png",
+      "sha256": "2e5d3bee24425ad250319be28740838629649241fe5cc6b6205c4c1d74158519",
+      "bank": 0,
+      "ref": 10,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/selection_sprite/011.png",
+      "sha256": "f1c4125842051f70eea27e965d72a5f897c94c1f6d1efce2faf50ff1bcf8332b",
+      "bank": 0,
+      "ref": 11,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/selection_sprite/012.png",
+      "sha256": "719b8f32d44c1fdd741bb9cb0731d65653cfb5c49066be88d9d930dbab848136",
+      "bank": 0,
+      "ref": 12,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/selection_sprite/013.png",
+      "sha256": "d15989d11fe117c0bd319febd7c100716acc78632476e1b030dd4a40043209f6",
+      "bank": 0,
+      "ref": 13,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/selection_sprite/014.png",
+      "sha256": "e46347ae0caeac0de47da60cad00e58e5557a668d25042a1b084033590e88924",
+      "bank": 0,
+      "ref": 14,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/selection_sprite/015.png",
+      "sha256": "c7c7f92c51d9c63a906e3d37f9cc6593dec7fc7f76213382721b558b0b379206",
+      "bank": 0,
+      "ref": 15,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/selection_sprite/016.png",
+      "sha256": "4ac03172171dbd1dc173bfa22f6a090badc240422e0cf070f656d2b33ddbfe2c",
+      "bank": 0,
+      "ref": 16,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/selection_sprite/017.png",
+      "sha256": "aff418b704a015d60542cadd03dd99d80bcc358435639015ec3bac36d71e0ccd",
+      "bank": 0,
+      "ref": 17,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/selection_sprite/018.png",
+      "sha256": "9a6089346518f2af0d6b9fd31adce7ec80f25a8d0a1b87f049938d65f77db789",
+      "bank": 0,
+      "ref": 18,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/selection_sprite/019.png",
+      "sha256": "6e216fd9389268d7c739f5cfb8503c1a6f1dbd3970a80547bddff41555053818",
+      "bank": 0,
+      "ref": 19,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/selection_sprite/020.png",
+      "sha256": "6c76c8e5373c186b5806a36f7d0912b286630580bd1237385b2e9bea72de60ea",
+      "bank": 0,
+      "ref": 20,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/selection_sprite/021.png",
+      "sha256": "6e216fd9389268d7c739f5cfb8503c1a6f1dbd3970a80547bddff41555053818",
+      "bank": 0,
+      "ref": 21,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/selection_sprite/022.png",
+      "sha256": "00ca93291927facb29a99282511623719e0b546ceea62e9df9709ac8e8647c66",
+      "bank": 0,
+      "ref": 22,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/selection_sprite/023.png",
+      "sha256": "eea0f9418cad7fbe3d7b53d12cc2c290c85d2326217e0962d5388089d8ac5af2",
+      "bank": 0,
+      "ref": 23,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/selection_sprite/024.png",
+      "sha256": "eea0f9418cad7fbe3d7b53d12cc2c290c85d2326217e0962d5388089d8ac5af2",
+      "bank": 0,
+      "ref": 24,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/selection_sprite/025.png",
+      "sha256": "0910533f13541aa9e9484a375e196f2e087316f9faf4660592d457a88b2ff92a",
+      "bank": 0,
+      "ref": 25,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/selection_sprite/026.png",
+      "sha256": "0910533f13541aa9e9484a375e196f2e087316f9faf4660592d457a88b2ff92a",
+      "bank": 0,
+      "ref": 26,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/selection_sprite/027.png",
+      "sha256": "c71ec28972aaf8891537c23f16eee3ed39e18bc4d3e975e5f63a2f1607c507b9",
+      "bank": 0,
+      "ref": 27,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/selection_sprite/028.png",
+      "sha256": "edb26ab745340964d5671b743c9c969923b5a7b2a27f3bf9e6f37fc2496bb3ce",
+      "bank": 0,
+      "ref": 28,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/selection_sprite/029.png",
+      "sha256": "a60b02214d1d41e391ff9e6240cc8dd221544ab9169d23b942dcff5e0f9421de",
+      "bank": 0,
+      "ref": 29,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/selection_sprite/030.png",
+      "sha256": "c3790110b5574f78793bfa213f114d040e830f913962720047798050e6e58184",
+      "bank": 0,
+      "ref": 30,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/selection_sprite/031.png",
+      "sha256": "d2e3b4db501829ff9c4ab4ec686132c28e0193c9653991f64bfe23b63de6bbbe",
+      "bank": 0,
+      "ref": 31,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/selection_sprite/032.png",
+      "sha256": "4f83538ccc4ba1ad35ee820212e695ca14166abd9e3e2ae7261a8f0de042c5aa",
+      "bank": 0,
+      "ref": 32,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/selection_sprite/033.png",
+      "sha256": "d15f9962b74acda436442bb69b80453a623defb63e50075cb6958d3185bad336",
+      "bank": 0,
+      "ref": 33,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/selection_sprite/034.png",
+      "sha256": "0cd94c7e49070794fdc846de8f9fbac6bad66a6107e4442557866b7ccb5e407d",
+      "bank": 0,
+      "ref": 34,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/selection_sprite/035.png",
+      "sha256": "3f06a5a993b5f7088c801a3768c08c01ae2cd5a2330c328d666a5e2f0976fe8a",
+      "bank": 0,
+      "ref": 35,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/selection_sprite/036.png",
+      "sha256": "eebeab5d4b45fb9938c4674949762701171280ba75a20809e3cb9a055519ce56",
+      "bank": 0,
+      "ref": 36,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/selection_sprite/037.png",
+      "sha256": "78c4e49353d84869908f649619289f83bab2ad2c235468950cef1dee0afbe51e",
+      "bank": 0,
+      "ref": 37,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/selection_sprite/038.png",
+      "sha256": "15584b1400bb0664ae21638b75a49fafdf3af4b3fa0d83e8f20e411cba16d5fb",
+      "bank": 0,
+      "ref": 38,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/selection_sprite/039.png",
+      "sha256": "8279b261e90bacd5c3fcc24863eb1154f2376eb1593dd7113811377a4a15173d",
+      "bank": 0,
+      "ref": 39,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/selection_sprite/040.png",
+      "sha256": "93af1a821cf97242bf830f5de793831400e086ed5806a46d3217a9cf5de31088",
+      "bank": 0,
+      "ref": 40,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/selection_sprite/000.png",
+      "sha256": "5d0e2815107fc7490e1046e1f4034b83c0b357135a57a96d00ba7856c7705029",
+      "bank": 2,
+      "ref": 0,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/selection_sprite/001.png",
+      "sha256": "d67737a332d2595890c0bfbb1f32ed611c91c08d4549e612af76bdb6337fdf28",
+      "bank": 2,
+      "ref": 1,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/selection_sprite/002.png",
+      "sha256": "726e7a54ca4877d8b61f03f2aa1f6cc397c0248ce499756059a8aaf2941c3be0",
+      "bank": 2,
+      "ref": 2,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/selection_sprite/003.png",
+      "sha256": "cb6690d2ce1105fdbd46abed52c22ab2fb60d4d0b259d639498d5f206e708153",
+      "bank": 2,
+      "ref": 3,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/selection_sprite/004.png",
+      "sha256": "c180e47b381dacf4c23011f3e58fb157650af0c8e946ab95aee2ee35e180f4f1",
+      "bank": 2,
+      "ref": 4,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/selection_sprite/005.png",
+      "sha256": "1a3880d330366f43d2bb577ab18d47fe2a6f6dd288c17536d3de7c9ec42f8f15",
+      "bank": 2,
+      "ref": 5,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/selection_sprite/006.png",
+      "sha256": "978d19fcd3450f0a8a055229e383f397af10c8e70aeb58e24b4b8f9b384130f1",
+      "bank": 2,
+      "ref": 6,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/selection_sprite/007.png",
+      "sha256": "3ef3e60eaf1ea5264f2f512c90094520e9b2b1ba62a56ae8dc8eee809e32b905",
+      "bank": 2,
+      "ref": 7,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/selection_sprite/008.png",
+      "sha256": "5d4b26680dc1e63e11377184a4d553b7280d113e5cdf29c324d2bf1472c5e958",
+      "bank": 2,
+      "ref": 8,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/selection_sprite/009.png",
+      "sha256": "adeb5cdc381a7c80bbb31d8b10e7cc6cc4305718d15662d9fe7e1d1932d7dac5",
+      "bank": 2,
+      "ref": 9,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/selection_sprite/010.png",
+      "sha256": "ec087b7637287ef11800268953fff9f781841fdc1bbce65f38225264ebc668ce",
+      "bank": 2,
+      "ref": 10,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/selection_sprite/011.png",
+      "sha256": "26f8f2e68da9cff9c5fedcded3302e702e72d331fc5facc3035f63ff56e0ee7f",
+      "bank": 2,
+      "ref": 11,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/selection_sprite/012.png",
+      "sha256": "aeb82e27215d72b79a905f8dd0ed545643ab4ba26760fb72458800ea8842d5f2",
+      "bank": 2,
+      "ref": 12,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/selection_sprite/013.png",
+      "sha256": "b28a30518e3f99a25709e555bb00a66baefd2ae09c9e3874f9e56e0c0bd02e5d",
+      "bank": 2,
+      "ref": 13,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/selection_sprite/014.png",
+      "sha256": "5dd608f8e02ccae4a2eda6d8ba9ac50c0c50f7a5fceac275838d6f35b70b0b9b",
+      "bank": 2,
+      "ref": 14,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/selection_sprite/015.png",
+      "sha256": "3a27dd8fe4baac85d6ed634db758b10dc81a07fcdef0d88bc9e9ef7ca6e20462",
+      "bank": 2,
+      "ref": 15,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/selection_sprite/016.png",
+      "sha256": "00c4302e8efe6f31d48546c71037f53c4b96a06e879d0617bfc3890a06208428",
+      "bank": 2,
+      "ref": 16,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/selection_sprite/017.png",
+      "sha256": "59304c9219dff400a020ed7af39a53ddf11e4f7c5c77ed5db76a1424dd1340bd",
+      "bank": 2,
+      "ref": 17,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/selection_sprite/018.png",
+      "sha256": "03ac074c4a70205cb522350ee0e70a2fa3ee88b64d92113e06f502d20968e650",
+      "bank": 2,
+      "ref": 18,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/selection_sprite/019.png",
+      "sha256": "01353d9cf741d10051f27b94bd07c55acbc6e16803a0f9604339f2f34560a419",
+      "bank": 2,
+      "ref": 19,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/selection_sprite/020.png",
+      "sha256": "88fcaaf9f841da09a333b3401812bb05069d245b1cbe1a98f0d1bede9b04b919",
+      "bank": 2,
+      "ref": 20,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/selection_sprite/021.png",
+      "sha256": "6e51bfd2c221983f6fd3f55269f356b5b63124112c6577aa745207df8ebda6c6",
+      "bank": 2,
+      "ref": 21,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/selection_sprite/022.png",
+      "sha256": "5699606427e59ea8f01db0a6f4b674982769f8d60057c9a76a266b2222dbca95",
+      "bank": 2,
+      "ref": 22,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/selection_sprite/023.png",
+      "sha256": "499b601ee518108b012de770d6afd1b192754b19dd12cdc3eb67e2261408ef45",
+      "bank": 2,
+      "ref": 23,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/selection_sprite/024.png",
+      "sha256": "c23e52ca0dca4496d3f173610ced11e3cbd2305f818cd87a4499a497319c94c9",
+      "bank": 2,
+      "ref": 24,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/save_sprite/fourth_00_arm1.png",
+      "sha256": "5d0e2815107fc7490e1046e1f4034b83c0b357135a57a96d00ba7856c7705029",
+      "mask": 0,
+      "arm_type": 1,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/save_sprite/fourth_01_arm1.png",
+      "sha256": "b8d93a69b571125821b54b0b3fbbd5c5400b11b9edfb5e5bc2e1eedc149922ad",
+      "mask": 1,
+      "arm_type": 1,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/save_sprite/fourth_02_arm1.png",
+      "sha256": "ed1f0ca8f92f7b60bde92558db90d6711eabeede07c31ee570e85a4d1aa5ec1b",
+      "mask": 2,
+      "arm_type": 1,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/save_sprite/fourth_03_arm1.png",
+      "sha256": "503a4726209c87a6c7cf5e3fbe86f8e4cd91ec092655b05505582ac0fcd03b21",
+      "mask": 3,
+      "arm_type": 1,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/save_sprite/fourth_04_arm1.png",
+      "sha256": "62339b3696eaf7d2783ba8bfdec6d778371688be7f49ecd0f7ef0e075f0a905b",
+      "mask": 4,
+      "arm_type": 1,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/save_sprite/fourth_05_arm1.png",
+      "sha256": "264a3e0602d5385ce3db18bcd19007cd91651e5242352fbda73691403f9e6e2b",
+      "mask": 5,
+      "arm_type": 1,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/save_sprite/fourth_06_arm1.png",
+      "sha256": "e160285b5de6d66f513359214797d5dec6eb04022c640dda07bfaa17b42c4b97",
+      "mask": 6,
+      "arm_type": 1,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/save_sprite/fourth_07_arm1.png",
+      "sha256": "c2669039d741dc6cfbc7f169eae92af3ef5cd573f1f1ee3c8bd5606d4e3f62d7",
+      "mask": 7,
+      "arm_type": 1,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/save_sprite/fourth_08_arm1.png",
+      "sha256": "ee0d81974cf3c3f62b02fcbece2a15d8f90bc59dd6450d2e9eb3c5be68c96695",
+      "mask": 8,
+      "arm_type": 1,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/save_sprite/fourth_09_arm1.png",
+      "sha256": "0c9865232815676e252df43de014415cac9434e974be9b351c373583c8bd4931",
+      "mask": 9,
+      "arm_type": 1,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/save_sprite/fourth_10_arm1.png",
+      "sha256": "fa2ebd0140c5dc8b583a51d22edaeabf0cc03095a222978f26a52042280834b5",
+      "mask": 10,
+      "arm_type": 1,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/save_sprite/fourth_11_arm1.png",
+      "sha256": "6f074e7ce628bcc71033b7b30936c3b0c3ca188f7247faab7521923c87e12216",
+      "mask": 11,
+      "arm_type": 1,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/save_sprite/fourth_12_arm1.png",
+      "sha256": "4b5ba0e48544c9f9e0c89a9bc1a59c8be4d30487d5b190e0b023c43bab5d65ee",
+      "mask": 12,
+      "arm_type": 1,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/save_sprite/fourth_13_arm1.png",
+      "sha256": "e0698ebe13fe3d58207ac951ad048673ab67ae9df6ace99b63f706e8aa5a3fab",
+      "mask": 13,
+      "arm_type": 1,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/save_sprite/fourth_14_arm1.png",
+      "sha256": "cca65c23e0f6907cc5b6e4943eb7ab402b8af60900d94844a4edbcd90e30e5af",
+      "mask": 14,
+      "arm_type": 1,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/save_sprite/fourth_15_arm1.png",
+      "sha256": "f6820880a18e3b689fad2330fb7af44c51151730b3194b8420eeb9f2de365892",
+      "mask": 15,
+      "arm_type": 1,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/save_sprite/fourth_00_arm2.png",
+      "sha256": "5d0e2815107fc7490e1046e1f4034b83c0b357135a57a96d00ba7856c7705029",
+      "mask": 0,
+      "arm_type": 2,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/save_sprite/fourth_01_arm2.png",
+      "sha256": "b8d93a69b571125821b54b0b3fbbd5c5400b11b9edfb5e5bc2e1eedc149922ad",
+      "mask": 1,
+      "arm_type": 2,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/save_sprite/fourth_02_arm2.png",
+      "sha256": "ed1f0ca8f92f7b60bde92558db90d6711eabeede07c31ee570e85a4d1aa5ec1b",
+      "mask": 2,
+      "arm_type": 2,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/save_sprite/fourth_03_arm2.png",
+      "sha256": "503a4726209c87a6c7cf5e3fbe86f8e4cd91ec092655b05505582ac0fcd03b21",
+      "mask": 3,
+      "arm_type": 2,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/save_sprite/fourth_04_arm2.png",
+      "sha256": "62339b3696eaf7d2783ba8bfdec6d778371688be7f49ecd0f7ef0e075f0a905b",
+      "mask": 4,
+      "arm_type": 2,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/save_sprite/fourth_05_arm2.png",
+      "sha256": "264a3e0602d5385ce3db18bcd19007cd91651e5242352fbda73691403f9e6e2b",
+      "mask": 5,
+      "arm_type": 2,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/save_sprite/fourth_06_arm2.png",
+      "sha256": "e160285b5de6d66f513359214797d5dec6eb04022c640dda07bfaa17b42c4b97",
+      "mask": 6,
+      "arm_type": 2,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/save_sprite/fourth_07_arm2.png",
+      "sha256": "c2669039d741dc6cfbc7f169eae92af3ef5cd573f1f1ee3c8bd5606d4e3f62d7",
+      "mask": 7,
+      "arm_type": 2,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/save_sprite/fourth_08_arm2.png",
+      "sha256": "ee0d81974cf3c3f62b02fcbece2a15d8f90bc59dd6450d2e9eb3c5be68c96695",
+      "mask": 8,
+      "arm_type": 2,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/save_sprite/fourth_09_arm2.png",
+      "sha256": "0c9865232815676e252df43de014415cac9434e974be9b351c373583c8bd4931",
+      "mask": 9,
+      "arm_type": 2,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/save_sprite/fourth_10_arm2.png",
+      "sha256": "fa2ebd0140c5dc8b583a51d22edaeabf0cc03095a222978f26a52042280834b5",
+      "mask": 10,
+      "arm_type": 2,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/save_sprite/fourth_11_arm2.png",
+      "sha256": "6f074e7ce628bcc71033b7b30936c3b0c3ca188f7247faab7521923c87e12216",
+      "mask": 11,
+      "arm_type": 2,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/save_sprite/fourth_12_arm2.png",
+      "sha256": "4b5ba0e48544c9f9e0c89a9bc1a59c8be4d30487d5b190e0b023c43bab5d65ee",
+      "mask": 12,
+      "arm_type": 2,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/save_sprite/fourth_13_arm2.png",
+      "sha256": "e0698ebe13fe3d58207ac951ad048673ab67ae9df6ace99b63f706e8aa5a3fab",
+      "mask": 13,
+      "arm_type": 2,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/save_sprite/fourth_14_arm2.png",
+      "sha256": "cca65c23e0f6907cc5b6e4943eb7ab402b8af60900d94844a4edbcd90e30e5af",
+      "mask": 14,
+      "arm_type": 2,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/save_sprite/fourth_15_arm2.png",
+      "sha256": "f6820880a18e3b689fad2330fb7af44c51151730b3194b8420eeb9f2de365892",
+      "mask": 15,
+      "arm_type": 2,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/save_sprite/ultimate_before.png",
+      "sha256": "d39e44c2f21e0275abe071f9f8dd607a94e7ee899ff5a489761ac3f1bb1d4532",
+      "origin": [
+        80,
+        80
+      ],
+      "ref": 52,
+      "palette_row": 30
+    },
+    {
+      "character": "shibuki",
+      "file": "characters/shibuki/ui/save_sprite/ultimate_after.png",
+      "sha256": "8aac25d593572a5b3e31f5c617f71ba1b43a2b2930209980fff2967ee36799a1",
+      "origin": [
+        80,
+        80
+      ],
+      "ref": 53,
+      "palette_row": 31
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/save_sprite/normal.png",
+      "sha256": "c71ec28972aaf8891537c23f16eee3ed39e18bc4d3e975e5f63a2f1607c507b9",
+      "origin": [
+        80,
+        80
+      ],
+      "ref": 43,
+      "palette_row": 8
+    },
+    {
+      "character": "riko",
+      "file": "characters/riko/ui/save_sprite/black.png",
+      "sha256": "b4c7a40eb5cd1dd8ee5cafbb69fcb1979a12edf070109aa49d98300d47d7866f",
+      "origin": [
+        80,
+        80
+      ],
+      "ref": 43,
+      "palette_row": 27
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/hud/069.png",
+      "sha256": "859a563de41982ed01e7f4bcec19d3184dc0bb84a8190a5d6e5d611571490ce7",
+      "bank": 1,
+      "ref": 69,
+      "bounds": [
+        -24,
+        -17,
+        24,
+        47
+      ],
+      "note": "Modified HUD with original meter geometry; CAPCOM rights also apply."
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/hud/070.png",
+      "sha256": "2d230583f4279278015d0428fe0c7473baae5ca86fa347ea98c7b467ec576ca6",
+      "bank": 1,
+      "ref": 70,
+      "bounds": [
+        -24,
+        -19,
+        24,
+        47
+      ],
+      "note": "Modified HUD with original meter geometry; CAPCOM rights also apply."
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/hud/071.png",
+      "sha256": "3b586537080ea8cbba0b991f933d7ffdb55356936d8ba23d59569863cef8ba3c",
+      "bank": 1,
+      "ref": 71,
+      "bounds": [
+        -24,
+        -21,
+        24,
+        47
+      ],
+      "note": "Modified HUD with original meter geometry; CAPCOM rights also apply."
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/hud/072.png",
+      "sha256": "ee2b43b87ce6683fbf308173b891b614f940ce98efca565c9f39e921a673523c",
+      "bank": 1,
+      "ref": 72,
+      "bounds": [
+        -24,
+        -23,
+        24,
+        47
+      ],
+      "note": "Modified HUD with original meter geometry; CAPCOM rights also apply."
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/hud/073.png",
+      "sha256": "ff3222fdb706dd2ab8288b82f7f5585fe197729c0479aa5c62d13ca3cdfbb8a6",
+      "bank": 1,
+      "ref": 73,
+      "bounds": [
+        -24,
+        -25,
+        24,
+        47
+      ],
+      "note": "Modified HUD with original meter geometry; CAPCOM rights also apply."
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/hud/074.png",
+      "sha256": "0e4183b4f93cab7080ebfeb24fcbecf9b9c61dc9377854ed1bf56f2638ca62c1",
+      "bank": 1,
+      "ref": 74,
+      "bounds": [
+        -24,
+        -27,
+        24,
+        47
+      ],
+      "note": "Modified HUD with original meter geometry; CAPCOM rights also apply."
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/hud/075.png",
+      "sha256": "755144bc574502d5275af0f3d28edb11c9e2b0b0d1f5015432c835102c1ae99d",
+      "bank": 1,
+      "ref": 75,
+      "bounds": [
+        -24,
+        -29,
+        24,
+        47
+      ],
+      "note": "Modified HUD with original meter geometry; CAPCOM rights also apply."
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/hud/076.png",
+      "sha256": "878ead0133cd102e278ea53dedad51a85bf0c8a31253a6c647b7b04403bcc966",
+      "bank": 1,
+      "ref": 76,
+      "bounds": [
+        -24,
+        -31,
+        24,
+        47
+      ],
+      "note": "Modified HUD with original meter geometry; CAPCOM rights also apply."
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/hud/077.png",
+      "sha256": "8e1795e92ca5a41b58064066d8609ea79efe98b225430ed05fc321e873a98230",
+      "bank": 1,
+      "ref": 77,
+      "bounds": [
+        -24,
+        -33,
+        24,
+        47
+      ],
+      "note": "Modified HUD with original meter geometry; CAPCOM rights also apply."
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/hud/069.png",
+      "sha256": "2411e50a59ae08bb48400ca4335d48bff84b837918a5667869f4283627ee4bca",
+      "bank": 1,
+      "ref": 69,
+      "bounds": [
+        -24,
+        -17,
+        24,
+        47
+      ],
+      "note": "Modified HUD with original meter geometry; CAPCOM rights also apply."
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/hud/070.png",
+      "sha256": "9f7cf69e7187b41c40e904475a328a83dcf85d481adb59a857893c4f39861a87",
+      "bank": 1,
+      "ref": 70,
+      "bounds": [
+        -24,
+        -19,
+        24,
+        47
+      ],
+      "note": "Modified HUD with original meter geometry; CAPCOM rights also apply."
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/hud/071.png",
+      "sha256": "80ecef61c6995296d1c3d96acfe00deef0a1b81e428929675a114453cc60ad1f",
+      "bank": 1,
+      "ref": 71,
+      "bounds": [
+        -24,
+        -21,
+        24,
+        47
+      ],
+      "note": "Modified HUD with original meter geometry; CAPCOM rights also apply."
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/hud/072.png",
+      "sha256": "18087dd7aff1ecfa5a94daa43b128ef23f98a30b00db2de730bc65490c9d4ce2",
+      "bank": 1,
+      "ref": 72,
+      "bounds": [
+        -24,
+        -23,
+        24,
+        47
+      ],
+      "note": "Modified HUD with original meter geometry; CAPCOM rights also apply."
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/hud/073.png",
+      "sha256": "4d269c97f6743d9732bcbe55faa38e4e860e998172a2b8be3a1937bcb0a872f0",
+      "bank": 1,
+      "ref": 73,
+      "bounds": [
+        -24,
+        -25,
+        24,
+        47
+      ],
+      "note": "Modified HUD with original meter geometry; CAPCOM rights also apply."
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/hud/074.png",
+      "sha256": "1d8f33689247c17ed5cdb3d3a32da9eba7e929b2ca54b728f1643b57ff250e70",
+      "bank": 1,
+      "ref": 74,
+      "bounds": [
+        -24,
+        -27,
+        24,
+        47
+      ],
+      "note": "Modified HUD with original meter geometry; CAPCOM rights also apply."
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/hud/075.png",
+      "sha256": "23b8677f501646e25ae7160a1c0ad5fe73d6e754ca99421cdf910d733ec99844",
+      "bank": 1,
+      "ref": 75,
+      "bounds": [
+        -24,
+        -29,
+        24,
+        47
+      ],
+      "note": "Modified HUD with original meter geometry; CAPCOM rights also apply."
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/hud/076.png",
+      "sha256": "2acec63c347e64330e44bc07a182cbce9ac27263ceddfc25c22990f2821683e4",
+      "bank": 1,
+      "ref": 76,
+      "bounds": [
+        -24,
+        -31,
+        24,
+        47
+      ],
+      "note": "Modified HUD with original meter geometry; CAPCOM rights also apply."
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/hud/077.png",
+      "sha256": "30127010b70eadea3e1409d466a9ac27e215b250b5eac6fc9b36cffe72dc86cd",
+      "bank": 1,
+      "ref": 77,
+      "bounds": [
+        -24,
+        -33,
+        24,
+        47
+      ],
+      "note": "Modified HUD with original meter geometry; CAPCOM rights also apply."
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/selection_sprite/000.png",
+      "sha256": "301dc86d600e7a752442da17d8e683bf0927f6fc927962b7ade98de15fd8e320",
+      "bank": 0,
+      "ref": 0,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/selection_sprite/001.png",
+      "sha256": "1a894fb11fed71a07e178c5be7becc72d25274bf7489a974d8e7986dc25810f4",
+      "bank": 0,
+      "ref": 1,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/selection_sprite/002.png",
+      "sha256": "553060f188215766806e7ca075f86bd75f48cd47fc905cb89ec28a463a6014e2",
+      "bank": 0,
+      "ref": 2,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/selection_sprite/003.png",
+      "sha256": "630359f172732e0eb34afdc0ac7788fededdfcf2a0a2ac3e3ac321909dbf42fa",
+      "bank": 0,
+      "ref": 3,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/selection_sprite/004.png",
+      "sha256": "5430ed4ebe2cdada29c44e3c4e084170f61f982171e5a580fb5420b17829bdb7",
+      "bank": 0,
+      "ref": 4,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/selection_sprite/005.png",
+      "sha256": "20dd3400eb7df87e612844dd8322ff05fc63563af4a071a0107618e5f6e30686",
+      "bank": 0,
+      "ref": 5,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/selection_sprite/006.png",
+      "sha256": "1b8fac0387da437a0cb247729d6a63a75608e845ffd5939b279f04f913298bd5",
+      "bank": 0,
+      "ref": 6,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/selection_sprite/007.png",
+      "sha256": "868c152de0ebddb78a9e2e091a1b948c96844d63ec6f14f601dc0ca01da1fc33",
+      "bank": 0,
+      "ref": 7,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/selection_sprite/008.png",
+      "sha256": "60fea1f79ddb78c6a6dd29912f7789245ca13d7d6e331305d93ce0778f8fd993",
+      "bank": 0,
+      "ref": 8,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/selection_sprite/009.png",
+      "sha256": "868c152de0ebddb78a9e2e091a1b948c96844d63ec6f14f601dc0ca01da1fc33",
+      "bank": 0,
+      "ref": 9,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/selection_sprite/010.png",
+      "sha256": "2e5d3bee24425ad250319be28740838629649241fe5cc6b6205c4c1d74158519",
+      "bank": 0,
+      "ref": 10,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/selection_sprite/011.png",
+      "sha256": "d6b6e57212f165aad92fbb5d4428bc64eccc62f5450eb2b029be2d98650892af",
+      "bank": 0,
+      "ref": 11,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/selection_sprite/012.png",
+      "sha256": "719b8f32d44c1fdd741bb9cb0731d65653cfb5c49066be88d9d930dbab848136",
+      "bank": 0,
+      "ref": 12,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/selection_sprite/013.png",
+      "sha256": "9b44967da480857292098121a1e94bc4d0d489402e4149981b374fd20013f32f",
+      "bank": 0,
+      "ref": 13,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/selection_sprite/014.png",
+      "sha256": "e46347ae0caeac0de47da60cad00e58e5557a668d25042a1b084033590e88924",
+      "bank": 0,
+      "ref": 14,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/selection_sprite/015.png",
+      "sha256": "9b44967da480857292098121a1e94bc4d0d489402e4149981b374fd20013f32f",
+      "bank": 0,
+      "ref": 15,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/selection_sprite/016.png",
+      "sha256": "4ac03172171dbd1dc173bfa22f6a090badc240422e0cf070f656d2b33ddbfe2c",
+      "bank": 0,
+      "ref": 16,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/selection_sprite/017.png",
+      "sha256": "9b44967da480857292098121a1e94bc4d0d489402e4149981b374fd20013f32f",
+      "bank": 0,
+      "ref": 17,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/selection_sprite/018.png",
+      "sha256": "9a6089346518f2af0d6b9fd31adce7ec80f25a8d0a1b87f049938d65f77db789",
+      "bank": 0,
+      "ref": 18,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/selection_sprite/019.png",
+      "sha256": "9b44967da480857292098121a1e94bc4d0d489402e4149981b374fd20013f32f",
+      "bank": 0,
+      "ref": 19,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/selection_sprite/020.png",
+      "sha256": "6c76c8e5373c186b5806a36f7d0912b286630580bd1237385b2e9bea72de60ea",
+      "bank": 0,
+      "ref": 20,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/selection_sprite/021.png",
+      "sha256": "9b44967da480857292098121a1e94bc4d0d489402e4149981b374fd20013f32f",
+      "bank": 0,
+      "ref": 21,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/selection_sprite/022.png",
+      "sha256": "34421e7ac5eabcbe6ba8765b4150c84cfdd8213848808fd0b2d4b6ae3c3a1fb1",
+      "bank": 0,
+      "ref": 22,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/selection_sprite/023.png",
+      "sha256": "a690c10cf9ae8e99bad1c1b22de488b00f51ae54eab6fe636bfaae1ecca639cc",
+      "bank": 0,
+      "ref": 23,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/selection_sprite/024.png",
+      "sha256": "a690c10cf9ae8e99bad1c1b22de488b00f51ae54eab6fe636bfaae1ecca639cc",
+      "bank": 0,
+      "ref": 24,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/selection_sprite/025.png",
+      "sha256": "be8aa11471062f6c693fd9f22975f0e8d414eee817e38c891964cc17a7cfc0d6",
+      "bank": 0,
+      "ref": 25,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/selection_sprite/026.png",
+      "sha256": "2332fc753306e21cdd4169049fb6aa808013448c1916dccd5ab3059455f95b6d",
+      "bank": 0,
+      "ref": 26,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/selection_sprite/027.png",
+      "sha256": "301dc86d600e7a752442da17d8e683bf0927f6fc927962b7ade98de15fd8e320",
+      "bank": 0,
+      "ref": 27,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/selection_sprite/028.png",
+      "sha256": "cde551b562bd7c300d8fff90ce48c36e2f8115d3c7086325302166714a17e674",
+      "bank": 0,
+      "ref": 28,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/selection_sprite/029.png",
+      "sha256": "fe3b0d1ebc9a857eb892261c8af0ea92500e7da19e956cc9be466c63385f1659",
+      "bank": 0,
+      "ref": 29,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/selection_sprite/030.png",
+      "sha256": "9c23c7dba6e55812531520dbbd692323ca7c90569336b90e28280d1a695b8e9f",
+      "bank": 0,
+      "ref": 30,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/selection_sprite/031.png",
+      "sha256": "90e2604fd880434f540faa459ac3df5a3f56948ac2c39bb37603760555791006",
+      "bank": 0,
+      "ref": 31,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/selection_sprite/032.png",
+      "sha256": "57ed3e5d780d5438608e01aeb871e1399c797d23b720ed7a7663d51c85b6dbd8",
+      "bank": 0,
+      "ref": 32,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/selection_sprite/033.png",
+      "sha256": "4d32e843607cf6ae5d9d672da653d97e1218c8a20cf177d6d29867e7c8e59a8b",
+      "bank": 0,
+      "ref": 33,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/selection_sprite/034.png",
+      "sha256": "c2aa99969bdc015e5e5a957b074a1daaf8d624ca223c39023647ad9b98728a03",
+      "bank": 0,
+      "ref": 34,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/selection_sprite/035.png",
+      "sha256": "4e828a7bfe996f3d9ffd203fc6acb3ed7eadf1d19bdc81542c92c5dec509411b",
+      "bank": 0,
+      "ref": 35,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/selection_sprite/036.png",
+      "sha256": "b11436087f37c0a6c281218a06fd1d98942cdf3695627911b4f2e0f68a160a90",
+      "bank": 0,
+      "ref": 36,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/selection_sprite/037.png",
+      "sha256": "11e8131029374f2d30fae6d34bbd41b22316e19ce152ae2f94712c3c0130307d",
+      "bank": 0,
+      "ref": 37,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/selection_sprite/038.png",
+      "sha256": "e80ed24f29d051f97f8448586a5c98f58ac05bbc19d9dbc071519b124e41bf59",
+      "bank": 0,
+      "ref": 38,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/selection_sprite/039.png",
+      "sha256": "e8e2a37ae21df8e2fc041ea36f80288e75b210aab2ebb12addcb6d9764d8a58c",
+      "bank": 0,
+      "ref": 39,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/selection_sprite/040.png",
+      "sha256": "a60f897f06f52ee54c39889d289505222c96cd2facc6d9374cbb13a3b731897c",
+      "bank": 0,
+      "ref": 40,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/selection_sprite/000.png",
+      "sha256": "22b5a24590821dedb3a5548576dab2fd1863eee07baeaf2dbd4c8959e110046b",
+      "bank": 2,
+      "ref": 0,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/selection_sprite/001.png",
+      "sha256": "7a319cd3f924a3954554285dd742bb62de480328a080f8d06ef1a59b2fdb7b6e",
+      "bank": 2,
+      "ref": 1,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/selection_sprite/002.png",
+      "sha256": "5f3f9b27dffb97f4dcc89b1f8a0bade1e16466bb582ae33dc94fd5f531db32b7",
+      "bank": 2,
+      "ref": 2,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/selection_sprite/003.png",
+      "sha256": "96ddc968367fcdac21dfee2ee9c28ba58af673c1f6da5c74493a59adebaf1af6",
+      "bank": 2,
+      "ref": 3,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/selection_sprite/004.png",
+      "sha256": "cab559c4facba49fd39ad69567bcb7cfa888a14faedeb944d35c91ec79bd1ff0",
+      "bank": 2,
+      "ref": 4,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/selection_sprite/005.png",
+      "sha256": "0b833c7ae4e248186ab9c720ed1e26210254d8c3c1227e1d28079ecf6a92555a",
+      "bank": 2,
+      "ref": 5,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/selection_sprite/006.png",
+      "sha256": "5a769f6d63596e0174f30a63b025ceb65e3c18988b471c7fbba1d8601f40655f",
+      "bank": 2,
+      "ref": 6,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/selection_sprite/007.png",
+      "sha256": "1de79507479d066586ec306a1613200fa03fbece208e08aabbb395d724476334",
+      "bank": 2,
+      "ref": 7,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/selection_sprite/008.png",
+      "sha256": "a2ee3977827f443cde7ee7c545000c8576b970cb0938663d0b73d376e682beda",
+      "bank": 2,
+      "ref": 8,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/selection_sprite/009.png",
+      "sha256": "adeb5cdc381a7c80bbb31d8b10e7cc6cc4305718d15662d9fe7e1d1932d7dac5",
+      "bank": 2,
+      "ref": 9,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/selection_sprite/010.png",
+      "sha256": "ec087b7637287ef11800268953fff9f781841fdc1bbce65f38225264ebc668ce",
+      "bank": 2,
+      "ref": 10,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/selection_sprite/011.png",
+      "sha256": "26f8f2e68da9cff9c5fedcded3302e702e72d331fc5facc3035f63ff56e0ee7f",
+      "bank": 2,
+      "ref": 11,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/selection_sprite/012.png",
+      "sha256": "aeb82e27215d72b79a905f8dd0ed545643ab4ba26760fb72458800ea8842d5f2",
+      "bank": 2,
+      "ref": 12,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/selection_sprite/013.png",
+      "sha256": "b28a30518e3f99a25709e555bb00a66baefd2ae09c9e3874f9e56e0c0bd02e5d",
+      "bank": 2,
+      "ref": 13,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/selection_sprite/014.png",
+      "sha256": "5dd608f8e02ccae4a2eda6d8ba9ac50c0c50f7a5fceac275838d6f35b70b0b9b",
+      "bank": 2,
+      "ref": 14,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/selection_sprite/015.png",
+      "sha256": "3a27dd8fe4baac85d6ed634db758b10dc81a07fcdef0d88bc9e9ef7ca6e20462",
+      "bank": 2,
+      "ref": 15,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/selection_sprite/016.png",
+      "sha256": "00c4302e8efe6f31d48546c71037f53c4b96a06e879d0617bfc3890a06208428",
+      "bank": 2,
+      "ref": 16,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/selection_sprite/017.png",
+      "sha256": "59304c9219dff400a020ed7af39a53ddf11e4f7c5c77ed5db76a1424dd1340bd",
+      "bank": 2,
+      "ref": 17,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/selection_sprite/018.png",
+      "sha256": "47d5a86e5e185dff8d63f8ebe03e1f7ef2ca59320feb08e2494ddaf1aad574a8",
+      "bank": 2,
+      "ref": 18,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/selection_sprite/019.png",
+      "sha256": "22e3a31d4ca687d9ce7af0c81450018b36ef65b146220f895fbda8fa18ed8db6",
+      "bank": 2,
+      "ref": 19,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/selection_sprite/020.png",
+      "sha256": "38c7bc07bce4cd038081c3b7cc57b642af35d0d59e74bdad2ebe9d110264c5a9",
+      "bank": 2,
+      "ref": 20,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/selection_sprite/021.png",
+      "sha256": "28d80ba5a9809cac03a2cdea8b293887365ee10ec3cc37e0d61c5e8109656668",
+      "bank": 2,
+      "ref": 21,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/selection_sprite/022.png",
+      "sha256": "ac2fbcf82fcb978910a0ce1d671793a6560495c65aa551e8f5e685c5678c0137",
+      "bank": 2,
+      "ref": 22,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/selection_sprite/023.png",
+      "sha256": "ab3094325c53c51fdf3cd168c1fe12be682106a6f308165b5aeb5b62bf0b4919",
+      "bank": 2,
+      "ref": 23,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/selection_sprite/024.png",
+      "sha256": "09cb25b1c6a26622f060a8a8ec02214b5c708f6316b330573988f7f6e24a6cb3",
+      "bank": 2,
+      "ref": 24,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/save_sprite/fourth_00_arm1.png",
+      "sha256": "22b5a24590821dedb3a5548576dab2fd1863eee07baeaf2dbd4c8959e110046b",
+      "mask": 0,
+      "arm_type": 1,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/save_sprite/fourth_01_arm1.png",
+      "sha256": "c7e7d74022b4d1114658682bdf4443fa4a67495d6a98eba6c5f7bcaf4b6f5e82",
+      "mask": 1,
+      "arm_type": 1,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/save_sprite/fourth_02_arm1.png",
+      "sha256": "4ea7d1b75ff5f65269cb4b0fca684168f28a37bd938fef83af62c006b4892592",
+      "mask": 2,
+      "arm_type": 1,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/save_sprite/fourth_03_arm1.png",
+      "sha256": "589e576501b54af4006aead55ffb0e89ab526b61f3c344e5fe22511ebc4f0de1",
+      "mask": 3,
+      "arm_type": 1,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/save_sprite/fourth_04_arm1.png",
+      "sha256": "d90f7b4b6a31dd1c1cde764c58c602484e9099ff66b77b9cced0eea51ec459ac",
+      "mask": 4,
+      "arm_type": 1,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/save_sprite/fourth_05_arm1.png",
+      "sha256": "36ab648734fe0bfe9f2b026f631b31daf07e55b1ed1a05868731d68137fd9fac",
+      "mask": 5,
+      "arm_type": 1,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/save_sprite/fourth_06_arm1.png",
+      "sha256": "d2336d9b832e1ac295ea309eb3bd4010070407ed6074ab4a9cfeec6095cb5e40",
+      "mask": 6,
+      "arm_type": 1,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/save_sprite/fourth_07_arm1.png",
+      "sha256": "6f6d43b3f8d6dc29d8b3ccafefe87579326623a48811a2dbf239607193ac44db",
+      "mask": 7,
+      "arm_type": 1,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/save_sprite/fourth_08_arm1.png",
+      "sha256": "90475e2734cafbecde79013558c445b32651d77569edc24bba03c56f0cd20137",
+      "mask": 8,
+      "arm_type": 1,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/save_sprite/fourth_09_arm1.png",
+      "sha256": "5ec3b576b378a7f6dc217b058141e11c7db70f0ee15c0643e12b7e65ce3f0656",
+      "mask": 9,
+      "arm_type": 1,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/save_sprite/fourth_10_arm1.png",
+      "sha256": "c871471a3405bff133446fd0813a25707c5cd9f49c874a8e660bed7dd4fb03b0",
+      "mask": 10,
+      "arm_type": 1,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/save_sprite/fourth_11_arm1.png",
+      "sha256": "91c6514147581903f4423917abf652f32522943ca061541553bb4638748d4cb8",
+      "mask": 11,
+      "arm_type": 1,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/save_sprite/fourth_12_arm1.png",
+      "sha256": "d514ed5571e8e3463604109a74d3f4b70e19d507beb46d02017ffeb6e5cb6493",
+      "mask": 12,
+      "arm_type": 1,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/save_sprite/fourth_13_arm1.png",
+      "sha256": "d885d236a3442695317e3bed8921450b9d86cd56aecbfec71415b2977a76b845",
+      "mask": 13,
+      "arm_type": 1,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/save_sprite/fourth_14_arm1.png",
+      "sha256": "899cc5a9d6d6dad1800f5cd5c761684c2505e1790122849f04359dbe43b40cef",
+      "mask": 14,
+      "arm_type": 1,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/save_sprite/fourth_15_arm1.png",
+      "sha256": "221bcbde3bee19b8429a6cc9d7d2d085252052191bd5c66344e99dd6ac22a092",
+      "mask": 15,
+      "arm_type": 1,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/save_sprite/fourth_00_arm2.png",
+      "sha256": "22b5a24590821dedb3a5548576dab2fd1863eee07baeaf2dbd4c8959e110046b",
+      "mask": 0,
+      "arm_type": 2,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/save_sprite/fourth_01_arm2.png",
+      "sha256": "c7e7d74022b4d1114658682bdf4443fa4a67495d6a98eba6c5f7bcaf4b6f5e82",
+      "mask": 1,
+      "arm_type": 2,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/save_sprite/fourth_02_arm2.png",
+      "sha256": "4ea7d1b75ff5f65269cb4b0fca684168f28a37bd938fef83af62c006b4892592",
+      "mask": 2,
+      "arm_type": 2,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/save_sprite/fourth_03_arm2.png",
+      "sha256": "589e576501b54af4006aead55ffb0e89ab526b61f3c344e5fe22511ebc4f0de1",
+      "mask": 3,
+      "arm_type": 2,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/save_sprite/fourth_04_arm2.png",
+      "sha256": "d90f7b4b6a31dd1c1cde764c58c602484e9099ff66b77b9cced0eea51ec459ac",
+      "mask": 4,
+      "arm_type": 2,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/save_sprite/fourth_05_arm2.png",
+      "sha256": "36ab648734fe0bfe9f2b026f631b31daf07e55b1ed1a05868731d68137fd9fac",
+      "mask": 5,
+      "arm_type": 2,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/save_sprite/fourth_06_arm2.png",
+      "sha256": "d2336d9b832e1ac295ea309eb3bd4010070407ed6074ab4a9cfeec6095cb5e40",
+      "mask": 6,
+      "arm_type": 2,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/save_sprite/fourth_07_arm2.png",
+      "sha256": "6f6d43b3f8d6dc29d8b3ccafefe87579326623a48811a2dbf239607193ac44db",
+      "mask": 7,
+      "arm_type": 2,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/save_sprite/fourth_08_arm2.png",
+      "sha256": "90475e2734cafbecde79013558c445b32651d77569edc24bba03c56f0cd20137",
+      "mask": 8,
+      "arm_type": 2,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/save_sprite/fourth_09_arm2.png",
+      "sha256": "5ec3b576b378a7f6dc217b058141e11c7db70f0ee15c0643e12b7e65ce3f0656",
+      "mask": 9,
+      "arm_type": 2,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/save_sprite/fourth_10_arm2.png",
+      "sha256": "c871471a3405bff133446fd0813a25707c5cd9f49c874a8e660bed7dd4fb03b0",
+      "mask": 10,
+      "arm_type": 2,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/save_sprite/fourth_11_arm2.png",
+      "sha256": "91c6514147581903f4423917abf652f32522943ca061541553bb4638748d4cb8",
+      "mask": 11,
+      "arm_type": 2,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/save_sprite/fourth_12_arm2.png",
+      "sha256": "d514ed5571e8e3463604109a74d3f4b70e19d507beb46d02017ffeb6e5cb6493",
+      "mask": 12,
+      "arm_type": 2,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/save_sprite/fourth_13_arm2.png",
+      "sha256": "d885d236a3442695317e3bed8921450b9d86cd56aecbfec71415b2977a76b845",
+      "mask": 13,
+      "arm_type": 2,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/save_sprite/fourth_14_arm2.png",
+      "sha256": "899cc5a9d6d6dad1800f5cd5c761684c2505e1790122849f04359dbe43b40cef",
+      "mask": 14,
+      "arm_type": 2,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/save_sprite/fourth_15_arm2.png",
+      "sha256": "221bcbde3bee19b8429a6cc9d7d2d085252052191bd5c66344e99dd6ac22a092",
+      "mask": 15,
+      "arm_type": 2,
+      "origin": [
+        80,
+        80
+      ]
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/save_sprite/ultimate_before.png",
+      "sha256": "d3e262b6555f7922cc7f7e891abca22451c3df7d65144f147cc7d2208699f261",
+      "origin": [
+        80,
+        80
+      ],
+      "ref": 52,
+      "palette_row": 30
+    },
+    {
+      "character": "nana",
+      "file": "characters/nana/ui/save_sprite/ultimate_after.png",
+      "sha256": "c74b7c5a83970d1108e915158cbe27d33c8c8820b03850d52bf548c921355ee0",
+      "origin": [
+        80,
+        80
+      ],
+      "ref": 53,
+      "palette_row": 31
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/save_sprite/normal.png",
+      "sha256": "301dc86d600e7a752442da17d8e683bf0927f6fc927962b7ade98de15fd8e320",
+      "origin": [
+        80,
+        80
+      ],
+      "ref": 43,
+      "palette_row": 8
+    },
+    {
+      "character": "rin",
+      "file": "characters/rin/ui/save_sprite/black.png",
+      "sha256": "aa042e76b401953c492c0deb3defa217f0bb14cf5d79d6daba993890b924ac61",
+      "origin": [
+        80,
+        80
+      ],
+      "ref": 43,
+      "palette_row": 27
+    }
+  ],
+  "runtime_capture": false
+}

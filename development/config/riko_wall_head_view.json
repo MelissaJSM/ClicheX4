@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "base_standard_sha256": "c9ac5ae0762e7ebd0e63bb86f111c1615dba3a49fc5fa03c3453f0cf0bafe9a9",
+  "frames": [
+    38,
+    39,
+    40,
+    41,
+    42,
+    43
+  ],
+  "reference_png": "work/ver_buki_riko/art_pilot/wall_v1/rear_head_indexed.png",
+  "reference_png_sha256": "ee2b61b3d420177339b427b671a8ab71e221b28c8fb695846e139ce5aadfde70",
+  "reference_indices_sha256": "85f527b0096a0478aadaaaa0764c3b4ca6897c5d9dac8f69ad8551e3cb8d430b",
+  "size": [
+    23,
+    19
+  ],
+  "view": "wall_side_three_quarter",
+  "art_user_review_pending": true,
+  "source_artwork": "work/ver_buki_riko/art_pilot/wall_v1/generated_wall_v3.png",
+  "source_artwork_sha256": "686cf00def9e768c0b9c5c31f222d9b201ee178e43a952b349ff3b1bd06bf64d"
+}

@@ -1,0 +1,120 @@
+"""피격13의 새몸/파생실루엣·원효과와 출처 보존 오라를 패킹한다."""
+from pathlib import Path
+import sys,json,struct,argparse
+import numpy as np
+from PIL import Image
+D=Path(__file__).resolve().parent;N=D.parent;ROOT=N.parents[2]
+sys.path[:0]=[str(ROOT),str(N/'native_restore'),str(N/'base_run_repaint'),str(D)]
+from preview_restore import Archive,sha,digest,write,need,helper
+from pack_cycle import raw,PLACEHOLDERS
+
+from scripts.prepare_shibuki_ultimate_production import pack_shared,repack_parts,records
+from scripts.overhaul_sprites_costume_pack import repack_variable,pack_planes
+from scripts.prepare_riko_ui import replace_entry
+from src.psx_player import composition_frame,bank_offsets,indexed_atlas
+from scripts.discover_inputs import psx_arc
+PBS=(0,5,6,7,8);REFS=tuple(range(106,115))+(233,234,235,236)
+BEFORE='4132738ac872750507538cd8d150e13a510422df81cea99b502e7371b6753cd9'
+PARENT=N/'rising_repaint/packed_ultimate_candidate_v1/PL02_U.ARC'
+def tile_copy(old_raw,count,tiles):
+    arr=np.frombuffer(indexed_atlas(old_raw,count)[0],np.uint8).reshape(-1,256)
+    dst=np.zeros((32,256),np.uint8)
+    for t in tiles:dst[t//16*16:t//16*16+16,t%16*16:t%16*16+16]=arr[t//16*16:t//16*16+16,t%16*16:t%16*16+16]
+    return bytes((dst[:,::2]|(dst[:,1::2]<<4)).ravel())
+
+def composite(a,ls,mask,arm):
+    im=a.rgba(ls[0])
+    for bit,pb in((8,8),(1,5),(4,7),(2,6)):
+        if mask&bit:im.alpha_composite(a.rgba(ls[pb],32 if pb==7 and arm==2 else 16))
+    return im
+def part_bytes(rr):
+    return b''.join(struct.pack('<BBbb',flag,t,x-80,y-80)for t,x,y,flag in rr)
+def build(parent,targets,meta):
+    need(sha(parent)==BEFORE,'Parent SHA');a=Archive(parent)
+    need(set(targets)=={(n,pb) for n in REFS for pb in PBS},'Exact target set')
+    for (n,pb),z in targets.items():
+        need(z.shape==(384,384)and z.dtype==np.uint8 and z.max()<48,'목표 포맷');need(sha(z.tobytes())==meta['targets'][str(n)][str(pb)],'목표 해시')
+    audit=ROOT/'work/sprite_style_unification_20261107/zero_audit/nana_ultimate_hurt_relations01/report.json'
+    rel={}
+    for q in json.loads(audit.read_text('utf8'))['semantic_effect_comparisons']:
+        used={0,5}if q['ref']in(107,108)else{0}
+        rel[q['ref']]={'layers':{str(pb):{'effect_tiles':q['effect_tiles']if pb in used else [],'extra_effect_records':q['effect_records']if pb in used else []}for pb in PBS}}
+    replacement={};counts={};changes={pb:{}for pb in PBS};groups=[];protected=[]
+    for ns in((106,107,108),(110,111),(109,),(112,),(113,),(114,),(233,),(234,),(235,),(236,)):
+        n=ns[0];keep=set()
+        for k in ns:
+            if k in rel:
+                for ls in rel[k]['layers'].values():keep.update(ls['effect_tiles'])
+        if keep:
+            oldcnt=a.banks[0]['frames'][n]['tile_count'];seed=tile_copy(raw(a,0,n),oldcnt,keep)
+            ims=[targets[n,pb][80:240,80:240]for pb in PBS]
+            nr,assign=pack_shared(seed,32,ims,set(range(32))-{0,16}-keep,[16]*5)
+        else:
+            nr,assign=pack_planes(bytes(4096),32,[targets[n,pb][80:240,80:240]for pb in PBS],set(range(32))-{0,16},[16]*5)
+        for k in ns:
+            replacement[k]=nr;counts[k]=32
+            for pb,rr in zip(PBS,assign):
+                record=part_bytes(rr)
+                if k in rel:
+                    effects=rel[k]['layers'][str(pb)]['extra_effect_records']
+                    record+=b''.join(struct.pack('<BBbb',q['flags'],q['tile'],q['x'],q['y'])for q in effects)
+                changes[pb][k]=record
+        if keep:
+            oldatlas=np.frombuffer(indexed_atlas(raw(a,0,n),oldcnt)[0],np.uint8).reshape(-1,256)
+            newatlas=np.frombuffer(indexed_atlas(nr,32)[0],np.uint8).reshape(32,256)
+            for t in keep:
+                y,x=t//16*16,t%16*16;need(np.array_equal(oldatlas[y:y+16,x:x+16],newatlas[y:y+16,x:x+16]),'원효과 타일')
+            protected.append({'refs':list(ns),'tiles':sorted(keep),'whole_tiles_exact':True})
+        groups.append({'refs':list(ns),'parts':{str(pb):[len(changes[pb][k])//4 for k in ns]for pb in PBS},'raw_sha256':sha(nr)})
+    nc=a.c;slack={}
+    for pb in PBS:nc,slack[pb]=repack_parts(nc,pb,changes[pb])
+    ng,packing=repack_variable(a.g,replacement,counts);result=replace_entry(replace_entry(a.data,2,ng),3,nc);b=Archive(result)
+    rawcount=nonraw=0
+    for gb,bank in enumerate(a.banks):
+        need((bank['base'],bank['end'])==(b.banks[gb]['base'],b.banks[gb]['end']),'은행경계')
+        for n in range(len(bank['frames'])):
+            expected=replacement[n]if gb==0 and n in replacement else raw(a,gb,n)
+            need(raw(b,gb,n)==expected,f'raw{gb}/{n}');rawcount+=1;nonraw+=not(gb==0 and n in replacement)
+    layers=nonlayers=0
+    for n in range(237):
+        if n in PLACEHOLDERS:continue
+        for pb in PBS:
+            z=targets[n,pb]if n in REFS else a.layer(n,pb)[0]
+            need(np.array_equal(b.layer(n,pb)[0],z),f'layer{n}/{pb}');layers+=1;nonlayers+=n not in REFS
+    otherparts=0
+    for pb in range(len(bank_offsets(a.c))):
+        for n in range(composition_frame(a.c,pb,0)['bank_frame_count']):
+            if pb in PBS and n in REFS:continue
+            need(records(a.c,pb,n)==records(b.c,pb,n),f'조립{n}/{pb}');otherparts+=1
+    need(a.p==b.p,'팔레트')
+    for e in psx_arc(a.data):
+        if int(e['type'],16)in(2,3):continue
+        sl=slice(e['offset'],e['offset']+e['size']);need(a.data[sl]==result[sl],'기타entry')
+    rgba=0
+    for n in range(237):
+        if n in PLACEHOLDERS:continue
+        for mask in range(16):
+            for arm in(1,2):
+                expected=composite(a,{pb:targets[n,pb]for pb in PBS},mask,arm)if n in REFS else a.composite(n,mask,arm)[0]
+                need(b.composite(n,mask,arm)[0].tobytes()==expected.tobytes(),f'RGBA{n}/{mask}/{arm}');rgba+=1
+    report={'passed':True,'before':BEFORE,'after':sha(result),'target_manifest':meta,'refs':list(REFS),
+            'raw_checked':rawcount,'nonselected_raw_exact':nonraw,'layers_checked':layers,'nonselected_layers_exact':nonlayers,'nonselected_compositions_exact':otherparts,
+            'rgba_combinations':rgba,'target_rgba_combinations':len(REFS)*32,'protected_effect_tiles':protected,'groups':groups,'packing':packing,'composition_slack':slack,
+            'palette_and_other_entries_exact':True,'scope':'진단용 native 재추출. 미술잔류/오라겹침·GPU경계 원MIPS·원순서/독립검사/동결 전.','frozen':False,'runtime_verified':False}
+    report['scope']='새 피격13 네이티브 후보. 출처 보존 오라 정합 포함. 독립검사와 실제 게임은 별도.'
+    return result,report
+
+def main():
+    ap=argparse.ArgumentParser();ap.add_argument('--out',default='packed_hurt_candidate_v1');args=ap.parse_args()
+    out=(D/args.out).resolve();need(out.is_relative_to(D.resolve())and not out.exists(),'New owned output')
+    td=D/'final_targets_v1';meta=json.loads((td/'manifest.json').read_text('utf8'))
+    targets={(n,pb):np.array(Image.open(td/f'layer{pb}_{n:03}.png'))for n in REFS for pb in PBS}
+    result,report=build(PARENT.read_bytes(),targets,meta);b=Archive(result)
+    out.mkdir();(out/'PL02_U.ARC').write_bytes(result)
+    for k,ns in enumerate(((106,110),(233,234),(107,108,109),(111,112,113),(114,235,236)),1):
+        helper.grid([(f'hurt {n}',[('before idle',b.composite(0,15)[0]),('new before',b.composite(n,15)[0]),('after idle',b.composite(0)[0]),('new after',b.composite(n)[0])])for n in ns],out/f'readback_{k}.png',6 if k<3 else 5)
+    report.pop('target_manifest');report['targets_manifest_sha256']=digest(td/'manifest.json')
+    write(out/'verification.json',report)
+    write(out/'proposal.json',{'project':'ver_rin_nana','baseline_sha256':'f9762868ea6a5c3e9ce65708a07bfbff3762cd98c6a057f78b584525fb48c720','parent_arc_sha256':BEFORE,'files':{'PL02_U.ARC':{'path':str((out/'PL02_U.ARC').relative_to(ROOT)).replace(chr(92),'/'),'before':'4564d66c4e8559454f4cc434e78194d3ac89f42b4db5877925755c818153a1fa','after':sha(result),'parent_arc_sha256':BEFORE}}})
+    print(json.dumps({'sha256':sha(result),'slack':report['composition_slack'],'rgba':report['rgba_combinations']}))
+if __name__=='__main__':main()

@@ -1,0 +1,8 @@
+"""포스 대기의 검보라/금색 옆장식을 작은머리 입력에 명시한다."""
+from pathlib import Path
+import sys
+H=Path(__file__).resolve().parent;ROOT=H.parents[2];sys.path.insert(0,str(ROOT))
+from native_pose_pack import need,sha,write
+def main():
+    d=H/'vehicle_head_base_inputs01';need(not(d/'prompt_materials_v2.txt').exists(),'새 입력 문구 보호');old=(d/'prompt.txt').read_text('utf8');old=old.replace('Keep the pink side ornament of the left head and the distinctive dark-purple forehead/right-ear decoration of the right head.','Keep the pink side ornament of the LEFT base head. For the RIGHT Fourth head, correct the currently pink side patch to the dark navy-purple side accessory with its compact gold marker shown in the lower accepted idle reference. Keep its exact existing side silhouette and location, changing only its interior material colors/shading. Keep the existing dark forehead/right-ear decoration of the Fourth head.');old=old.replace('Only improve interior hair shading; the original outline/eyes/accessories remain.','Only improve interior hair shading and the specified Fourth side-accessory material; all outer outlines and eye positions stay fixed, and the left base pink accessory remains.');(d/'prompt_materials_v2.txt').write_text(old,'utf8');write(d/'input_materials_v2.json',{'scope':'기본 머릿결과 포스 머릿결/대기와 일치하는 검보라·금색 옆장식.13×15외곽/눈좌표 유지.','supersedes_prompt_only':'prompt.txt','input_images':['target_edit.png','accepted_idle_style.png'],'prompt':'prompt_materials_v2.txt','source_files':{p.relative_to(ROOT).as_posix():sha(p.read_bytes()) for p in [d/'input_manifest.json',d/'target_edit.png',d/'accepted_idle_style.png',d/'prompt_materials_v2.txt',Path(__file__)]},'new_art_called':False,'resources_modified':False})
+if __name__=='__main__':main()

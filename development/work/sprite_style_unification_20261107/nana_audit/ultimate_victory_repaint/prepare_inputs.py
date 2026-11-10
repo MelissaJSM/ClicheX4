@@ -1,0 +1,26 @@
+"""승리204/205 및206/207의 원제스처를 보존하는 새 상세 원화 입력."""
+from pathlib import Path
+import sys,json,argparse
+import numpy as np
+from PIL import Image
+D=Path(__file__).resolve().parent;N=D.parent;ROOT=N.parents[2]
+sys.path[:0]=[str(ROOT),str(N/'native_restore')]
+from preview_restore import Archive,digest,sha,write,need
+GROUPS={'a':(204,205),'b':(206,207)}
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('group',choices=GROUPS);args=ap.parse_args();refs=GROUPS[args.group];p=N/'ultimate_ceremony_repaint/packed_arrival_candidate_v1/PL02_U.ARC';need(digest(p)=='c721ddee3292a88f6d1dbffb49bc79d1a82e08b3d6913cb501dc406800aa23c9','등장후보부모');a=Archive(p.read_bytes());out=D/f'{args.group}_inputs_v1';out.mkdir(exist_ok=False);target=Image.new('RGBA',(1536,1536));style=target.copy();frames=[]
+ for row,mask in enumerate((15,0)):
+  for col,n in enumerate(refs):
+   im=a.composite(n,mask)[0];target.alpha_composite(im.crop((112,112,208,208)).resize((768,768),Image.Resampling.NEAREST),(col*768,row*768));style.alpha_composite(a.composite(0 if col==0 else 138,mask)[0].crop((112,112,208,208)).resize((768,768),Image.Resampling.NEAREST),(col*768,row*768));y,x=np.nonzero(np.array(im)[:,:,3]);frames.append({'ref':n,'form':'before'if mask else'after','mask':mask,'cell':row*2+col,'world_bbox':[int(x.min()-160),int(y.min()-160),int(x.max()-159),int(y.max()-159)],'source_rgba_sha256':sha(im.tobytes())})
+ target.save(out/'targets.png');style.save(out/'style.png');hp=ROOT/'work/ver_rin_nana/nana_ultimate_armor/ceremony_v1/generated_first.png';hist=Image.open(hp).convert('RGBA');h=Image.new('RGBA',(1536,768))
+ for col,n in enumerate(refs):
+  i=[138,156,204,205,206,207].index(n);cell=hist.crop((i%3*512,i//3*512,(i%3+1)*512,(i//3+1)*512)).resize((768,768),Image.Resampling.NEAREST);h.alpha_composite(cell,(col*768,0))
+ h.save(out/'historical_gestures.png')
+ gestures=('Left204: confident victory START, screen-left hand bent close to her upper chest, screen-right hand resting at hip. No pistol is shown in this original gesture. Right205: salute with the screen-left empty hand near her forehead, palm angled down; screen-right hand remains on hip. Do not turn this salute into the later raised-pistol gesture.'if args.group=='a'else'Left206: hold her compact pink handgun vertically NEXT TO THE CHEEK, with fingers clearly gripping it; screen-right hand on hip. Right207: the same pistol arm is FULLY RAISED vertically above her head, muzzle pointing up; screen-right hand remains on hip. The pistol barrel is exactly8 native pixels long, compact pink with a separate bent dark grip, not a long cannon or part of the bunny ear.')
+ prompt=f'''Use case: style-transfer. Neutral full-body adult heroine sprites for a late1990s console action game. Image1 is the EDIT TARGET: four complete figures in a fixed2x2 grid, exactly1536x1536. Top row wears her pink JACKET, bottom row the same woman's accepted black/pink athletic costume with bare arms. Left column pose{refs[0]}, right column pose{refs[1]}. Each768x768cell represents96x96 native game pixels; preserve its origin and overall sprite scale.
+Redraw the four figures with the detail density of Image2's accepted idle and newly refined artwork: separated pink hair locks and layered fringe, compact green eyes/face, readable pink jacket lapels, shoulder/elbow folds and pale cuffs; stable skin midtones and selective dark shadow contours on knees/calves. Bottom row has bare arms and the established black top/pink belt, no leftover jacket collar/cuff. Preserve neutral outfit coverage. The same head, hair, hands, legs and shoes should occupy matching positions in both costume versions.
+Image3 is HISTORICAL GESTURE REFERENCE ONLY, confirming arm meaning and original pose. {gestures}
+Keep the exact foot positions, floor, head size, shoulder/wrist/knee/ankle placement and confident upright stance of Image1. All four victory poses form a short continuous sequence with planted feet. Restore material shading without changing pose, thickening or thinning the legs, enlarging shoes, or shrinking/expanding the face. The original wide flat dark sleeve and flat hair masses are the details to improve, not a style to copy. Do not use the other poses in Image2 as replacements.
+Output only the four corrected full-body sprites, same2x2layout, genuinely transparent background. No labels, frames, text, halo, shadows, effects or backdrop. Keep all ears, hands and shoe tips within the existing padding. Crisp small pixel clusters and readable native silhouettes; no smooth gradients or thin high-resolution contour strokes. Do not add unrelated weapons, limbs or decorations.'''
+ (out/'prompt.txt').write_text(prompt,'utf8');write(out/'manifest.json',{'parent_arc':p.relative_to(ROOT).as_posix(),'parent_arc_sha256':digest(p),'parent_frozen_at_input_creation':(p.parent/'FROZEN.json').exists(),'frames':frames,'native_cell':[96,96],'render_scale':8,'historical_art':hp.relative_to(ROOT).as_posix(),'historical_art_sha256':digest(hp),'historical_order':[138,156,204,205,206,207],'gesture_policy':'204 가슴 손/205 빈손 경례,206 뺨옆/207 머리위 권총. 역사 자세의 의미를 보존한다.','files':[{'path':(out/f).relative_to(ROOT).as_posix(),'sha256':digest(out/f)}for f in('targets.png','style.png','historical_gestures.png','prompt.txt')],'native_packed':False,'runtime_verified':False});print(out)
+if __name__=='__main__':main()

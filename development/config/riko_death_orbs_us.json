@@ -1,0 +1,295 @@
+{
+  "source_sha256": "3ceab06ac99add4035f912188bcbf5b16c02056f46a33d38ff0c8dbce6cb613b",
+  "player_archive_sha256": "35414320eff2bb0a196b88f70ccd69ecfe9adb25c4ed5c82f24a96efd3c35359",
+  "frames": [
+    {
+      "frame": 105,
+      "size": [
+        32,
+        31
+      ],
+      "bounds": [
+        -16,
+        -16,
+        16,
+        15
+      ],
+      "pixels_sha256": "400bf258d19c8bf5ac5f1c0e793363d0c12303fa6a198fefd7246ca86fabef55",
+      "part_bytes_sha256": "4f955b0ffbbbd49ae5288e2c268cb6e36d201fafddee4b9907a39e4571cbf092"
+    },
+    {
+      "frame": 106,
+      "size": [
+        32,
+        31
+      ],
+      "bounds": [
+        -16,
+        -16,
+        16,
+        15
+      ],
+      "pixels_sha256": "a481e1da6ae19b171290386adf26762154794b83b2ab1c05e25597b990fa3db7",
+      "part_bytes_sha256": "d24dbe5a93506e07c8520a280313ddecb33e81dfe9c318fa507d1b36f84c5093"
+    },
+    {
+      "frame": 107,
+      "size": [
+        32,
+        31
+      ],
+      "bounds": [
+        -16,
+        -16,
+        16,
+        15
+      ],
+      "pixels_sha256": "274538fdb5de0bb10ac3e2bb660dd5afca6d69df7a28b6b8b35462c908b26911",
+      "part_bytes_sha256": "6f9fccdf22b2af2a9a8971d814d1c9287347d2416647df5c4f7261d1685deea3"
+    },
+    {
+      "frame": 108,
+      "size": [
+        32,
+        31
+      ],
+      "bounds": [
+        -16,
+        -16,
+        16,
+        15
+      ],
+      "pixels_sha256": "f7c968c4e5c63e372d065981cc59068bb849a694777fd0d010d46b74b2f64c70",
+      "part_bytes_sha256": "a1aa421102bbb51edc78e6447b3918ba8d8e556a83d5eba995d9a151618013ca"
+    },
+    {
+      "frame": 109,
+      "size": [
+        32,
+        31
+      ],
+      "bounds": [
+        -16,
+        -16,
+        16,
+        15
+      ],
+      "pixels_sha256": "f6031e4df6a7bf9d0e524e3b984600dbb78bd4316e2d8ab41219106ffd0c178b",
+      "part_bytes_sha256": "c46b4c7a5659e1dffa63b88dd9fd01fb64d62fea90c3986ddb6b437f5c7edb72"
+    },
+    {
+      "frame": 110,
+      "size": [
+        32,
+        31
+      ],
+      "bounds": [
+        -16,
+        -16,
+        16,
+        15
+      ],
+      "pixels_sha256": "7662a38ca4008ce44a1b68ae406f708a40a5a08509e460eacb5425c7d06bffad",
+      "part_bytes_sha256": "7949fbc8d2672b94404a8c023fb947e0ed59ceb7f4239253eeb8a14be3bd93c0"
+    },
+    {
+      "frame": 111,
+      "size": [
+        32,
+        31
+      ],
+      "bounds": [
+        -16,
+        -16,
+        16,
+        15
+      ],
+      "pixels_sha256": "c91129fbedf6f59c8ae0b5e088dee61d34f80f32036ec5d53f148ec1e6197089",
+      "part_bytes_sha256": "13a5fe135114509603e0ddbbde8ca5607a4f447f6be2ae5463993979f86cab73"
+    },
+    {
+      "frame": 112,
+      "size": [
+        32,
+        31
+      ],
+      "bounds": [
+        -16,
+        -16,
+        16,
+        15
+      ],
+      "pixels_sha256": "38112922d79fafe89bc0e9213d63d523534be56b9c0666aeb4dcfbe48f109865",
+      "part_bytes_sha256": "0436812e47ddc741144e81b771064dc35783813cd0b107797c4369ff15da8336"
+    },
+    {
+      "frame": 113,
+      "size": [
+        16,
+        16
+      ],
+      "bounds": [
+        -8,
+        -8,
+        8,
+        8
+      ],
+      "pixels_sha256": "baca891d4f0a2031b79fd2c7a32ec84dd9e7c548e0a2295575865b7124dbd50e",
+      "part_bytes_sha256": "b1392e88277c2c91eb8f6d7678b33eac20bd4fabc26e3f6047a2fa9a5c26bad8"
+    }
+  ],
+  "tiles": [
+    205,
+    206,
+    208,
+    209,
+    210,
+    211,
+    212,
+    214,
+    238
+  ],
+  "tile_bytes_sha256": "b3c94c234d390dd092b5131cfbf888c2c02361e7f1ce28b5ac3071fdaf581d68",
+  "clut_base": 30722,
+  "part_clut_offset": 1,
+  "lut": [
+    0,
+    6,
+    7,
+    8,
+    9,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "stage_palettes": [
+    {
+      "path": "/ARC/COL00_0Z.ARC;1",
+      "sha256": "72b1c4a009fd59a0ec14416baeec4756c3c93088c5fdea8c531ef5cf2abbe3ed",
+      "colors_5_through_9": "fffff5f3a9eb03db22be"
+    },
+    {
+      "path": "/ARC/COL00_1Z.ARC;1",
+      "sha256": "72b1c4a009fd59a0ec14416baeec4756c3c93088c5fdea8c531ef5cf2abbe3ed",
+      "colors_5_through_9": "fffff5f3a9eb03db22be"
+    },
+    {
+      "path": "/ARC/COL01_0Z.ARC;1",
+      "sha256": "72b1c4a009fd59a0ec14416baeec4756c3c93088c5fdea8c531ef5cf2abbe3ed",
+      "colors_5_through_9": "fffff5f3a9eb03db22be"
+    },
+    {
+      "path": "/ARC/COL01_1Z.ARC;1",
+      "sha256": "72b1c4a009fd59a0ec14416baeec4756c3c93088c5fdea8c531ef5cf2abbe3ed",
+      "colors_5_through_9": "fffff5f3a9eb03db22be"
+    },
+    {
+      "path": "/ARC/COL02_0Z.ARC;1",
+      "sha256": "72b1c4a009fd59a0ec14416baeec4756c3c93088c5fdea8c531ef5cf2abbe3ed",
+      "colors_5_through_9": "fffff5f3a9eb03db22be"
+    },
+    {
+      "path": "/ARC/COL02_1Z.ARC;1",
+      "sha256": "72b1c4a009fd59a0ec14416baeec4756c3c93088c5fdea8c531ef5cf2abbe3ed",
+      "colors_5_through_9": "fffff5f3a9eb03db22be"
+    },
+    {
+      "path": "/ARC/COL03_0Z.ARC;1",
+      "sha256": "72b1c4a009fd59a0ec14416baeec4756c3c93088c5fdea8c531ef5cf2abbe3ed",
+      "colors_5_through_9": "fffff5f3a9eb03db22be"
+    },
+    {
+      "path": "/ARC/COL03_1Z.ARC;1",
+      "sha256": "72b1c4a009fd59a0ec14416baeec4756c3c93088c5fdea8c531ef5cf2abbe3ed",
+      "colors_5_through_9": "fffff5f3a9eb03db22be"
+    },
+    {
+      "path": "/ARC/COL04_0Z.ARC;1",
+      "sha256": "72b1c4a009fd59a0ec14416baeec4756c3c93088c5fdea8c531ef5cf2abbe3ed",
+      "colors_5_through_9": "fffff5f3a9eb03db22be"
+    },
+    {
+      "path": "/ARC/COL04_1Z.ARC;1",
+      "sha256": "72b1c4a009fd59a0ec14416baeec4756c3c93088c5fdea8c531ef5cf2abbe3ed",
+      "colors_5_through_9": "fffff5f3a9eb03db22be"
+    },
+    {
+      "path": "/ARC/COL05_0Z.ARC;1",
+      "sha256": "72b1c4a009fd59a0ec14416baeec4756c3c93088c5fdea8c531ef5cf2abbe3ed",
+      "colors_5_through_9": "fffff5f3a9eb03db22be"
+    },
+    {
+      "path": "/ARC/COL05_1Z.ARC;1",
+      "sha256": "72b1c4a009fd59a0ec14416baeec4756c3c93088c5fdea8c531ef5cf2abbe3ed",
+      "colors_5_through_9": "fffff5f3a9eb03db22be"
+    },
+    {
+      "path": "/ARC/COL06_0Z.ARC;1",
+      "sha256": "72b1c4a009fd59a0ec14416baeec4756c3c93088c5fdea8c531ef5cf2abbe3ed",
+      "colors_5_through_9": "fffff5f3a9eb03db22be"
+    },
+    {
+      "path": "/ARC/COL06_1Z.ARC;1",
+      "sha256": "72b1c4a009fd59a0ec14416baeec4756c3c93088c5fdea8c531ef5cf2abbe3ed",
+      "colors_5_through_9": "fffff5f3a9eb03db22be"
+    },
+    {
+      "path": "/ARC/COL07_0Z.ARC;1",
+      "sha256": "72b1c4a009fd59a0ec14416baeec4756c3c93088c5fdea8c531ef5cf2abbe3ed",
+      "colors_5_through_9": "fffff5f3a9eb03db22be"
+    },
+    {
+      "path": "/ARC/COL07_1Z.ARC;1",
+      "sha256": "72b1c4a009fd59a0ec14416baeec4756c3c93088c5fdea8c531ef5cf2abbe3ed",
+      "colors_5_through_9": "fffff5f3a9eb03db22be"
+    },
+    {
+      "path": "/ARC/COL08_0Z.ARC;1",
+      "sha256": "72b1c4a009fd59a0ec14416baeec4756c3c93088c5fdea8c531ef5cf2abbe3ed",
+      "colors_5_through_9": "fffff5f3a9eb03db22be"
+    },
+    {
+      "path": "/ARC/COL08_1Z.ARC;1",
+      "sha256": "72b1c4a009fd59a0ec14416baeec4756c3c93088c5fdea8c531ef5cf2abbe3ed",
+      "colors_5_through_9": "fffff5f3a9eb03db22be"
+    },
+    {
+      "path": "/ARC/COL09_0Z.ARC;1",
+      "sha256": "72b1c4a009fd59a0ec14416baeec4756c3c93088c5fdea8c531ef5cf2abbe3ed",
+      "colors_5_through_9": "fffff5f3a9eb03db22be"
+    },
+    {
+      "path": "/ARC/COL0A_0Z.ARC;1",
+      "sha256": "72b1c4a009fd59a0ec14416baeec4756c3c93088c5fdea8c531ef5cf2abbe3ed",
+      "colors_5_through_9": "fffff5f3a9eb03db22be"
+    },
+    {
+      "path": "/ARC/COL0B_0Z.ARC;1",
+      "sha256": "72b1c4a009fd59a0ec14416baeec4756c3c93088c5fdea8c531ef5cf2abbe3ed",
+      "colors_5_through_9": "fffff5f3a9eb03db22be"
+    },
+    {
+      "path": "/ARC/COL0B_1Z.ARC;1",
+      "sha256": "72b1c4a009fd59a0ec14416baeec4756c3c93088c5fdea8c531ef5cf2abbe3ed",
+      "colors_5_through_9": "fffff5f3a9eb03db22be"
+    },
+    {
+      "path": "/ARC/COL0C_0Z.ARC;1",
+      "sha256": "72b1c4a009fd59a0ec14416baeec4756c3c93088c5fdea8c531ef5cf2abbe3ed",
+      "colors_5_through_9": "fffff5f3a9eb03db22be"
+    },
+    {
+      "path": "/ARC/COL0C_1Z.ARC;1",
+      "sha256": "72b1c4a009fd59a0ec14416baeec4756c3c93088c5fdea8c531ef5cf2abbe3ed",
+      "colors_5_through_9": "fffff5f3a9eb03db22be"
+    }
+  ]
+}

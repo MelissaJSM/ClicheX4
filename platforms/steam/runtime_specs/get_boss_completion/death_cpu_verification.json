@@ -1,0 +1,69 @@
+{
+  "passed": true,
+  "native_setter_getter_cases": 6,
+  "native_renderer_flag_cases": 512,
+  "ps1_death_frames_equal": 54,
+  "only_actor_palette_and_stack_written": true,
+  "native_callees_mocked": false,
+  "single_byte_palette_operand": "0xa7860f",
+  "original_value": 2,
+  "patched_value": 0,
+  "source_ps1_instruction": "00780224",
+  "resources": [
+    {
+      "mode": "ver_rin_nana",
+      "target_arc": "pl00.arc",
+      "palette_rows": [
+        0
+      ],
+      "frames": 9,
+      "source_bin_sha256": "03bb660be698dd7dd1b1b3fbf6612bcd1ed111cff47b5eda7c186ded3f343f3a"
+    },
+    {
+      "mode": "ver_rin_nana",
+      "target_arc": "pl01.arc",
+      "palette_rows": [
+        3
+      ],
+      "frames": 9,
+      "source_bin_sha256": "03bb660be698dd7dd1b1b3fbf6612bcd1ed111cff47b5eda7c186ded3f343f3a"
+    },
+    {
+      "mode": "ver_rin_nana",
+      "target_arc": "pl02.arc",
+      "palette_rows": [
+        0
+      ],
+      "frames": 9,
+      "source_bin_sha256": "03bb660be698dd7dd1b1b3fbf6612bcd1ed111cff47b5eda7c186ded3f343f3a"
+    },
+    {
+      "mode": "ver_buki_riko",
+      "target_arc": "pl00_eng.arc",
+      "palette_rows": [
+        0
+      ],
+      "frames": 9,
+      "source_bin_sha256": "0d76b1e983275482e4aa5d56ebdaa4a7d6f01a571e8cea218337df9eb84ed46e"
+    },
+    {
+      "mode": "ver_buki_riko",
+      "target_arc": "pl01_eng.arc",
+      "palette_rows": [
+        3
+      ],
+      "frames": 9,
+      "source_bin_sha256": "0d76b1e983275482e4aa5d56ebdaa4a7d6f01a571e8cea218337df9eb84ed46e"
+    },
+    {
+      "mode": "ver_buki_riko",
+      "target_arc": "pl02_eng.arc",
+      "palette_rows": [
+        0
+      ],
+      "frames": 9,
+      "source_bin_sha256": "0d76b1e983275482e4aa5d56ebdaa4a7d6f01a571e8cea218337df9eb84ed46e"
+    }
+  ],
+  "actual_death_scene_verified": false
+}

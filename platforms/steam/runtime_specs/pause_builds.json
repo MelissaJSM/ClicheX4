@@ -1,0 +1,42 @@
+[
+  {
+    "target_arc": "load.arc",
+    "relative_path": "nativeDX10/X4/romPC/load.arc",
+    "output_sha256": "f50a1dc55eb075f77710902a9e0e7a496ad8481f166cdd0ce6d38950926e6bfd"
+  },
+  {
+    "target_arc": "pl00.arc",
+    "relative_path": "nativeDX10/X4/romPC/pl00.arc",
+    "output_sha256": "785a58e04472747530d1a6d7a5a2edcf812caf6267c8cc6766c5b6453cc76bd0"
+  },
+  {
+    "target_arc": "pl01.arc",
+    "relative_path": "nativeDX10/X4/romPC/pl01.arc",
+    "output_sha256": "1601c1beeb1d7258f8b3c57362f00d02b1b36b758f4f4b51672db0d0bbae4e08"
+  },
+  {
+    "target_arc": "pl02.arc",
+    "relative_path": "nativeDX10/X4/romPC/pl02.arc",
+    "output_sha256": "8d85e192cf5d42c4a26dfbf7fa04af3e15baa8e1a2eb3c0f41c9cdb086a0d709"
+  },
+  {
+    "target_arc": "load_eng.arc",
+    "relative_path": "nativeDX10/X4/romPC/load_eng.arc",
+    "output_sha256": "b2de3157f461a31ab30e6bf9dda1990a585ae4446812ac62487bb33d2aa0f57e"
+  },
+  {
+    "target_arc": "pl00_eng.arc",
+    "relative_path": "nativeDX10/X4/romPC/pl00_eng.arc",
+    "output_sha256": "e2a62b7d31e7045ff6ff8ebc329c8c712ec02b6e5657c95aeeef4dbb7f9ece6c"
+  },
+  {
+    "target_arc": "pl01_eng.arc",
+    "relative_path": "nativeDX10/X4/romPC/pl01_eng.arc",
+    "output_sha256": "431d5bca47ca5b4534fdb30f55d7cc282e1db90dde803d4b60b03a333cccc972"
+  },
+  {
+    "target_arc": "pl02_eng.arc",
+    "relative_path": "nativeDX10/X4/romPC/pl02_eng.arc",
+    "output_sha256": "538cfffe050f37b4d56a5c6ece6ff4d9ba148f5b52a10905dca763e942475800"
+  }
+]

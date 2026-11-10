@@ -1,0 +1,11 @@
+{
+  "reference_png": "out/ver_buki_riko/riko_bank1_20261025T090314908139Z/frame_033.png",
+  "reference_png_sha256": "a2fa5a17b31de708e27721219d67cacc19c66a496667b10968b9b46867cc0eec",
+  "reference_body_pixels": 446,
+  "head_reference": "config/riko_body_standard.json",
+  "ratio_bounds": [
+    0.9,
+    1.2
+  ],
+  "meaning": "Artist-selected area regression guard after head subtraction; not proof of anatomy or a game format limit"
+}

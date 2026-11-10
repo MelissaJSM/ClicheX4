@@ -1,0 +1,21 @@
+{
+  "status": "unapproved_art_pilot_refinement",
+  "transparent_index": 0,
+  "colors": [
+    {"name": "outline", "rgb": [24, 32, 49]},
+    {"name": "deep_cloth_shadow", "rgb": [57, 65, 90]},
+    {"name": "white_shadow", "rgb": [115, 132, 164]},
+    {"name": "white_mid", "rgb": [181, 197, 222]},
+    {"name": "white_light", "rgb": [247, 247, 247]},
+    {"name": "hair_shadow", "rgb": [41, 99, 74]},
+    {"name": "hair_mid", "rgb": [115, 181, 123]},
+    {"name": "hair_light", "rgb": [206, 239, 173]},
+    {"name": "skin_shadow", "rgb": [214, 140, 115]},
+    {"name": "skin_light", "rgb": [255, 222, 181]},
+    {"name": "cape_shadow", "rgb": [0, 90, 107]},
+    {"name": "cape_mid", "rgb": [0, 164, 164]},
+    {"name": "cape_light", "rgb": [74, 213, 181]},
+    {"name": "eye_violet", "rgb": [132, 57, 173], "minimum_rb_over_g": 20, "area_weight": 3},
+    {"name": "skin_mid", "rgb": [246, 181, 148]}
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "source_sha256": "3ceab06ac99add4035f912188bcbf5b16c02056f46a33d38ff0c8dbce6cb613b",
+  "archive": {"path": "/ARC/PL00_U.ARC;1", "lba": 1135, "size": 796672, "sha256": "92b2a3209ad6603cf519616dc580400434271f87e8e7129495430c04d0d1c35a"},
+  "executable": {"lba": 232979, "size": 1179648, "sha256": "dae43d44a9f3176208830ddbba0607bb627ebcd7faf9b36fc03dd0ffda34d2e8", "load_address": 2147549184},
+  "animation_table_address": 2148638192,
+  "animation_table_count": 144,
+  "idle_sequence_address": 2148636036,
+  "idle_animation_id": 5,
+  "base_graphics_bank": 0,
+  "base_parts_bank": 0,
+  "allow_graphics_bank_aliases": true,
+  "evidence": "Actual US EXE idle sequence and 144-pointer table; local decomp player_common.c/player_animations.c. See docs/SHIBUKI_SPRITES.md."
+}

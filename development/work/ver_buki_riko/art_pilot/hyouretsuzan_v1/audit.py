@@ -1,0 +1,28 @@
+from pathlib import Path
+import sys,json
+ROOT=Path(__file__).resolve().parents[4];sys.path.insert(0,str(ROOT))
+from scripts.discover_inputs import psx_arc
+from scripts.repack_zero import read_inputs
+from src.psx_player import graphics_bank,bank_offsets,decode_stream,composition_frame,compose_indices
+from src.psx_bank_patch import patch_bank
+from src.psx_ice import BODY
+D=Path(__file__).parent;B=Path(json.loads((D/'builds.json').read_text())['build']['output']);P=ROOT/'out/ver_buki_riko/riko_bank1_20261025T103425732468Z'
+before=(P/'modified.arc').read_bytes();after=(B/'modified.arc').read_bytes();e=next(e for e in psx_arc(after) if e['type']=='0x2');lo=e['offset'];hi=lo+e['size']
+assert before[:lo]==after[:lo] and before[hi:]==after[hi:]
+unchanged=[p.name for p in P.glob('*.png') if p.read_bytes()==(B/p.name).read_bytes()];changed=[p.name for p in P.glob('*.png') if p.name not in unchanged]
+assert len(unchanged)==254 and changed==['bank1_133.png']
+_,_,_,_,g,parts,_=read_inputs(ROOT/'work/ver_buki_riko/zero_extract/20261023T062408235550Z')
+actual=[];b,a=before[lo:hi],after[lo:hi]
+for bi in range(len(bank_offsets(g))):
+ for f in graphics_bank(g,bi)['frames']:
+  x=decode_stream(b,f['offset'],f['limit'],f['tile_count']*128).data;y=decode_stream(a,f['offset'],f['limit'],f['tile_count']*128).data
+  if x!=y:
+   c=composition_frame(parts,0 if bi==0 else 5,f['index'])
+   if compose_indices(x,f['tile_count'],c)[:2]!=compose_indices(y,f['tile_count'],c)[:2]:actual.append((bi,f['index']))
+assert set(actual)=={(1,n) for n in BODY-{132}}
+recipe=json.loads((D/'recipe.json').read_text());originals={}
+for key in recipe['frames']:
+ n=int(key);f=graphics_bank(g,1)['frames'][n];raw=decode_stream(g,f['offset'],f['limit'],f['tile_count']*128).data;originals[n]=compose_indices(raw,f['tile_count'],composition_frame(parts,5,n))[:2]
+same,checks=patch_bank(g,parts,1,5,originals,recipe['preserved_effect_frames'],clear_unreferenced=True);assert same==g
+result={'build':str(B),'previous_build':str(P),'previous_pngs_byte_identical':254,'changed_previous_pngs':changed,'changed_composed_references':actual,'original_unmodified_roundtrip_references':len(originals),'original_unmodified_roundtrip_byte_identical':True,'graphics_entry_only_changed':True,'preserved_effects':recipe['preserved_effect_frames'],'external_parts6_unchanged':True,'all_spin_body_pngs_byte_identical':True,'shared_extra_new_body':[88,96,99],'shared_extra_techniques_runtime_not_verified':True}
+(D/'preservation_audit.json').write_text(json.dumps(result,indent=2),'utf8');print(json.dumps(result))

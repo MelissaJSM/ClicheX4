@@ -1,0 +1,14 @@
+{
+  "source_sha256": "3ceab06ac99add4035f912188bcbf5b16c02056f46a33d38ff0c8dbce6cb613b",
+  "original_parts_sha256": "2d2a48b17eb0b0859a4d85952cf087d575dad0f0d9a6384f2298729b038f60d4",
+  "frames": [
+    22,
+    23,
+    24
+  ],
+  "graphics_bank": 0,
+  "parts_bank": 0,
+  "dx_native": -8,
+  "dy": 0,
+  "basis": "Head x -7 to -15, matching adjacent jump21 and fall25; full parts translated together; bitmap and object coordinates unchanged"
+}

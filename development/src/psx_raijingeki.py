@@ -1,0 +1,7 @@
+"""US animations 95/96: body and paired lightning from bank1/parts5."""
+SCOPE='wall_spin_ice_rise_burst_thrust_bank1_v1'
+BODY=frozenset((86,87,88,91,93,95,96,98,99,101,103,105,107,108,110,112,114,116,119,122,125,128,129,130,131))
+SHARED_BODY=frozenset((86,87,88,95,96,98,99))
+NEW_BODY=BODY-SHARED_BODY
+EFFECTS=frozenset((89,90,92,94,97,100,102,104,106,109,111,113,115,117,118,120,121,123,124,126,127))
+THRUST=frozenset((108,110,112,114,116,119,122,125,128,129,130,131))

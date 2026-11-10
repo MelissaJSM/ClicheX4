@@ -1,0 +1,20 @@
+"""수용 대기0을 보존한 서서사격2 새 팔 입력. 게임 파일 쓰기 없음."""
+from pathlib import Path
+import sys,json
+import numpy as np
+from PIL import Image,ImageDraw
+H=Path(__file__).resolve().parent;ROOT=H.parents[2];sys.path.insert(0,str(ROOT))
+from native_pose_pack import need,sha,write
+from scripts.export_x_consistency import Archive
+def main():
+    out=H/'base_run_shot_inputs01/page06';need(not out.exists(),'Fresh input output');out.mkdir();p=H/'prepared_dash_base01/PL00_U.ARC';a=Archive(p.read_bytes());meta=json.loads((H/'base_run_shot_inputs01/manifest.json').read_text('utf8'));br=next(r for r in meta['barrels']if r['shot_ref']==2);gun=np.array(Image.open(H/'base_run_shot_inputs01/barrels/002_indices.png'));guard=np.array(Image.open(H/'base_run_shot_inputs01/barrels/002_mask.png'))>0;board=Image.new('RGBA',(1536,1024));rows=[]
+    for row,(form,mask)in enumerate((('base',0),('fourth',15))):
+        body=a.composite(0,mask)[0];v=np.array(body);v[guard]=np.array(a.rgba(gun))[guard];target=Image.fromarray(v);target.save(out/f'{form}_002_target.png');body.save(out/f'{form}_000_body.png');newshot=Image.open(H/f'base_run_shot_page01_registered02/{form}_004.png').convert('RGBA')
+        for col,im in enumerate((target,body,newshot)):board.alpha_composite(im.crop((128,124,192,188)).resize((512,512),Image.Resampling.NEAREST),(col*512,row*512))
+        rows.append({'form':form,'body_ref':0,'shot_ref':2,'cell':[0,row],'eye':[-5,-8],'shoulder':[-4,-1],'old_foreground_arm_bbox':[-16,-3,-1,14],'source_body_sha256':sha(body.tobytes()),'barrel':br})
+    board.save(out/'edit_target.png');guide=board.copy();dr=ImageDraw.Draw(guide)
+    for row in(0,1):
+        dr.rectangle(((32-16)*8,row*512+(36-3)*8,(32-1)*8,row*512+(36+14)*8),outline=(255,160,50,255),width=2);dr.line([((32+x)*8,row*512+(36+y)*8)for x,y in[(-18,-12),(-1,-4),(-1,4),(-18,-3),(-18,-12)]],fill=(60,255,150,255),width=3)
+    guide.save(out/'arm_guide.png');prompt='''Use case: precise-object-edit. Image1 is a transparent 1536x1024 sprite sheet, THREE512x512 columns and TWO512px rows. EACH cell is native64x64 enlarged exactly8x, origin32,36. Edit ONLY the LEFT column, both top and bottom. MIDDLE column is the accepted standing idle and RIGHT column is the accepted new running-shot arm style: preserve those reference columns exactly. Image2 is a guide only; remove its annotations from output.
+In left column, two outfits of the same compact Tenko Shibuki stand still facing LEFT. The compact buster is already at the exact fixed original muzzle. Replace ONLY the low folded foreground fist/sleeve with a short natural firing arm joining the same shoulder to the RIGHT end of that fixed buster. Exactly TWO arms total: remove the previous folded foreground fist and its obsolete hanging sleeve before adding the firing arm; keep the other rear/downward arm. The newly exposed chest/garment should have coherent existing folds, not a flat fill or an extra cuff. Top outfit is white/blue-lavender folded sleeve with red cuff and red shrine outfit; bottom is navy/purple folded sleeve with gold trim and white fur collar. Use the short folded firing sleeves in right-column examples for material/style. Keep the accepted idle's head/ears/face/eyes/hair size and every torso/hem/leg/foot location unchanged. Do not upgrade/redraw the accepted idle head, stretch the arms, shorten the legs, scale or shift the whole body. Buster pixels/position/size and muzzle stay fixed. No extra hand near the chin, no straight rectangular long sleeve, no effect/dust/tail. Truly transparent background, no glow or haze or floor. Output the same three-by-two layout.''';(out/'prompt.txt').write_text(prompt,'utf8');write(out/'manifest.json',{'rows':rows,'source_parent_sha256':sha(a.data),'source_common_report_sha256':None,'standing_idle_source_ref':0,'reference_columns':[1,2],'layout':{'canvas':[1536,1024],'cell':[512,512],'native_cell':[64,64],'origin':[32,36],'scale':.125},'generation_pending':True,'game_written':False});print(json.dumps({'rows':rows}))
+if __name__=='__main__':main()

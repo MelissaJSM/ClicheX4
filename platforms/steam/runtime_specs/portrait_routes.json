@@ -1,0 +1,74 @@
+{
+  "routes": [
+    {
+      "original_arc": "st0_1_1.arc",
+      "private_arc": "cliche_br_st0_1_1.arc",
+      "sha256": "26190a25d77f05a20fa267569bbfad14214171f5349008d6fd66ec80b5418fff"
+    },
+    {
+      "original_arc": "st0a_00.arc",
+      "private_arc": "cliche_br_st0a_00.arc",
+      "sha256": "4f2579573d8253cf393467c81d2445dee2cf82856abf91acad79685e4289dfbc"
+    },
+    {
+      "original_arc": "st0b_01.arc",
+      "private_arc": "cliche_br_st0b_01.arc",
+      "sha256": "0b25e84f0ac18b83805de2c1aa488a13311e8f3e6405e5624651e168b0b5f841"
+    },
+    {
+      "original_arc": "st0b_0z.arc",
+      "private_arc": "cliche_br_st0b_0z.arc",
+      "sha256": "412838adcecab8ecf0cb1a25a5abab1c6b20605f4b669ff254b1842ccef3b573"
+    },
+    {
+      "original_arc": "st0c_00.arc",
+      "private_arc": "cliche_br_st0c_00.arc",
+      "sha256": "8ff422eaa1c69666f8961e85a951c1a0624929c10f126dba27aff42f1609fd40"
+    },
+    {
+      "original_arc": "st0d_0x.arc",
+      "private_arc": "cliche_br_st0d_0x.arc",
+      "sha256": "d91e71b78b12385f2c4e91a3667637fbe871c399cb963504211816e42161410e"
+    },
+    {
+      "original_arc": "st0d_0z.arc",
+      "private_arc": "cliche_br_st0d_0z.arc",
+      "sha256": "82d55b68e516eeeb34f0a9ac2dde8b8a2d4557aad6f8d078a0bbf33dc0b73f60"
+    },
+    {
+      "original_arc": "stb_1_1.arc",
+      "private_arc": "cliche_br_stb_1_1.arc",
+      "sha256": "b452fd2b7d5907c0b6895701ea104a60e805631b28eac5b8f2eccadf41fd2f26"
+    }
+  ],
+  "requirements": {
+    "nativeDX10/X4/romPC/st00_00.arc": "c13241ff4417715e58a18f371659b8ac1257206124935e6884e39667f4fe0342",
+    "nativeDX10/X4/romPC/st00_01.arc": "497d433dd2426b7159ef40df71163751bdac43f5ed82d2e9478a83142441ee84",
+    "nativeDX10/X4/romPC/st09_00.arc": "928ebe48d6c31cf7c327804bd35773753d7b23938c2ca25a027fc30a000aa2ad",
+    "nativeDX10/X4/romPC/st0_1_1.arc": "db7d69d0d88fd24055341d1a42cd3eab00fa607891092a314751bc57c1b3b2fe",
+    "nativeDX10/X4/romPC/st0a_00.arc": "ec15e423badfe84c4febf0d5da00d809206257d82ff339df2aaac39d46ae55d7",
+    "nativeDX10/X4/romPC/st0b_01.arc": "04fdce5cd4c6a504e702edf9be33023b714bd8a21e858746bc47abffa0341396",
+    "nativeDX10/X4/romPC/st0b_0x.arc": "c650e32df1f1e935acf4c4d9e21d82cac107d079a99c458359d8138f9ed90fec",
+    "nativeDX10/X4/romPC/st0c_01.arc": "d4572475b65da6b31b48d5ac151484b24b54a09a947a2a5614d7d02680bfccd8",
+    "nativeDX10/X4/romPC/st0d_0x.arc": "8fac088cea57c108ce3c1b120cb0760d32798b7859284e8c9ecdf452180195db",
+    "nativeDX10/X4/romPC/st0d_0z.arc": "b5bb6239c5cb1cb38d54c36655c2ad5fdde033dd8c47ac48bc75af79b6c9fdfa",
+    "nativeDX10/X4/romPC/sta_1_1.arc": "340a833279d7259891ed218c6e601a4b081ef4369b6dd836ed4dd3f2b5fa24ce",
+    "nativeDX10/X4/romPC/stb_1_1.arc": "b2ae0e3a8f7438ca7d4fa33a17104f90be8cb44d742262ef32d3ab32b61c2622",
+    "nativeDX10/X4/romPC/stc_1_1.arc": "293f3b76ae586d7c21df8b37a2fc9d010b59a28fbd865d5a5b32a2e10e3b8804",
+    "nativeDX10/X4/romPC/st00_00_eng.arc": "7f774ef32571c7acbf76d5b24b1541cea9bf6935e5359e061519f434956da943",
+    "nativeDX10/X4/romPC/st00_01_eng.arc": "077742e93adc7f156cba3a78f44f89d333186e4bb5e87138b6e65e8ac0ac1592",
+    "nativeDX10/X4/romPC/st09_00_eng.arc": "4f48aa0fda4eb0fcc7227b8ba3df34131dc07e80d29c25cf1aacbb72120a4149",
+    "nativeDX10/X4/romPC/cliche_br_st0_1_1.arc": "26190a25d77f05a20fa267569bbfad14214171f5349008d6fd66ec80b5418fff",
+    "nativeDX10/X4/romPC/cliche_br_st0a_00.arc": "4f2579573d8253cf393467c81d2445dee2cf82856abf91acad79685e4289dfbc",
+    "nativeDX10/X4/romPC/cliche_br_st0b_01.arc": "0b25e84f0ac18b83805de2c1aa488a13311e8f3e6405e5624651e168b0b5f841",
+    "nativeDX10/X4/romPC/st0b_0x_eng.arc": "d5d34acddf9acc798d50a4e114610584908052f61ba7f8c2ec55363241ad3bfd",
+    "nativeDX10/X4/romPC/st0c_01_eng.arc": "f52807690f981893407760dd354d6262d2de58b6797aa0ac8619ca3344c367c2",
+    "nativeDX10/X4/romPC/cliche_br_st0d_0x.arc": "d91e71b78b12385f2c4e91a3667637fbe871c399cb963504211816e42161410e",
+    "nativeDX10/X4/romPC/cliche_br_st0d_0z.arc": "82d55b68e516eeeb34f0a9ac2dde8b8a2d4557aad6f8d078a0bbf33dc0b73f60",
+    "nativeDX10/X4/romPC/sta_1_1_eng.arc": "8fd4236b29c776a6adc48eaa040991820301cfededb42563f851b90b498593a2",
+    "nativeDX10/X4/romPC/cliche_br_stb_1_1.arc": "b452fd2b7d5907c0b6895701ea104a60e805631b28eac5b8f2eccadf41fd2f26",
+    "nativeDX10/X4/romPC/stc_1_1_eng.arc": "456188e48133bdd30efa9f04d9614ba1a28000e33ff48e58baec1428bb635d30",
+    "nativeDX10/X4/romPC/cliche_br_st0b_0z.arc": "412838adcecab8ecf0cb1a25a5abab1c6b20605f4b669ff254b1842ccef3b573",
+    "nativeDX10/X4/romPC/cliche_br_st0c_00.arc": "8ff422eaa1c69666f8961e85a951c1a0624929c10f126dba27aff42f1609fd40"
+  }
+}

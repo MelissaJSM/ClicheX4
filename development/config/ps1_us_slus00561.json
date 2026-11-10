@@ -1,0 +1,12 @@
+{
+  "source_sha256": "3ceab06ac99add4035f912188bcbf5b16c02056f46a33d38ff0c8dbce6cb613b",
+  "boot_id": "SLUS_005.61",
+  "zero_archive": {"path": "/ARC/PL01_U.ARC;1", "lba": 1525, "size": 741376, "sha256": "35414320eff2bb0a196b88f70ccd69ecfe9adb25c4ed5c82f24a96efd3c35359"},
+  "executable": {"path": "/SLUS_005.61;1", "lba": 232979, "size": 1179648, "sha256": "dae43d44a9f3176208830ddbba0607bb627ebcd7faf9b36fc03dd0ffda34d2e8", "load_address": 2147549184},
+  "zero_animation_table_address": 2148642800,
+  "zero_animation_bank_table_address": 2148642656,
+  "idle_animation_id": 5,
+  "player_object_address": 2148800712,
+  "player_gfx_buffer_address": 2148982440,
+  "evidence": "docs/SPRITE_SPEC.md"
+}

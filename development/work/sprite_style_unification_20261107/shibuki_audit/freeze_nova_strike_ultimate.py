@@ -1,0 +1,26 @@
+"""Ultimate 돌진4의 원화·효과 정책·독립·최종 미술 근거를 동결한다."""
+from pathlib import Path
+import sys,json
+H=Path(__file__).resolve().parent;ROOT=H.parents[2];sys.path.insert(0,str(ROOT))
+from native_pose_pack import need,sha,write
+FINAL='01997c949968d5a1a12d89e09c5eb46448bbcf245009feb9953e3d9e9356efd7'
+def read(p):return json.loads(p.read_text('utf8'))
+def check(files,base=ROOT):
+    for name,h in files.items():need(sha((base/name).read_bytes())==h,'고정파일 변경 '+name)
+def images(rows):
+    for r in rows:need(sha((ROOT/r['path']).read_bytes())==r['sha256'],'실제열람판 변경')
+def main():
+    d=H/'prepared_nova_strike_ultimate01';need(not(d/'FROZEN.json').exists(),'기존동결보호');need(sha((d/'PL02_U.ARC').read_bytes())==FINAL,'후보변경');il=read(d/'INPUT_LOCK.json');pl=read(d/'PREPARED_LOCK.json');check(il['files']);check(pl['files'],d);check(pl['source_scripts'],H)
+    a=H.parent/'zero_audit/shibuki_nova_strike_ultimate4_independent01';need(sha((a/'report.json').read_bytes())=='271e43715b47c5d8e1216d5422c5d281125a4e4e54d52e99972c0771f545a8ec','독립결과변경');ind=read(a/'report.json');vis=read(a/'visual_review.json');check(read(a/'READER_LOCK.json')['files']);need(ind['passed'] and ind['candidate_sha256']==FINAL and ind['parent_sha256']==il['parent_sha256'],'독립실패')
+    for k,v in {'raw_checked':512,'non_target_raw_exact':508,'non_target_layers_exact':1120,'target_layers_exact':20,'non_target_compositions_exact':1771,'GPU_parts':66,'target_partial_RGBA_exact':128}.items():need(ind['counts'][k]==v,'독립수치 '+k)
+    need(ind['generated_cells_direct_requantized']==1 and ind['new_body_pixels']==776 and ind['historical_BIN_direct_extraction_exact'] and ind['effect218_current3_world_exact'] and ind['effect218_hidden_old_foot_pixel_not_reintroduced']==[12,13,1] and ind['staging220_world_translation']==[0,0] and ind['all_entry_bank_boundaries_palette_audio_exact'],'원화/효과/보존')
+    need(vis['actually_viewed'] and vis['actual_images']==4 and not vis['new_confirmed_defect'],'독립미술');images(vis['images'])
+    rp=H.parent/'root_review_checkpoint155.json';need(sha(rp.read_bytes())=='6d9d9e6736cfd02b8d248f0aca902729c2036a949cce12d76c48e15c84ad5a41','루트검토변경');rr=read(rp);need(rr['candidate_sha256']==FINAL and len(rr['actually_viewed_files'])==8,'루트8판');images(rr['actually_viewed_files'])
+    vr=read(d/'verification.json');need(vr['passed'] and vr['total_identical_builds']==3 and vr['rejected_count']==14 and not vr['pixel_reduction'],'재현/거부')
+    np=H/'nova_strike_ultimate_components_native_checks.json';native=read(np);nr=native['resources']['PL02_U.ARC'];cc=[v for b in nr['banks']for v in b['native_decoder_checks']];need(native['passed'] and nr['candidate_sha256']==FINAL and len(cc)==4 and all(v['buffer_outside_and_unused_tail_preserved']for v in cc),'원MIPS4')
+    seq=H/'nova_strike_ultimate_sequence01';sr=read(seq/'report.json');br=read(seq/'browser_verification.json');need(sr['original_steps']==13 and sr['new_art_steps']==9 and sr['native_table_bytes_verified'] and br['passed'] and br['canvas_form_checks']==200,'원순서');need(all(v==15 for k,v in sr['effective_masks'].items()if int(k.split('_')[-1])>=217),'217이후강제15')
+    ep=read(d/'post_lock_evidence.json');check(ep['evidence']);ev=[d/'INPUT_LOCK.json',d/'PREPARED_LOCK.json',d/'verification.json',d/'post_lock_evidence.json',d/'author_visual_review.json',d/'historical_probe_correction.json',*[a/n for n in('report.json','visual_review.json','READER_LOCK.json')],np,rp,seq/'report.json',seq/'browser_verification.json',seq/'REVIEW.html',Path(__file__)]
+    write(d/'final_verification.json',{'passed':True,'candidate_sha256':FINAL,'parent_arc_sha256':il['parent_sha256'],'selected_refs':[217,218,219,220],'source_files_checked':len(il['files']),'counts':ind['counts'],'new_unique_bodies':1,'total_identical_builds':3,'rejected_inputs':14,'root_actual_images':8,'independent_actual_images':4,'evidence':{p.relative_to(ROOT).as_posix():sha(p.read_bytes())for p in ev},'original_MIPS_changed_refs':4,'all_bank_entry_boundaries_palette_audio_preserved':True,'actual_engine_mask':15,'actual_body_costume':'accepted Ultimate after','supersedes_initial_pending_flags':True,'gameplay_verified':False,'user_accepted':False,'full_project_complete':False,'limits':['원217의흰재킷840픽셀을 수용after의상776픽셀로새제작했다.원소유코드변경없음.원몸외곽모든픽셀exact나옛의상보존을주장하지않는다.','218현재3점은전체exact.숨겨졌던옛발끝1점은다시노출하지않는다.첫실패라벨의부정확한설명은 historical_probe_correction에정정했다.','219는새몸Manhattan2 실루엣.220은역사외부효과를보존하며새몸가림93셀/443메움정책이므로전체FXraw exact가아니다.','128부분RGBA는저장/조합진단이다.실제217..220은획득소유와무관mask15이며전폼진단판도후폼몸체로보이는원규칙을유지한다.','원MIPS4는graphics포인터를공급한디코더/업로드검사이며전체directory loader·실제게임·GPU래스터화검사가아니다.','원표13/100호출200canvas는오프라인 상대분기검사이며효과발생/물리이동/속도/입력조건/소리·60Hz실기와구별한다.']})
+    write(d/'FROZEN.json',{'frozen':True,'files':{p.name:sha(p.read_bytes())for p in sorted(d.iterdir())if p.is_file()and p.name!='FROZEN.json'},'candidate_sha256':FINAL,'parent_arc_sha256':il['parent_sha256'],'selected_refs':[217,218,219,220],'native_and_independent_passed':True,'root_packed_ownership_and_order_reviewed':True,'root_valid_actual_plates':8,'all_bank_boundaries_preserved':True,'supersedes_initial_pending_flags':True,'gameplay_verified':False,'user_accepted':False,'full_style_unification_complete':False})
+    print(json.dumps({'candidate':FINAL,'frozen':sha((d/'FROZEN.json').read_bytes()),'final':sha((d/'final_verification.json').read_bytes())}))
+if __name__=='__main__':main()

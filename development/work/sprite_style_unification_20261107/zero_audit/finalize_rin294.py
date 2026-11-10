@@ -1,0 +1,32 @@
+"""등장5몸체·섬광2의 원화/독립/원MIPS/루트 실제열람을 결속한다."""
+from pathlib import Path
+import sys,json,hashlib
+D=Path(__file__).parent;ROOT=D.parents[2];sys.path.insert(0,str(ROOT))
+from scripts.c01_audio_build import read_disc
+from scripts.build_sprite_style_unification import check_static_body
+R=D/'rin_extension';P=R/'prepared_arrival01';expected='adf3b9475dd95cad5ff53ba627e4461dc9cb7ec18d202482b59744b0587c0322'
+sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();rel=lambda p:p.relative_to(ROOT).as_posix();read=lambda p:json.loads(p.read_text('utf8'))
+def dump(p,j):p.write_text(json.dumps(j,ensure_ascii=False,indent=2)+'\n','utf8')
+assert sha(P/'PL01_U.ARC')==expected and not(P/'FROZEN.json').exists()
+proofs={'source_reproduction_rejections':R/'rin294_source_proof.json','native_gpu':R/'rin294_components_native_checks.json','independent':D.parent/'nana_audit/rin294_independent_readback.json','native_arrival_and_idle':R/'arrival294_review_v2/report.json'}
+assert sha(proofs['independent'])=='a46e8d891941fc8f097976c7eb13616b8f1d30e5953e9c0951d180f1d2e7c90f'
+for p in proofs.values():
+ j=read(p);assert j['passed'] and j.get('candidate_sha256',expected)==expected
+review=D.parent/'root_review_checkpoint46.json';assert sha(review)=='33b55c4a76605018e4071e7ea9fb5b4bcc9ea6e2b8922c083c392a3ceebcbcb1';rv=read(review);own_images=[im for im in rv['art_review_images']if '/zero_audit/rin_extension/' in im['path']];assert rv['rin_candidate_sha256']==expected and len(own_images)==10
+for im in own_images:assert im['root_actually_viewed'] and sha(ROOT/im['path'])==im['sha256']
+visual=R/'arrival294_review_v2/visual_review.json';v=read(visual);assert len(v['actually_viewed_by_agent'])==10
+for im in v['actually_viewed_by_agent']:assert im['actually_viewed'] and sha(ROOT/im['path'])==im['sha256']
+q=read(P/'proposal.json');plan=read(R/'rin294_components.json');base=read_disc(ROOT/plan['source_bin'],('PL01_U.ARC',))[0]['PL01_U.ARC'];s=check_static_body(base,(P/'PL01_U.ARC').read_bytes(),q['static_body_patch'])
+sp=R/'rin294_static_binding_check.json';dump(sp,{'passed':True,'candidate_sha256':expected,'result':s});proofs['static_binding']=sp
+audit={'passed':True,'candidate_sha256':expected,'cumulative_authored_refs':294,'new_art_refs':7,'new_original_bodies':5,'derived_flash_refs':[247,248],'proofs':{k:{'path':rel(p),'sha256':sha(p)}for k,p in proofs.items()},'root_review':rel(review),'root_review_sha256':sha(review),'agent_visual_review':rel(visual),'agent_visual_review_sha256':sha(visual),'raw_count':444,'non_target_raw_exact':437,'display_count':436,'non_target_display_exact':429,'partial8_preserved':True,'native_arrival_calls':39,'actual_first_idle_ref':0,'actual_next_idle_refs':[146,147],'original_table_animation2_terminal96_is_bypassed_by_caller':True,'new_tile_window_x_only_bytes':6,'runtime_verified':False,'user_accepted':False,'limitations':['등장7참조의 새 실제 게임 실행은 미확인. 접지 후 원 MIPS 경로와 실제 대기 선택을 격리 검사했다.','기준147과 실제 첫대기0을 구분한다. 전체 WEBP 반복은 미술검토용이고 재등장이 자동반복된다는 주장이 아니다.','250/253의 눈1px 차이는 새얼굴 내부 비율을 보존했으며 단순 수치 일치를 위해 왜곡하지 않았다.']}
+ap=R/'final294_readback_audit.json';dump(ap,audit)
+q.update(source_bin=plan['source_bin'],source_bin_sha256=plan['source_sha256'],integration_baseline_arc_sha256=plan['resources']['PL01_U.ARC']['before'],incremental_parent_arc_sha256=q['source_arc_sha256'],independent_report=rel(ap),native_report=rel(proofs['native_gpu']),visual_report=rel(visual),root_art_review_pending=False,root_review=rel(review),root_review_sha256=sha(review),ready_for_checkpoint_integration=True,full_art_unification_complete=False);dump(P/'proposal.json',q)
+f={'candidate_sha256':expected,'proposal_sha256':sha(P/'proposal.json'),'static_recipe_sha256':sha(P/'static_effects.json'),'registration_sha256':sha(R/'arrival_contacts_probe_v3/registration.json'),'independent_report':rel(ap),'independent_report_sha256':sha(ap),'root_review':rel(review),'root_review_sha256':sha(review),'technical_checks_passed':True,'ready_for_checkpoint_integration':True,'root_art_review_pending':False,'runtime_verified':False,'user_accepted':False,'cumulative_main_refs':294,'new_art_refs':7,'scope':q['scope']+' 최종10판 루트·제작자 실제열람, 실제CPU 접지후39호출 및 첫대기0 선택 확인. 새실기는 별도.'};dump(P/'FROZEN.json',f)
+j=read(R/'progress_ledger.json');assert j['prepared_count']==287;done=set(j['new_art_prepared_refs'])|set(q['new_art_refs']);assert len(done)==294
+body={x for g in j['groups']for x in g['body_or_head_refs']};remaining=body-done;assert len(remaining)==21
+for g in j['groups']:
+ refs=set(g['body_or_head_refs']);g['new_art_prepared']=sorted(refs&done);g['remaining']=sorted(refs-done)
+m=read(R/'remaining287_manifest.json');m['groups']=[g for g in m['groups']if g['group']!='arrival_body'];m.update(candidate_sha256=expected,frozen=rel(P/'FROZEN.json'),frozen_sha256=sha(P/'FROZEN.json'),new_art_refs_with_aliases_and_effect_derivations=294,remaining_ledger_refs=21,needs_new_art_refs=9,scope='낙봉파 잔여9: 새원화7키+186/187동일공유와177의기존새101 동일몸체 재사용. 나머지12는 수용대기/전환10·동기화정적2이며 무조건 재작화하지 않는다. 참조수는 품질완료율이 아니다.')
+m['concrete_backlog'].pop('arrival');m['concrete_backlog'].update(total_ledger_refs=21,active_repaint_refs=9);m['concrete_backlog']['rakuhouha'].update(new_original_masters_required=7,accepted_art_reuse177='b1_101 full old body exact without translation',source_separation_evidence=rel(R/'burst_remaining_probe01/inventory.json'));m['limitations']=[s.replace('고정287','고정294')for s in m['limitations']];dump(R/'remaining294_manifest.json',m)
+j.update(current_arc=rel(P/'PL01_U.ARC'),current_sha256=expected,new_art_prepared_refs=sorted(done),remaining_refs_in_original_audit=sorted(remaining),prepared_count=294,latest_scope=f['scope'],latest_proof=rel(ap),latest_native=rel(proofs['native_gpu']),latest_frozen=rel(P/'FROZEN.json'),remaining_classification=rel(R/'remaining294_manifest.json'),next_page='burst_charge01',next_page_scope='낙봉파178..181구체전몸체4,이후186/188/189회복3.177은새101공유,187은186공유.',next_authored_inputs=[{'directory':rel(R/'burst_charge01'),'refs':[178,179,180,181],'bank':1},{'directory':rel(R/'burst_recovery01'),'refs':[186,188,189],'bank':1}]);j['limitations']=[s for s in j['limitations']if'누적287'not in s]+['누적294는 공유/파생을 포함한 참조수이며 품질완료율이 아니다. 새등장7 실기는 미확인.'];dump(R/'progress_ledger.json',j);dump(R/'progress_ledger294_snapshot.json',j)
+print(json.dumps({'arc':expected,'frozen_sha256':sha(P/'FROZEN.json'),'proposal_sha256':sha(P/'proposal.json'),'recipe_sha256':sha(P/'static_effects.json'),'remaining':21},ensure_ascii=False))

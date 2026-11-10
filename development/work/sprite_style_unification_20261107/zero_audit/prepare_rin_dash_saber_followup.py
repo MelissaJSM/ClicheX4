@@ -1,0 +1,23 @@
+"""질풍아 회전하며 일어나는8몸체를 원위치4셀 두 페이지로 준비."""
+from pathlib import Path
+import sys,json,struct,hashlib,argparse
+import numpy as np
+from PIL import Image
+ROOT=Path(__file__).resolve().parents[3];sys.path.insert(0,str(ROOT))
+from scripts.overhaul_sprites_audit import render,rgba
+from scripts.prepare_riko_ui import entry
+from src.psx_player import graphics_bank,composition_frame
+D=Path(__file__).parent/'rin_extension';P=D/'prepared_ladder_dash01/PL01_U.ARC';sha=lambda b:hashlib.sha256(b).hexdigest()
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument('--page',type=int,choices=(1,2),required=True);args=ap.parse_args();O=D/f'dash_saber_followup{args.page:02}';assert not O.exists();O.mkdir();arc=P.read_bytes();assert sha(arc)=='c2ec4099740eb77cca2d37e4b0f997728e1748a35e47b45475289725ec1dd09b';pal=struct.unpack_from('<16H',entry(arc,9));crop=(112,104,208,200);canvas=Image.new('RGBA',(192,192));refs=(158,160,162,164)if args.page==1 else(166,168,170,172);frames=[];allframes={(b,f['index']):render(arc,b,b*5,f['index'])[0]for b in(0,1)for f in graphics_bank(entry(arc,2),b)['frames']if not(b==1 and 42<=f['index']<=49)}
+ for i,n in enumerate(refs):
+  z=allframes[0,n];pic=rgba(z,pal);outside=z.copy();outside[104:200,112:208]=0;assert not outside.any();x,y=i%2,i//2;canvas.paste(pic.crop(crop),(x*96,y*96));pic.save(O/f'b0_{n:03}_before.png');Image.fromarray(z).save(O/f'b0_{n:03}_before_indices.png');aliases=[f'b{b}_{j:03}'for(b,j),other in allframes.items()if np.array_equal(z,other)];assert aliases==[f'b0_{n:03}'];bank=graphics_bank(entry(arc,2),0);f=bank['frames'][n]
+  frames.append({'key':f'b0_{n:03}','bank':0,'ref':n,'cell':[x,y],'bounds':pic.getbbox(),'source_canvas_sha256':sha(z.tobytes()),'exact_aliases':aliases,'same_stream_refs':[q['index']for q in bank['frames']if q['offset']==f['offset']],'tile_count':f['tile_count'],'part_count':len(composition_frame(entry(arc,3),0,n)['parts']),'paired_original_effect':n+1})
+ canvas.save(O/'native_input.png');canvas.resize((1536,1536),Image.Resampling.NEAREST).save(O/'input.png')
+ for label,b,n in [('idle147',0,147),('refined_dash156',0,156),('refined_rear178',0,178)]:rgba(render(arc,b,b*5,n)[0],pal).crop(crop).resize((768,768),Image.Resampling.NEAREST).save(O/(label+'.png'))
+ info={'actual_input_arc':str(P.relative_to(ROOT)),'archive_sha256':sha(arc),'source_bin':'out/ver_rin_nana/sprite_reaudit_20261106_v1/rin_nana.bin','source_sha256':'f9762868ea6a5c3e9ce65708a07bfbff3762cd98c6a057f78b584525fb48c720','character':'rin','crop':crop,'native_cell':[96,96],'columns':2,'rows':2,'scale':8,'native_origin':[160,160],'palette_words':list(pal),'frames':frames,'native_animation':104,'native_effect_animation':125,'effects_preserved':True,'scope':'질풍아 낮은 돌진에서 몸을 틀어 일어나는 원래 연속자세. 새 묘사만 보완, 머리/눈/손·팔/무릎/발끝 원점·원검기 접점 유지. 다른방향 대기머리 복제 금지.'};(O/'inputs.json').write_text(json.dumps(info,ensure_ascii=False,indent=2)+'\n','utf8')
+ prompt='''Use case: precise-object-edit. Edit only the FIRST image: four different Rin maid pixel-art poses in exactly the existing2x2 layout. Each cell is96x96 native pixels enlarged8x. Output1536x1536, truly transparent background. The other images are approved detailed Rin idle, low dash and rear views, for material/style identity only.
+Preserve each input pose exactly: head view and facing direction, eye/ear position, short neck, shoulder/elbow/wrist/glove centers, hip/knee/ankle/toes and the original overall width/height. These are successive ground dash-saber follow-through poses that rotate and rise, not interchangeable standing or running poses. Keep the low first pose, leaned transitional torso, side/back angles and opposite-facing views exactly as in the input. Never paste an idle head or change the camera angle.
+Replace coarse flat clusters with detailed but crisp native pixel clusters: white-gray hair strands and internal shadows, cyan iris only where visible from this angle, selective navy/gray contours, clear collar/blue ribbon, structured dark bodice, layered broad white cuffs, paneled pleated apron/hem, substantial natural thighs and articulated boot shading. Match the precise style of the reference. Keep hand/foot contact positions and readable original knee bends. Do not lengthen neck/calves, shrink body, enlarge the head, merge feet, make stick-thin limbs, recenter cells, or rescale the whole body. No extra weapon/long shaft, blade/attack effects, guide marks, text or new accessory. Preserve exact cell margins and full pose. New fine art across the whole body, not mere filtering or recoloring.'''
+ (O/'prompt.txt').write_text(prompt+'\n','utf8');print(json.dumps({'out':str(O),'refs':refs,'independent_exact_aliases':True}))
+if __name__=='__main__':main()

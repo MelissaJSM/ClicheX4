@@ -1,0 +1,43 @@
+{
+  "base_standard_sha256": "c9ac5ae0762e7ebd0e63bb86f111c1615dba3a49fc5fa03c3453f0cf0bafe9a9",
+  "views": {
+    "ladder_rear": {
+      "reference_png": "work/ver_buki_riko/art_pilot/ladder_v1/rear_head_indexed.png",
+      "reference_png_sha256": "ccbf05e2dfe6277fcbf8eeaed9ad75f827aeb8375ff554a406afcf06ec9946d7",
+      "reference_indices_sha256": "60ee69b820a9377586ed9711a954c8795678d9010857b12306ece73d84942328",
+      "size": [
+        23,
+        19
+      ]
+    },
+    "ladder_rear_mirrored": {
+      "reference_png": "work/ver_buki_riko/art_pilot/ladder_v1/rear_head_mirrored_indexed.png",
+      "reference_png_sha256": "0a438766541b978afd066df8c27281171558b0bd35d4cc09e73c0d1fef30eb75",
+      "reference_indices_sha256": "3bb9af8f99c8a1391f75667b0f6ea8872c68fb8e5c0559f9c7a97f42dea674b6",
+      "size": [
+        23,
+        19
+      ]
+    }
+  },
+  "assignments": {
+    "174": "ladder_rear",
+    "175": "ladder_rear",
+    "176": "ladder_rear_mirrored",
+    "177": "ladder_rear_mirrored",
+    "178": "ladder_rear",
+    "179": "ladder_rear",
+    "180": "ladder_rear_mirrored",
+    "181": "ladder_rear_mirrored",
+    "182": "ladder_rear",
+    "183": "ladder_rear",
+    "184": "ladder_rear_mirrored",
+    "185": "ladder_rear_mirrored",
+    "186": "ladder_rear",
+    "187": "ladder_rear_mirrored",
+    "188": "ladder_rear",
+    "189": "ladder_rear_mirrored",
+    "190": "ladder_rear"
+  },
+  "new_art_user_review_pending": true
+}

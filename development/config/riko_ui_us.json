@@ -1,0 +1,35 @@
+{
+  "source_sha256": "3ceab06ac99add4035f912188bcbf5b16c02056f46a33d38ff0c8dbce6cb613b",
+  "archives": [
+    {
+      "path": "/ARC/COL0E_U1.ARC;1",
+      "lba": 185,
+      "size": 6144,
+      "sha256": "47b96c6434ba065ba50626b50d76163bd5586a3e99c76a5f341a4ff751c668e4"
+    },
+    {
+      "path": "/ARC/LOAD_U.ARC;1",
+      "lba": 222,
+      "size": 100352,
+      "sha256": "e9a9585c65c9fda6134a7423eb7550685bbe4ff6750b3d323c511feb24226a41"
+    },
+    {
+      "path": "/ARC/ST0E_U1.ARC;1",
+      "lba": 10034,
+      "size": 217088,
+      "sha256": "931d79726e41562b5780d0d9eeea79747e082291bb3b95ad332bec77a7ac20f6"
+    },
+    {
+      "path": "/ARC/MOJIPAT.ARC;1",
+      "lba": 271,
+      "size": 11420,
+      "sha256": "4ab6027595245284367182e347a7da0808beae79e8e411d4d9ede179d238bc2f"
+    }
+  ],
+  "select_texture_offsets": [
+    0,
+    40960,
+    90112
+  ],
+  "save_palette_offset": 7108
+}

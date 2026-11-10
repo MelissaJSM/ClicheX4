@@ -1,0 +1,16 @@
+from pathlib import Path
+import json,hashlib
+R=Path(__file__).resolve().parent;W=R.parent;ROOT=W.parents[1];read=lambda p:json.loads(p.read_text('utf8'));sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();bind=lambda p:{'path':p.relative_to(ROOT).as_posix(),'sha256':sha(p)}
+name='nana_fourth_arrival30';watch=read(R/(name+'_watch/evidence.json'));record=read(R/(name+'_play/evidence.json'));review=read(R/(name+'_review_v2/manifest.json'))
+out=R/'nana_arrival30_summary.json';assert not out.exists();refset=[130,131,133,134,135,136,137]
+proof={str(n):[{'facing':e['facing_raw'],'armor':e['armor'],'engine_armor':e['engine_owned_armor'],'verified':e['verified']}for e in watch['events']if e['frame']==n]for n in refset}
+assert all(any(e['verified']for e in es)for es in proof.values())
+assert record['frames']==319 and record['error'] is None
+assert all(all(d.values())for d in watch['resident_assets_still_exact'].values())
+paths=[ROOT/p['path']for p in review['pages']];charge=read(R/'nana_fourth_charge26_review_v2/manifest.json');paths +=[ROOT/p['path']for p in charge['pages']]
+assert len(paths)==9
+summary={'disc_sha256':record['bin_sha256'],'session':record['session'],'fresh_boot':True,'copied_card_full_fourth_save_authenticated':bind(R/'nana_arrival30_load_fourth.json'),'source_archive_sha256':'9599ca5fc21828df5ef4d865eafab4d27aa06a7b2391873a063c887120e70f91','new_refs_observed':proof,'actual_captured_windows':319,'unique_encoded_windows':286,'directly_viewed_arrival_contact_sheets':3,'capture_timing_correction':bind(R/(name+'_review_v2/manifest.json')),'old_review_not_valid_for_timestamp_identity':bind(R/(name+'_review/manifest.json')),'observer_evidence':bind(R/(name+'_watch/evidence.json')),'record_evidence':bind(R/(name+'_play/evidence.json')),'unverified_events':watch['unverified_events'],'limits':['첫 메뉴/로딩0 상태의 사건0은 안정표본 미확정이며 이후0 성공으로 소급 검증하지 않는다.','원래 등장 초기126..139 동안 player armor=0이고140부터15이다. 새7 기본 표시를 확인했으며 포스7층의 실제 화면 표시 검증으로 계산하지 않는다.','첫 엄격 observer는 플레이어 자원이 없는 스테이지선택에서 키입력 전에 거부됐다. 새 읽기전용 transition helper는 실제 자원 로딩을 기다린다.','319전체를 한 장씩 직접보지 않았다. 시간 보정한30창·3판과 최종화면을 직접 검토했다.','RN29 추가 Ultimate 사다리7의 실제 검증은 이 세션에서 수행하지 않았다.'],'findings':['새 착지/준비 몸체 및 실루엣이 실제 RAM·GPU 해독과 일치했다.','시간 보정된 실제 장면에서 추가 확정 몸체 잘림·급격한 크기 변화가 보이지 않았다.'],'protection_before':bind(W/'protection_checkpoint39.json'),'protection_after':bind(W/'protection_checkpoint40.json'),'session_closed':read(ROOT/record['session']/'close.local.json')['exited'],'F1_F3_or_memory_writes':False,'final_user_accepted':False}
+out.write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n','utf8')
+cp=W/'root_review_checkpoint126.json';assert not cp.exists()
+cp.write_text(json.dumps({'root_actually_viewed':[bind(p)for p in paths],'arrival_summary':bind(out),'findings':summary['findings'],'prior_charge26_timing_audit':{'recorded':207,'encoded':206,'first_different_index':186,'revisited_six_sheets_all_capture_indices_before_186':True,'new_confirmed_visual_defect':False},'limits':['WebP時刻補正後の9比較板を直接検討。連続全画面や全モーションを直接見たという意味ではない。'.replace('WebP時刻補正後の9比較板を直接検討。連続全画面や全モーションを直接見たという意味ではない。','WebP 시간보정 후9비교판을 직접 검토했다. 연속 전체 영상이나 전모션 직접 검토를 뜻하지 않는다.')],'final_user_accepted':False},ensure_ascii=False,indent=2)+'\n','utf8')
+print(json.dumps({'summary_sha256':sha(out),'root_review_sha256':sha(cp)}))

@@ -1,0 +1,6 @@
+from pathlib import Path
+import json,hashlib
+W=Path(__file__).resolve().parent;ROOT=W.parents[1];D=W/'root_nana_return';sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+paths=[D/'registered01/comparison_1.png',D/'packed_return03/readback_1.png']+[D/'joint_targets03'/f'partial_{i}.png'for i in(1,2,3)]+[D/'native_sequence01'/f'{f}_id{i}_ordered.png'for i in(3,40)for f in('base','fourth')]
+r={'root_actually_viewed':[{'path':p.relative_to(ROOT).as_posix(),'sha256':sha(p)}for p in paths],'candidate_sha256':'6823c51d79f45beb3eeee8a9a2ec4a73aa1e067c5e1465d4325d6e4cf8c8ebf9','findings':['156 새머릿결·의상 주름을 대기 기준과 비교했다. 전체크기 재축소 없이 고정 셀에서 등록했다.','부분아머에서 떨어진 왼쪽7픽셀은 해당 머리/팔 소유로 바로잡았다. 뒤 베일은 기존 승인된 다리 파츠 배분으로 분리했다.','157은 기존 기본형의 Manhattan 흰 안쪽/분홍 바깥쪽 윤곽 규칙을 먼저 exact 재현한 후 새 몸체에 적용했다.158은 새156 상승몸과 기존159 효과를 연결했다.','최종 재추출·부분3판·원표3/40 정지 순서판에서 추가 확정된 몸체 단절이나 크기 급변을 찾지 못했다.'],'limits':['기존158의 옛 몸체를 보존한 것이 아니라 새156에 연결되는 상승몸으로 교체했다.','원표 정지 순서판 및 자동 canvas 검사이며 실제 게임 귀환 발동은 별도다.','모든 캐릭터 미술 완료나 사용자 최종 수용을 뜻하지 않는다.'],'runtime_verified':False,'final_user_accepted':False}
+p=W/'root_review_checkpoint131.json';assert not p.exists();p.write_text(json.dumps(r,ensure_ascii=False,indent=2)+'\n','utf8');print(sha(p))

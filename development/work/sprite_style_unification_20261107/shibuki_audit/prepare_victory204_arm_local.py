@@ -1,0 +1,13 @@
+"""후폼204의 펴진 앞팔만 재작화하기 위한 입력. 원화 다른 부위 보존."""
+from pathlib import Path
+import sys,shutil
+H=Path(__file__).resolve().parent;ROOT=H.parents[2];sys.path.insert(0,str(ROOT))
+from native_pose_pack import need,sha,write
+def main():
+ d=H/'ultimate_victory204_arm01';need(not d.exists(),'Fresh local input');s=H/'ultimate_victory_inputs01/page01';p=s/'generated.png';need(sha(p.read_bytes())=='5ab441b6b1bfde3a37173aca0a9514d71e325626449e05032cdcad6aa0dcd994','New art source changed');d.mkdir();shutil.copyfile(p,d/'edit_target.png');shutil.copyfile(s/'accepted_ultimate_style.png',d/'accepted_ultimate_style.png')
+ prompt='''Edit Image1, the newly drawn transparent 1536x1024 pixel sprite sheet, locally. Keep the complete sheet layout and all four poses. Modify ONLY the left/front bare arm of the BOTTOM-LEFT sprite (pose204 after acquisition). Its current forearm is an almost straight horizontal bar. Redraw that one arm with a compact naturally bent elbow lowered below the wrist and shoulder, following the arm joint gesture inside the jacket of the TOP-LEFT sprite. Keep the existing bare hand/fist endpoint, shoulder insertion and head exactly where they are. The elbow bends down about4-5 logical pixels, with the forearm returning upward toward the same fist. The 96x64 native cell uses8x enlargement and logical origin(48,36); the arm is on the image-left side of that bottom-left character. Do not lengthen or stretch the arm, and do not simply thicken the horizontal bar. The arm remains bare skin with a readable elbow crease and moderate highlight/shadow, without a glove, jacket cuff, sleeve, or extra hand. There must still be exactly two arms. Image2 is the accepted costume/detail reference, bottom row bare-arm costume.
+Preserve the new hair and ears, gold glasses, face/gaze, swimsuit body, opposite bent arm, hips, thighs, knees, feet, sandals and foot positions. Preserve the other three sprites unchanged. No global rescaling, body translation, longer limbs or moved hand endpoint. Keep the same restrained late-1990s pixel clusters and outline weight, with genuine transparent background; remove no body pixels elsewhere and add no glow, text or effects. Output exactly the same1536x1024 canvas and fixed2x2 cell arrangement.
+''';(d/'prompt.txt').write_text(prompt,'utf8')
+ meta=__import__('json').loads((s/'input.json').read_text('utf8'));write(d/'input.json',{'refs':[204,205],'ultimate_parent':meta['ultimate_parent'],'source_layout':meta['source_layout'],'intended_changed_pose':'after204 only','source_generated_sha256':sha(p.read_bytes()),'unrelated_135_edit':False,'body_rescale_allowed':False,'files':{p.name:sha(p.read_bytes())for p in d.iterdir()if p.is_file()}})
+ print(d.relative_to(ROOT).as_posix())
+if __name__=='__main__':main()

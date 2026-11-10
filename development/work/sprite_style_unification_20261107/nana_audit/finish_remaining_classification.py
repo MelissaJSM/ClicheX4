@@ -1,0 +1,18 @@
+"""잔여 파생/순수효과의 출처를 확인하고 실제3판 열람을 기록한다."""
+from pathlib import Path
+import sys,json
+import numpy as np
+N=Path(__file__).resolve().parent;ROOT=N.parents[2];D=N/'ultimate_remaining_classification01';sys.path[:0]=[str(ROOT),str(N/'native_restore')]
+from preview_restore import Archive,digest,sha,need,write
+from scripts.c01_audio_build import read_disc
+from src.psx_player import decode_stream,composition_frame
+from src.psx_sprite_batch import canvas_from_parts
+def raw(a,n):
+ f=a.banks[0]['frames'][n];return decode_stream(a.g,f['offset'],f['limit'],f['tile_count']*128).data
+def main():
+ m=json.loads((D/'report.json').read_text('utf8'));a=Archive((ROOT/m['source_arc']).read_bytes());need(sha(a.data)==m['source_sha256'],'current');original,_=read_disc(ROOT/'MegaMan X4.bin',('PL02_U.ARC',));us=Archive(original['PL02_U.ARC']);need(sha(us.data)=='fa8accf20e35634120fd4fc59bac1f31b0fdadaf639b06a783e92189e93c8042','US原');p=ROOT/'work/overhaul_20261105/sprites/ver_rin_nana/baseline/PL02_U.ARC';h=Archive(p.read_bytes());need(sha(h.data)=='89f9cc0a7c9a01a8d38dbc9fd67078413f06c71cc10234e358f5fde5e2643ab4','历史来源')
+ f=h.banks[0]['frames'][140];cp=composition_frame(h.c,0,140);parts=[q for q in cp['parts']if q['tile']==8];need(parts,'历史140tile8');small=canvas_from_parts(raw(h,140),f['tile_count'],{'parts':parts});fx=np.zeros((384,384),np.uint8);fx[80:240,80:240]=small;need(int((fx>0).sum())==46,'140原外闪46');target=np.where(a.layer(0)[0]>0,13,fx).astype(np.uint8);need(np.array_equal(target,a.layer(140)[0]),'140当前idle+46');effect=[]
+ for n in(211,212):
+  exact=[np.array_equal(a.layer(n,pb)[0],us.layer(n,pb)[0])for pb in(0,5,6,7,8)];v,u=a.layer(n)[0],us.layer(n)[0];pairs,count=np.unique(np.stack([u[u>0],v[u>0]],1),axis=0,return_counts=True);effect.append({'ref':n,'original_US_5layers_exact':all(exact),'per_layer':exact,'original_world_alpha_exact':np.array_equal(u>0,v>0),'original_to_current_index_pairs':[{'original':int(x),'current':int(y),'cells':int(c)}for (x,y),c in zip(pairs,count)],'current_raw_sha256':sha(raw(a,n)),'original_raw_sha256':sha(raw(us,n)),'raw_exact':raw(a,n)==raw(us,n),'composition_semantic_exact':all([(q['flags'],q['tile'],q['x'],q['y'])for q in composition_frame(a.c,pb,n)['parts']]==[(q['flags'],q['tile'],q['x'],q['y'])for q in composition_frame(us.c,pb,n)['parts']]for pb in(0,5,6,7,8))})
+ out=D/'conclusions_v2.json';need(not out.exists(),'新报告');write(out,{'source_report_sha256':digest(D/'report.json'),'original_US_PL02_sha256':sha(us.data),'historical140_source':{'path':p.relative_to(ROOT).as_posix(),'sha256':sha(h.data)},'140':{'historical_tile8_effect_count':46,'current_after_idle_alpha_plus_46_index13_exact':True,'new_art_needed':False,'policy':'既存共通白シルエットを保持。before独自の5px衣装差を今回新增しない。'},'211_212':effect,'actually_viewed_files':[{'path':(D/f'comparison_{i}.png').relative_to(ROOT).as_posix(),'sha256':digest(D/f'comparison_{i}.png'),'actually_viewed':True}for i in range(1,4)],'decisions':{'140':'현재 대기실루엣+역사46px의 공유흰섬광으로 보존 검토','208_209':'양폼 각각 현재idle 알파exact의 단색전환. 새고유몸체제작대상에서 제외하고 보존 검토','210':'현재idle 높이51 유지·가로12 압축실루엣으로 역사규칙exact. 새몸체제작대상에서 제외하고 보존 검토','211_212':'단색/다색 세로광선과 끝조각. 인물표현 없음, 기존효과 보존 검토'},'observations':['실제3판에서140과208/209는대기귀·머리·팔/다리실루엣을따르며 인물재작화가누락된단색면으로보이지 않는다.','210은전환중가로축소,211은수직빛줄기,212는상하잔여빛이다. 기존색·위치를유지하며이번에새원화나자원을변경하지않았다.'],'limits':['원표2의140 및원표98의208..212 바이트/유지시간은읽기확인. 실제caller도달성·실기·시간CLUT변화는미검증.','본분류를새6원화완료나전체완료율로계산하지않는다. 루트최종보존검토는별도.'],'new_art_created':False,'game_assets_modified':False,'runtime_verified':False});print(json.dumps({'sha256':digest(out),'pure_effect':effect},ensure_ascii=False))
+if __name__=='__main__':main()

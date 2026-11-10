@@ -1,0 +1,29 @@
+포함 구성 요소
+
+이 실행기는 프로젝트의 설치/복원/실행 보정 코드와 아래 런타임을 사용합니다.
+Steam 배포 ZIP의 코드 검토용 사본은 source_review.zip에 있으며, 저장소의 platforms/steam에도 있습니다.
+
+Python 3.13.14 (Python Software Foundation 및 기여자)
+  https://www.python.org/
+  라이선스: LICENSES/Python-3.13.txt
+  해당 문서에 포함된 표준 라이브러리와 제3자 구성 요소 고지를 함께 보존합니다.
+
+Tcl/Tk 8.6
+  https://www.tcl.tk/
+  라이선스: LICENSES/TclTk.txt 및 Python 라이선스의 관련 고지
+
+PyInstaller 6.22.3 (PyInstaller Development Team)
+  https://pyinstaller.org/
+  라이선스와 부트로더 예외: LICENSES/PyInstaller.txt
+  런타임 훅의 Apache License 2.0: LICENSES/Apache-2.0.txt
+  부트로더/런타임 훅은 수정하지 않았습니다.
+
+원작 게임 및 캐릭터
+  Mega Man / Rockman X4 및 Legacy Collection: CAPCOM
+  하나코 나나, 아오쿠모 린, 텐코 시부키, 유즈하 리코 및 클리셰: 스텔라이브
+  게임 자원 변경을 위한 팬 모드이며 공식 제품이 아닙니다.
+
+게임 원본 및 설정화 원본, 사용자의 저장 파일은 포함하지 않습니다.
+사용된 글꼴 파일이나 음성 생성 모델 자체도 포함하지 않습니다.
+이 안내가 게임/캐릭터에 대한 재배포 권한을 부여하는 것은 아닙니다.
+

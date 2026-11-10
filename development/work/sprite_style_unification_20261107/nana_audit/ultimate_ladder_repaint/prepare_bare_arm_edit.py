@@ -1,0 +1,14 @@
+"""후폼3 높은팔의 기존소매잔여만 제거하는 국소원화 입력."""
+from pathlib import Path
+import json,hashlib
+D=Path(__file__).resolve().parent;ROOT=D.parents[3]
+sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+def main():
+ out=D/'a_arm_inputs_v1';out.mkdir(exist_ok=False);target=D/'a_v1/generated.png';style=D/'a_inputs_v1/style.png'
+ prompt='''Use case: precise-object-edit. A neutral technical costume correction to an existing adult heroine game-sprite sheet. Image1 is the EDIT TARGET: exact1536x1024 canvas,3columns by2rows. Image2 is the approved costume/detail reference, with pink jacket in its top row and the sleeveless black-and-pink outfit in its bottom row.
+Edit ONLY the RAISED ARM in each of the THREE BOTTOM-ROW sprites of Image1. These three bottom sprites incorrectly retain a pink jacket sleeve on their upward-reaching arm. Replace that pink sleeve with a naturally shaded BARE ARM from the existing shoulder to the existing black wrist cuff/glove. Keep the black cuff and raised hand/fingers exactly at their original position. The upper arm and forearm must remain one anatomically coherent bent/raised arm with the same elbow, wrist and armpit coordinates. Preserve the existing black shoulder strap and upper garment edge; no pink cloth should remain on these three bottom-row arms.
+The left bottom sprite is a three-quarter climbing pose, and middle/right bottom sprites are rear-view climbing poses. Preserve those view directions; do not add an eye or face on the backs of the heads. Copy skin highlight/shadow balance from the other bare arm and legs already in each bottom sprite, with a thin selective dark shadow edge at the elbow and wrist, not a flat skin-colored strip.
+Do not modify ANY top-row sprite. Do not modify bottom-row heads, ears, pink hair, face, chest garment, waist, legs, shoes, the other arm, silhouette or body scale. Do not change clothing coverage elsewhere. Do not move the fingers, hand grip, shoulder, elbow, knee, toe, shoe or sprite origin. Do not add a limb, new weapon or accessory.
+Output the same six full-body sprites in the exact same six cell positions. Crisp game pixel-art clusters at the existing detail level. Genuine transparency without halo, colored background, shadow, labels or text. This is only a local sleeve-to-bare-arm correction, preserving the established adult character and neutral climbing animation.'''
+ (out/'prompt.txt').write_text(prompt,'utf8');j={'target':{'path':target.relative_to(ROOT).as_posix(),'sha256':sha(target)},'style':{'path':style.relative_to(ROOT).as_posix(),'sha256':sha(style)},'refs':[143,144,146],'forms':['after'],'scope':'첫후폼원화의높은팔분홍소매만새맨팔로교정.다른신체/앞폼미변경,등록시새팔부분만채택예정.','reason':'기존 target의 옛 분홍소매를첫생성이이어그린결과.단순색인치환으로맨팔완성주장하지않음.','native_packed':False,'runtime_verified':False};(out/'manifest.json').write_text(json.dumps(j,ensure_ascii=False,indent=2)+'\n','utf8');print(out)
+if __name__=='__main__':main()

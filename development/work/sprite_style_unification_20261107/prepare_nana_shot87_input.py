@@ -1,0 +1,6 @@
+from pathlib import Path
+W=Path(__file__).resolve().parent;S=W/'root_nana_shot85';D=W/'root_nana_shot87';D.mkdir(exist_ok=False)
+s=(S/'prepare_inputs.py').read_text('utf8')
+for a,b in [('root_nana_vehicle/packed_vehicle03','root_nana_shot85/packed_shot01'),('29f7b9a054ede30562bc4c3a88da96f70a909ad05262b3fd184c566e980454db','d2566605170954eebfeb37938dbea8abb611ac265dae572fe8c4b6c2128ceb61'),('(85,86)','(87,92)'),('0 if col==0 else 89','0 if col==0 else 85'),('Both face left and hold the same small pink/black Sarang pistol in the front hand. Keep its muzzle endpoint, grip, wrist, forearm, elbow and shoulder exactly connected and unmoved. Keep the gun compact, no giant gun or arm cannon, no flash or bullet.','Both face left and are settling after firing. Preserve the exact original bent arms and hands, with the small pink/black Sarang pistol lowered beside the thigh when visible, never pointing horizontally or floating. Keep the wrist, forearm, elbow and shoulder connected and unmoved. Keep any visible pistol compact, no arm cannon, flash or bullet.'),('original two firing/settling poses','original two distinct settling/ready poses87 and92'),('shooting85/86 input','settling87/92 input')]:
+ assert a in s,a;s=s.replace(a,b)
+(D/'prepare_inputs.py').write_text(s,'utf8');print(D)

@@ -1,0 +1,16 @@
+"""222 발사팔은 유지하고 남은 세번째 높은 주먹만 국소 재제작 입력."""
+from pathlib import Path
+import sys,json
+import numpy as np
+from PIL import Image,ImageDraw
+H=Path(__file__).resolve().parent;ROOT=H.parents[2];sys.path.insert(0,str(ROOT))
+from native_pose_pack import need,sha,write
+from scripts.export_x_consistency import Archive
+from prepare_hover_ultimate_inputs import P,PARENT
+def main():
+    d=H/'hover222_cleanup_inputs01';need(not d.exists(),'새입력');a=Archive(P.read_bytes());need(sha(a.data)==PARENT,'부모변경');src=H/'hover_ultimate_shot_page01_registered01/222_indices.png';z=np.array(Image.open(src));target=a.rgba(z).crop((96,96,224,224)).resize((1024,1024),Image.Resampling.NEAREST);d.mkdir();target.save(d/'edit_target.png');a.composite(222,15)[0].crop((96,96,224,224)).resize((1024,1024),Image.Resampling.NEAREST).save(d/'original_two_arm_pose.png');guide=target.copy();dr=ImageDraw.Draw(guide);dr.rectangle(((64-16)*8,(64-25)*8,(64-8)*8,(64-12)*8),outline=(0,255,120,255),width=3);dr.text(((64-40)*8,(64-30)*8),'REMOVE EXTRA RAISED ARM ONLY',fill=(0,255,120,255));guide.save(d/'region_guide.png')
+    prompt='''Use case: precise local pixel-art anatomy correction.
+Image1 is the edit target, one adult character gameplay sprite on a transparent1024x1024 canvas representing a128x128 native grid, origin(64,64). It currently has THREE ARMS: one horizontal arm firing LEFT, one correct raised arm on the viewer-RIGHT, and an erroneous extra raised forearm/fist on the viewer-LEFT beside the left ear. Image2 shows the intended TWO-arm pose. Image3 green rectangle identifies ONLY the extra raised left forearm and fist to REMOVE. Do not render any green marks.
+Correct only that extra raised arm: completely remove its skin, fist and arm-edge remnants from beside/above the LEFT ear. Restore the tiny exposed lavender hair/ear-side silhouette behind it with the same layered locks and purple contour as the new head, while leaving true fox ears intact. Where it was outside the real hair silhouette, leave transparent background. Do not fill the entire gap with a solid color, do not make a third ear, and do not replace the head with the simpler old reference.
+Keep the horizontal firing arm and its purple cannon EXACTLY unchanged. Keep the opposite viewer-RIGHT raised arm/fist EXACTLY unchanged. Final image must have exactly TWO arms: ONE horizontal to the left cannon and ONE raised on the right. Preserve all remaining head details, gold sunglasses, face/eye, braid, lavender garment, bare-arm material, torso, waist, hips, legs and footwear. Same complete canvas, margins, world position, scale and proportions; no zoom, crop, shift, stretch or body rotation. No new sleeve, jacket or costume. Crisp game pixel clusters, genuine alpha transparency, no halo, text, shadow, grid or effect. Return one corrected sprite in the exact same location.''';(d/'prompt.txt').write_text(prompt,'utf8');write(d/'input.json',{'ref':222,'source':{'path':src.relative_to(ROOT).as_posix(),'sha256':sha(src.read_bytes())},'parent_sha256':PARENT,'layout':{'logical_canvas':[128,128],'origin':[64,64]},'policy':'확정세팔오류의남은높은왼팔만원화국소교정.나머지새몸/두팔보호.','files':{p.name:sha(p.read_bytes())for p in sorted(d.iterdir())if p.is_file()}})
+if __name__=='__main__':main()

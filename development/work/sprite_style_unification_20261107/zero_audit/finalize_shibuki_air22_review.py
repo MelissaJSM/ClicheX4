@@ -1,0 +1,6 @@
+from pathlib import Path
+import json,hashlib
+D=Path(__file__).parent;ROOT=D.parents[2];H=D.parent/'shibuki_audit';P=H/'air_pack_probe01/readback';path=D/'shibuki_air22_independent.json';j=json.loads(path.read_text('utf8'));assert j['passed']and j['candidate_sha256']=='c580b371564252fd73cb97aa31d3282dcebabf5855cbec6d5b00acc7f7b7c6be'
+files=[P/f'{form}_actual_{i:02}.png'for form in('base','fourth')for i in range(3)]+[P/f'partial_all_{i:02}.png'for i in range(6)]+[H/'air_head_ownership03/partial_033.png']
+j.update({'visual_review_pending':False,'actually_viewed_sheets':[{'path':str(p.relative_to(ROOT)),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()}for p in files],'visual_observations':['실제 패킹 재독출 기본3·포스3 및 부분조합6장 전체를 열람했다. 새 머릿결·소매·의상 접힘과 다리 명암이 대기보다 과도하게 단순하던 이전 상태에서 개선됐다.','33~54의 목·어깨·팔 및 접힌 다리에서 뚜렷한 새 단절은 보이지 않는다. 사격 총열과 손목도 연결되며 과거 사격 팔의 긴 흰 덩어리가 줄었다.','부분16조합 시트에서 머리 파츠의 금색 장식과 기본 빨간 꽃 전환을 확인했다. 33 확대 시트도 별도로 봤으며 Head 단독의 원래 붉은 꽃 잔류는 보이지 않았다.','이 검사는 정적 이미지의 미술 관찰이다. 모든 부분 조합의 프레임 간 연속 움직임, 실제 게임 플레이와 원래 MIPS 실행은 이 감사에서 하지 않았다.'],'casing_scope_note':'44번 기존 총열 창의 옛 소매 혼입21픽셀은34번 기존 총열 모듈로 복원했다. 모든44번 이전 창의 바이트가 그대로라는 주장은 하지 않는다. 빨간 총구 위치는 부모와 동일하다.'})
+path.write_text(json.dumps(j,ensure_ascii=False,indent=2)+'\n','utf8');print(hashlib.sha256(path.read_bytes()).hexdigest())

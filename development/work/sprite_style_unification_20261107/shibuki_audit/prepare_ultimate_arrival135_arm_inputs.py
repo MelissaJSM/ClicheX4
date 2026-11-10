@@ -1,0 +1,16 @@
+"""135 두 의상 관절 차이만 고치는 국소 편집 입력."""
+from pathlib import Path
+import json,sys,shutil
+H=Path(__file__).resolve().parent;ROOT=H.parents[2];sys.path.insert(0,str(ROOT))
+from native_pose_pack import need,sha,write
+def main():
+    d=H/'ultimate_arrival135_arms01';need(not d.exists(),'Fresh input')
+    src=H/'ultimate_arrival_inputs01/page01/generated.png';need(sha(src.read_bytes())=='4ae7b567af9d3a6b2ab5ac99109c6d30927e0635f52444e805cc8c792a6d2964','Source changed')
+    d.mkdir();shutil.copyfile(src,d/'edit_target.png');shutil.copyfile(H/'ultimate_arrival_common_inspection01/135_grid.png',d/'joint_reference.png')
+    prompt='''Use case: precise-object-edit. Edit Image1, the existing transparent four-sprite1536x1024 sheet, in ONE tightly limited area: ONLY the two bare arms of the BOTTOM-RIGHT sprite135. Preserve every other sprite and all of this sprite's head, face, glasses, hair, swimsuit torso, hips, legs, sandals, original pixel scale and original position. Do not remake the whole sheet. Keep the exact same four-cell layout.
+The bottom-right swimsuit sprite must have exactly the SAME shoulder, elbow, wrist and fist positions as the top-right jacket sprite directly above it. Image2 is a magnified logical-coordinate guide: left panel is the accepted jacket joints, right panel is the bare-arm error. The current bare front arm has its fist too low; the other bare fist is too high. Fix these two bare arms so that they are anatomically the same bent pose as the top-right jacket arms with the sleeves removed. The near/left fist belongs beside the upper chest/chin at approximately logical world x=-11,y=-2, and the far/right fist belongs near the lower chest/waist at x=2,y=6. In each cell the origin is logical48,32 and every logical pixel is8source pixels. Use the top-right sprite's real hands as the visual authority, not the text coordinates alone. Remove the incorrectly located old bare arms rather than leaving a second pair or a third hand.
+The upper arm, elbow crease, forearm and compact curled hand must connect smoothly. Use the same small hand size, short limbs, soft skin shading and clean compact pixel contour as the existing accepted sprite. No stretched rectangular skin strip, no thick black filler, no pole arms, no added sleeve/cuff on the bare arm. Preserve the chest and swimsuit details between the arms. Do not cover the face or glasses, do not turn the head, do not change the facial expression. Make the necessary tiny local contour repair at each shoulder only. Exactly two arms. Keep original transparent background with no added glow, labels, grid, arrows or text. Return the complete original1536x1024 sheet with only those two bottom-right arm regions corrected.
+'''
+    (d/'prompt.txt').write_text(prompt,'utf8');write(d/'input.json',{'source':src.relative_to(ROOT).as_posix(),'source_sha256':sha(src.read_bytes()),'edit_scope':'bottom-right after135 arms only','protected':'other3sprites;135head/glasses/hair/torso/legs/feet/wholebodyorigin/scale','native_joint_reference':(H/'ultimate_arrival_common_inspection01/135_grid.png').relative_to(ROOT).as_posix(),'approximate_fist_centers':[[-11,-2],[2,6]],'wholebody_replacement':False,'generated':False,'files':{p.name:sha(p.read_bytes())for p in d.iterdir()if p.is_file()}})
+    print(d.relative_to(ROOT).as_posix())
+if __name__=='__main__':main()

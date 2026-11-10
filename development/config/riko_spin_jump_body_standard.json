@@ -1,0 +1,11 @@
+{
+  "reference_png": "out/ver_buki_riko/riko_bank1_20261025T090314908139Z/frame_021.png",
+  "reference_png_sha256": "8a63261a57d6e5794d2ef0013858da053bc0e0c0636fe5e44eae6c96d0834f93",
+  "reference_body_pixels": 586,
+  "head_reference": "config/riko_body_standard.json",
+  "ratio_bounds": [
+    0.9,
+    1.2
+  ],
+  "meaning": "Native jump21 body-area regression guard; visual proportions and clothing need separate review, not a game format constraint"
+}

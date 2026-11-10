@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "reference_png_sha256": "0b54b9aad6ec09847131023bcbb5716fa696ac912bb4de4b24d85c38d710d81c",
+  "reference_indices_sha256": "33b53f0129f2ff865392b3f143dc5f46de0f57f9c22ba58950e224deacbf635b",
+  "reference_roi": [
+    12,
+    0,
+    35,
+    19
+  ],
+  "reference_patch_indices_sha256": "a825588e13808c3b71cb6d52f9218475d2d5de21ff686fb73f7c44a0e149cc9f",
+  "reference_patch_size": [
+    23,
+    19
+  ],
+  "scale": 1,
+  "per_pose_bbox_resize": false,
+  "anisotropic_scale": false,
+  "whole_pose_height_is_anatomical_size": false,
+  "full_anatomical_quality_automatically_proven": false,
+  "documentation": "docs/RIKO_SCALE_STANDARD.md"
+}

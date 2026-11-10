@@ -1,0 +1,19 @@
+"""직접 선행 원화의215 굽힌 팔만 복원하는 내장 편집 입력."""
+from pathlib import Path
+import sys,json,shutil
+import numpy as np
+from PIL import Image,ImageDraw
+D=Path(__file__).resolve().parent;N=D.parent;ROOT=N.parents[2];sys.path[:0]=[str(ROOT),str(N/'native_restore')]
+from preview_restore import Archive,digest,write,need
+def main():
+ out=D/'raise215_inputs_v1';out.mkdir(exist_ok=False);meta=json.loads((D/'a_inputs_v1/manifest.json').read_text('utf8'));a=Archive((ROOT/meta['parent_arc']).read_bytes());shutil.copyfile(D/'a_v1/generated.png',out/'target.png');pose=Image.new('RGBA',(1536,1536));crop=(112,112,208,208)
+ for row in range(2):
+  for col,n in enumerate((213,215)):
+   pose.alpha_composite(a.composite(n,15)[0].crop(crop).resize((768,768),Image.Resampling.NEAREST),(col*768,row*768))
+ pose.save(out/'pose_reference.png');historical=ROOT/'work/ver_rin_nana/nana_ultimate_armor/nova_art_v1/generated.png';im=Image.open(historical).convert('RGBA');im.crop((im.width//3,0,im.width*2//3,im.height)).save(out/'historical_215.png')
+ prompt='''Use case: precise-object-edit. Image 1 is the edit target, a transparent 2 by 2 sprite sheet of adult game heroine Nana. Image 2 is a pose-position guide only. Image 3 is the direct historical artwork of the intended raised-arm pose, not a new costume reference.
+Change ONLY the bent rear arm of the TWO RIGHT-COLUMN sprites in image 1. Their rear arm is incorrectly lowered near the hip. Restore the distinct coiling pose shown in images 2 and 3: the rear hand is a clenched fist BEHIND the head near the ponytail root; the elbow is bent below/right of that fist and the upper arm joins the existing shoulder. The other hand stays low in front of the torso. Remove the incorrect lowered rear arm completely. Exactly two arms per character. Do not mistake the raised fist and cuff in the pose guide for an ear: the two rabbit ears on top of the head stay unchanged.
+Keep the image-1 face, head, eye, rabbit ears, detailed pink hair, torso, waist, long diagonal back leg, bent front leg, two shoes and their exact endpoints unchanged. The raised arm may occlude a small local part of trailing hair as in the guide; do not resize the head or change the rest of the hair. Keep the original image-1 costume design: top-right has the pink jacket sleeve and its dark cuff around the raised wrist; bottom-right has the existing black-and-pink outfit and a bare raised arm, no sleeve or glove. Both right sprites must use the same shoulder, elbow, wrist and fist positions. Retain the fine hair strands, pink jacket folds and thin varied shadow contours. Do not copy the guide's older flat hair or white shorts.
+Keep BOTH LEFT-COLUMN sprites untouched. Preserve the same four-cell layout, complete canvas margins and fixed game origins, no zoom or reposition. Each source cell corresponds to a 96 by 96 native pixel canvas. In the right cells the raised fist should be at the guide's location approximately 7 native pixels right and 21 pixels above the sprite origin, well behind the face, not above the rabbit ears. Keep the forearm naturally bent and attached. No weapon, energy, extra arm, duplicated fist, labels, outline boxes, arrows, background or shadows. Output the full four-sprite sheet with real transparent RGBA.'''
+ (out/'prompt.txt').write_text(prompt,'utf8');write(out/'manifest.json',{'parent_sha256':meta['parent_sha256'],'target_sha256':digest(out/'target.png'),'historical_source':historical.relative_to(ROOT).as_posix(),'historical_source_sha256':digest(historical),'historical_prompt_sha256':digest(historical.with_name('prompt.txt')),'frames':[{'ref':215,'form':'before','cell':1},{'ref':215,'form':'after','cell':3}],'fixed_grid':[2,2],'native_cell':[96,96],'scope':'현재215의 직접 선행 원화에 있는 머리뒤 주먹/굽힌팔 복원. 더 이른stage_vehicle 양팔내림 원화는현재포즈 정본으로 사용하지 않음. 새 머리/몸/다리·213은보존하며 최종에는 팔 의미영역만 등록한다.','native_packed':False});print('raise215 inputs saved')
+if __name__=='__main__':main()

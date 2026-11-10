@@ -1,0 +1,8 @@
+from pathlib import Path
+import hashlib,json
+O=Path(__file__).resolve().parent;ROOT=O.parents[2]
+sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+files=[f'{c}_current_context.png'for c in('shibuki','nana','riko','rin')]+['browser_sequence03_tick04_mirror0.png','browser_sequence04_tick12_mirror0.png','browser_sequence08_tick10_mirror0.png','browser_sequence11_tick08_mirror1.png','shibuki_hover_partial_masks.png','nana_hover_partial_masks.png']
+report={'checkpoint':49,'actually_viewed':[{'path':(O/n).relative_to(ROOT).as_posix(),'sha256':sha(O/n)}for n in files],'evidence':{n:sha(O/n)for n in('context_manifest.json','sequence_report.json','browser_verification.json','hover_partial_manifest.json','lowhp_trigger_native.json')},'observations':['체이서 기본4자세×12형태에서 손이 핸들 근방에 이어지고, 굽힌 다리와 신발이 차량 측면/발판에 놓인다. 육안 표본에서 확정할 만한 새로운 분리·구형 조각·큰 크기 도약을 발견하지 못했다.','대기 기준과 비교했을 때 각 캐릭터의 머리색·주요 장식·윤곽 명암이 유지된다. 차량에 가리는 하체 면적을 단순한 캐릭터 축소로 판정하지 않았다.','원표 합성의 착지/기울기4표본과 반전 표본에서도 새 손목/발목 단절을 발견하지 못했다.12표 전 구간을 연속 영상으로 눈으로 본 것은 아니다.','시부키·나나 발파츠 보유 마스크8/9/A/C/F의 대기+호버110개 정지 그림에서 새 허리·목·손목 경계 단절을 발견하지 못했다. 부분 의상 배색 차이는 파츠 소유에 따른 것이며 하나의 완전 의상으로 다시 칠하지 않는다.'],'new_confirmed_pixel_defects':[],'sprite_pixels_changed':False,'gameplay_verified_by_this_review':False,'limits':['차량 합성은 원좌표와 현재 디스크의 원차량 texel을 사용했지만 월드 이동/충돌/실제 GPU 순서를 실행한 것이 아니다.','부분 호버는 몸 그림 정적 검토이며 추진 이펙트와 실기 조합 검증의 대체가 아니다.','저체력150경우 검사는 원코드 분기 경계만 실행했다. 실제 저체력 모션 화면은 여전히 별도 확인 대상.'],'whole_task_complete':False}
+(O/'visual_review.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n','utf8')
+print(json.dumps({'viewed':len(files),'new_confirmed_defects':0,'sprite_pixels_changed':False}))

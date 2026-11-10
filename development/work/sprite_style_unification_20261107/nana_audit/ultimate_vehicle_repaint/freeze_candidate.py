@@ -1,0 +1,22 @@
+"""Ultimate 차량13 새원화·Y별칭·독립/native/시각근거를 고정한다."""
+from pathlib import Path
+import hashlib,json
+D=Path(__file__).resolve().parent;N=D.parent;ROOT=N.parents[2];P=D/'packed_vehicle_candidate_v1'
+FINAL='94326933d0dd62ccd7a5904019cae9fd36fc068a6acde8941d6bf8ff363666ca';PARENT='56a3aeb489229d85bb72205bd14f866b4444ff5daa8e1bc7f91c82e9b3c46fc0'
+sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();read=lambda p:json.loads(p.read_text('utf8'));rel=lambda p:p.relative_to(ROOT).as_posix()
+def main():
+ out=P/'FROZEN.json';assert not out.exists();assert sha(P/'PL02_U.ARC')==FINAL;proposal=read(P/'proposal.json');assert proposal['parent_arc_sha256']==PARENT and proposal['files']['PL02_U.ARC']['after']==FINAL
+ ip=N.parent/'zero_audit/nana_ultimate_vehicle13_independent01/report.json';iv=ip.parent/'visual_review.json';assert sha(ip)=='a45fef0eed2b62d70f95b2df709bfbbfd482bfb8e7987482c545ebd4f2f384e2';assert sha(iv)=='1fe39d0cfa351c3c7bb0d6ae0e97fed643560a8c6428f752dc998dd58903fabc';ij=read(ip);assert ij['passed']and ij['candidate_sha256']==FINAL and ij['parent_sha256']==PARENT
+ lockp=P/'INPUT_FROZEN.json';assert sha(lockp)==ij['input_frozen_sha256'];lock=read(lockp)
+ for q in lock['files']:assert sha(ROOT/q['path'])==q['sha256'],q['path']
+ cp=N.parent/'root_review_checkpoint136.json';assert sha(cp)=='1dc3eb73dbb8af1b26612d1e70a696c46e1dbbb245fa705b786313c1cac4b255';cj=read(cp);assert cj['candidate_sha256']==FINAL
+ rootsheets=[P/f'readback_{i}.png'for i in range(1,6)]+[D/f'native_cycle_v1/timeline_{i}.png'for i in(66,68,70,75)]+[D/f'common_probe_v2/comparison_{i}.png'for i in(1,2)]
+ for p in rootsheets:assert any(q['path']==rel(p)and q['sha256']==sha(p)for q in cj['actually_viewed_files'])
+ proofs=[P/'verification.json',P/'reproduction.json',D/'targets_v1/source_reconstruction.json',D/'native_components_v1_native_checks.json',D/'native_cycle_v1/verification.json',ip]
+ for p in proofs:assert read(p)['passed'],rel(p)
+ assert read(P/'verification.json')['after']==FINAL and read(P/'reproduction.json')['candidate_sha256']==FINAL;assert read(D/'native_components_v1_native_checks.json')['resources']['PL02_U.ARC']['candidate_sha256']==FINAL and read(D/'native_cycle_v1/verification.json')['candidate_arc_sha256']==FINAL
+ sheets=[P/f'readback_{i}.png'for i in range(1,6)]+[D/f'native_cycle_v1/timeline_{i}.png'for i in range(65,77)]
+ files=list(dict.fromkeys([P/'PL02_U.ARC',P/'proposal.json',lockp,D/'targets_v1/manifest.json',*proofs,iv,cp,*sheets,P/'producer_visual_review.json',D/'native_components_v1.json',D/'native_cycle_v1/manifest.json',D/'native_cycle_v1/REVIEW.html',D/'verify_reproduction.py',D/'make_native_cycle.py',D/'verify_native_cycle.py',D/'record_review.py',Path(__file__).resolve()]))
+ r={'frozen':True,'status':'나나 Ultimate 탑승13의 새상세와 원Y별칭 검증 동결. 전체 미술 완료는 아니다.','character':'nana','forms':['ultimate_before','ultimate_after'],'refs':list(range(162,175)),'new_authored_body_keys':[162,166,170,174],'new_authored_body_form_pairs':8,'derived_translation_refs':[163,164,165,167,168,169,171,172,173],'derived_translation_form_pairs':18,'derived_effect_refs':[],'asset_sha256':FINAL,'parent_asset_sha256':PARENT,'original_active_asset_sha256':proposal['files']['PL02_U.ARC']['before'],'files':[{'path':rel(p),'sha256':sha(p)}for p in files],'input_files_verified_unchanged':len(lock['files']),'independent_counts':ij['counts'],'root_art_review_checkpoints':[rel(cp)],'root_static_art_direction_accepted':True,'original_MIPS_decode_and_GPU_upload_checked':True,'offline_canvas_play_pause_checked':True,'source_provenance':'제작자와 독립reader 각각 생성8고정셀을 전체캔버스96격자로 재양자화했다. 실제 홍채4/손발8강체조각/팔레트15실제표본4/의상경계18/공통손→65층 재구성 exact. 임의 전신변형·알파클립·옛몸덮기 없음.','translation_policy':'원US 양폼/현재재킷의162군Y0/+1/+3/−1,166군동일,170군Y0/+1/+2/−1 관계를 새양폼 공통정책으로 적용했다. 역사후폼135~203셀 차이를 exact 복원한 것은 아니다.','packing_policy':'원4공유stream과32/28/32/13tile,은행/항목경계·13기타그래픽은행·팔레트·비대상조립 보존. 그림손실 없이146GPU파트와65층 확인.','reproduction':'별도프로세스 바이트동일 재현1회/잘못된8입력 거부. 최초7296전체RGBA, 직접832조건(32마스크×2팔×13),패킹/독립416조건(16×2×13)을 구분한다.','limits':['원표65~76의78canvas·12재생/정지와 정적판 실제열람. 실제게임 물리·차량배경·손잡이/페달·caller 관측은 별도다.','호버/노바와 전체잔여는 계속 제작한다.','보류 사다리148/149/150/151/152/153/155는 그대로 보존하며 이번입력으로 사용하지 않았다.'],'runtime_verified':False,'final_user_accepted':False,'all_nana_style_complete':False,'game_BIN_pointer_save_written':False}
+ out.write_text(json.dumps(r,ensure_ascii=False,indent=2)+'\n','utf8');print(json.dumps({'asset':FINAL,'frozen_sha256':sha(out),'files':len(files)}))
+if __name__=='__main__':main()

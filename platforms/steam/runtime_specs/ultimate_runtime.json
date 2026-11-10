@@ -1,0 +1,7 @@
+{
+  "installed_requirements": {
+    "nativeDX10/X4/romPC/pl02.arc": "8d85e192cf5d42c4a26dfbf7fa04af3e15baa8e1a2eb3c0f41c9cdb086a0d709",
+    "nativeDX10/X4/romPC/pl02_eng.arc": "538cfffe050f37b4d56a5c6ece6ff4d9ba148f5b52a10905dca763e942475800"
+  },
+  "build_manifest": "pause_builds.json"
+}

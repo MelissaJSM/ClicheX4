@@ -1,0 +1,69 @@
+{
+  "date": "2026-11-10",
+  "passed": true,
+  "issues": [],
+  "files_before_audit": 12559,
+  "bytes_before_audit": 61829034,
+  "python_sources_parsed": 4704,
+  "documentation_links_checked": 64,
+  "production_source_files": 4695,
+  "sprites": {
+    "shibuki": {
+      "composed": 1135,
+      "indexed_layers": 1407
+    },
+    "riko": {
+      "composed": 628,
+      "indexed_layers": 315
+    },
+    "nana": {
+      "composed": 1129,
+      "indexed_layers": 1429
+    },
+    "rin": {
+      "composed": 628,
+      "indexed_layers": 315
+    }
+  },
+  "illustration_images": 548,
+  "ui_images": 240,
+  "ps1_unit_tests": 8,
+  "published_core_unit_tests": 46,
+  "ps1_real_patch_roundtrip": [
+    {
+      "format": "clichex4-xor-v1",
+      "mode": "ver_buki_riko",
+      "size": 592217136,
+      "source_sha256": "3ceab06ac99add4035f912188bcbf5b16c02056f46a33d38ff0c8dbce6cb613b",
+      "target_sha256": "5bd81ec1cc7cff4b79a828e7931f14f1c7d5ac01a122da81b170751c960b5db7",
+      "output_stem": "shibuki_riko",
+      "verified": true,
+      "output_created": true,
+      "written_bin_hash_verified": true,
+      "patch_sha256": "dc4a76b063906e2529730346602c12f7765016a4c83cfe15006350a2609745c3",
+      "patch_bytes": 3953696
+    },
+    {
+      "format": "clichex4-xor-v1",
+      "mode": "ver_rin_nana",
+      "size": 592217136,
+      "source_sha256": "3ceab06ac99add4035f912188bcbf5b16c02056f46a33d38ff0c8dbce6cb613b",
+      "target_sha256": "03bb660be698dd7dd1b1b3fbf6612bcd1ed111cff47b5eda7c186ded3f343f3a",
+      "output_stem": "rin_nana",
+      "verified": true,
+      "output_created": true,
+      "written_bin_hash_verified": true,
+      "patch_sha256": "6772b5a5c29da844059ef7714f6cab384d4b4e3111b1bbe323fe8f0e1c12f4f4",
+      "patch_bytes": 3364052
+    }
+  ],
+  "frozen_ps1_verify": {
+    "ver_buki_riko": true,
+    "ver_rin_nana": true
+  },
+  "steam_v103_executable_and_patch_preserved": true,
+  "full_new_gameplay_test": false,
+  "uploaded": false,
+  "copyright_notice": "NOTICE.md",
+  "source_inventory": "docs/source-inventory.json"
+}

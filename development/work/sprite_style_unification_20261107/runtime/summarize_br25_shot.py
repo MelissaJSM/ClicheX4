@@ -1,0 +1,9 @@
+from pathlib import Path
+import json,hashlib
+R=Path(__file__).resolve().parent;W=R.parent;ROOT=W.parents[1]
+sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();bound=lambda p:{'path':p.relative_to(ROOT).as_posix(),'sha256':sha(p)}
+rec=json.loads((R/'br25_shot_play/evidence.json').read_text('utf8'));review=json.loads((R/'br25_shot_review01/manifest.json').read_text('utf8'))
+assert rec['bin_sha256']=='21696e9bae002ef6c9f95fed683e7cd531fd6cdfc6c0fdae97529c3b28a09636'
+files=[R/'br25_shot_play/first.png',R/'br25_shot_play/contact.png']+[Path(p['path'])for p in review['pages']];assert len(files)==9
+proof={'project':'ver_buki_riko','disc_sha256':rec['bin_sha256'],'source_asset_sha256':'1f271aeaee7c65a938a6a09116bc8b2317f7f138465f563d4c6cc1f3704ee1ad','session':rec['session'],'fresh_boot':True,'copied_card_DATA3_acquired_Ultimate_authenticated':True,'captures':review['mapping']['recorded_frames'],'encoded_webp_frames':review['mapping']['encoded_frames'],'recording_plan':rec['plan'],'actually_viewed_files':[dict(bound(p),actually_viewed=True)for p in files],'findings':['실제 획득후 Ultimate 일반사격·차지·반동·대기복귀를 양방향으로 기록하고 시간 대응7판 및 첫화면·흐름판을 직접 봤다.','이번 캡처에서 몸과 팔/버스터의 추가 확정 분리·큰 크기도약은 찾지 못했다.'],'limitations':['약16Hz 창 캡처이며 모든60Hz프레임/효과가림을 본 것은 아니다.','실행 참조별RAM/GPU는 이번 녹화에 기록하지 않았다. 캡슐획득전·부분조건을 실제 실행한 결과로 확대하지 않는다.'],'evidence':[bound(R/n)for n in('br25_ram_discovery.json','br25_continue.json','br25_load_ultimate.json','br25_hq.json','br25_shot_play/evidence.json','br25_shot_review01/manifest.json')],'protection':bound(W/'protection_checkpoint45.json'),'session_closed':True,'memory_written':False,'F1_F3_sent':False,'whole_project_complete':False}
+dest=R/'br25_shot_summary.json';assert not dest.exists();dest.write_text(json.dumps(proof,ensure_ascii=False,indent=2)+'\n','utf8');print(sha(dest))
