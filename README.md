@@ -11,22 +11,29 @@ Mega Man / Rockman X4의 플레이어 스프라이트, 일러스트, UI와 대�
 
 ## 두 가지 모드
 
-| 모드 | X → | Zero → | Steam에서 선택할 판 |
-|---|---|---|---|
-| 시부키 / 리코 | **텐코 시부키** | **유즈하 리코** | English (US) edition |
-| 나나 / 린 | **하나코 나나** | **아오쿠모 린** | Japanese edition |
+| 모드 | X → | Zero → | Steam에서 선택할 판 | 영상 |
+|---|---|---|---|---|
+| 시부키 / 리코 | **텐코 시부키** | **유즈하 리코** | English (US) edition | [자세히 보기](https://youtu.be/dZGrPU9fiZg) |
+| 나나 / 린 | **하나코 나나** | **아오쿠모 린** | Japanese edition | [자세히 보기](https://youtu.be/po-LAOYPr8g) |
 
 PS1은 동일한 미국판 원본에서 두 모드를 각각 별도 BIN/CUE로 만듭니다. `ver_buki_riko`의 Buki는 이전 별칭이며, 현재 표기는 **텐코 시부키**입니다.
 
 ## 영상
 
+| [![ClichéX4 트레일러](https://img.youtube.com/vi/vgi5sn53unc/maxresdefault.jpg)](https://youtu.be/vgi5sn53unc) | [![ClichéX4 모드 설명서](https://img.youtube.com/vi/opumPmvSKjs/maxresdefault.jpg)](https://youtu.be/opumPmvSKjs) |
+|:---:|:---:|
+| **[트레일러](https://youtu.be/vgi5sn53unc)** · 1분 | **[모드 설명서](https://youtu.be/opumPmvSKjs)** · 2분 |
+
+처음 보신다면 트레일러와 모드 설명서부터 보시면 됩니다. 그림을 누르면 영상이 열립니다.
+
 | 영상 | 길이 | 링크 |
 |---|---|---|
-| 나나 / 린 모드 소개 | 약 7분 | <https://youtu.be/1Vg-rLeGvLc> |
-| 하나코 나나 전체 플레이 | 약 1시간 26분 | <https://youtu.be/YyDA0AfchPU> |
-| 아오쿠모 린 전체 플레이 | 약 1시간 17분 | <https://youtu.be/cAJYBgYdII0> |
-
-처음 보신다면 소개 영상부터 보시면 됩니다. 시부키 / 리코 모드 영상은 준비되는 대로 추가합니다.
+| 시부키 / 리코 모드 자세히 보기 | 6분 | <https://youtu.be/dZGrPU9fiZg> |
+| 나나 / 린 모드 자세히 보기 | 6분 | <https://youtu.be/po-LAOYPr8g> |
+| 시부키 모드 전체 플레이 | 1시간 26분 | <https://youtu.be/3UOgYq0RnL8> |
+| 리코 모드 전체 플레이 | 1시간 15분 | <https://youtu.be/pEYIGqY1j34> |
+| 나나 모드 전체 플레이 | 1시간 26분 | <https://youtu.be/YyDA0AfchPU> |
+| 린 모드 전체 플레이 | 1시간 17분 | <https://youtu.be/cAJYBgYdII0> |
 
 ## 다운로드와 설치
 
@@ -49,11 +56,15 @@ PS1은 동일한 미국판 원본에서 두 모드를 각각 별도 BIN/CUE로 �
 
 여우 귀, 보라색 머리, 오드아이와 의상 실루엣을 살린 X 계열 캐릭터입니다. 소매와 연결된 버스터로 사격하며 기본형·포스아머의 개별 파츠·얼티밋 획득 전후 의상을 지원합니다.
 
+영상: [시부키 / 리코 모드 자세히 보기](https://youtu.be/dZGrPU9fiZg) · [시부키 모드 전체 플레이](https://youtu.be/3UOgYq0RnL8)
+
 ### 유즈하 리코 · Zero 교체
 
 ![유즈하 리코 소개](assets/showcase/riko.png)
 
 흰 의상과 청록색 망토를 중심으로 구성했습니다. 손에 쥔 짧은 검 연결부를 원작 검기에 맞춰 표현합니다. 블랙 변형은 검은 외투와 흰 안쪽 의상으로 바뀝니다.
+
+영상: [시부키 / 리코 모드 자세히 보기](https://youtu.be/dZGrPU9fiZg) · [리코 모드 전체 플레이](https://youtu.be/pEYIGqY1j34)
 
 ### 하나코 나나 · X 교체
 
@@ -61,11 +72,15 @@ PS1은 동일한 미국판 원본에서 두 모드를 각각 별도 BIN/CUE로 �
 
 전용 권총 **사랑이**를 손에 쥐고 발사합니다. 메뉴의 이름과 아이콘도 사랑이에 맞췄으며, 원래 탄환·차지샷·공격 이펙트는 유지합니다. 기본형·포스 파츠·얼티밋 획득 전후 의상을 지원합니다.
 
+영상: [나나 / 린 모드 자세히 보기](https://youtu.be/po-LAOYPr8g) · [나나 모드 전체 플레이](https://youtu.be/YyDA0AfchPU)
+
 ### 아오쿠모 린 · Zero 교체
 
 ![아오쿠모 린 소개](assets/showcase/rin.png)
 
 흰 머리와 파란 포인트, 정돈된 한쪽 묶음과 메이드 의상을 반영했습니다. 대걸레의 짧은 자루를 원작 검기에 연결하는 방식으로 빠른 공격을 표현하며, 블랙 변형은 **아카쿠모 린**입니다.
+
+영상: [나나 / 린 모드 자세히 보기](https://youtu.be/po-LAOYPr8g) · [린 모드 전체 플레이](https://youtu.be/cAJYBgYdII0)
 
 소개판의 도트·대화 그림은 실제 패치 자원에서 복원한 이미지입니다. 소개판 자체는 게임 플레이 캡처가 아닙니다.
 
